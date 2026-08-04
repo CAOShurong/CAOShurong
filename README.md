@@ -16,6 +16,7 @@ they drift.
 [![jsonxray](https://img.shields.io/pypi/v/jsonxray?label=jsonxray&color=0b7285)](https://pypi.org/project/jsonxray/)
 [![termscope](https://img.shields.io/pypi/v/termscope?label=termscope&color=0b7285)](https://pypi.org/project/termscope/)
 [![contextcost](https://img.shields.io/pypi/v/contextcost?label=contextcost&color=0b7285)](https://pypi.org/project/contextcost/)
+[![runproof](https://img.shields.io/pypi/v/runproof?label=runproof&color=0b7285)](https://pypi.org/project/runproof/)
 
 | | The question it answers |
 | --- | --- |

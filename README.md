@@ -15,6 +15,7 @@ they drift.
 [![slowimports](https://img.shields.io/pypi/v/slowimports?label=slowimports&color=0b7285)](https://pypi.org/project/slowimports/)
 [![jsonxray](https://img.shields.io/pypi/v/jsonxray?label=jsonxray&color=0b7285)](https://pypi.org/project/jsonxray/)
 [![termscope](https://img.shields.io/pypi/v/termscope?label=termscope&color=0b7285)](https://pypi.org/project/termscope/)
+[![contextcost](https://img.shields.io/pypi/v/contextcost?label=contextcost&color=0b7285)](https://pypi.org/project/contextcost/)
 
 | | The question it answers |
 | --- | --- |
@@ -23,6 +24,8 @@ they drift.
 | **[slowimports](https://github.com/CAOShurong/slowimports)** | *Why is my Python CLI slow to start, and which imports can I safely make lazy?* |
 | **[jsonxray](https://github.com/CAOShurong/jsonxray)** | *What is actually inside this JSONL file, including the records that don't match the rest?* Constant memory, any file size. |
 | **[termscope](https://github.com/CAOShurong/termscope)** | *What is my microcontroller actually sending?* A live serial plotter in the terminal, no GUI, works over SSH. |
+| **[contextcost](https://github.com/CAOShurong/contextcost)** | *What does this repository cost an AI coding agent to read, and what is wasting that budget?* Applies its own proposal and measures again, so the saving is a difference between two walks. |
+| **[runproof](https://github.com/CAOShurong/runproof)** | *Did that agent's work actually work?* Runs the job in an isolated git worktree and accepts it only if it passes the checks you declared — never the agent's own summary. |
 
 ### What they have in common
 
@@ -47,6 +50,12 @@ confident number.
 - `jsonxray` counts *absent* and *explicitly null* separately, and quotes every
   percentage against its own parent rather than the file, because the other way
   invents data-quality problems that aren't there.
+- `contextcost` prints its error bound next to every total, because it
+  estimates tokens rather than tokenizing them, and that bound is measured
+  against a real tokenizer in CI rather than asserted.
+- `runproof` treats a check that *could not run* as a failure rather than a
+  skip. Treating "could not verify" as "fine" would reintroduce, in one line,
+  the exact hole the tool exists to close.
 
 A tool that cries wolf gets uninstalled after the second false alarm, and then
 catches nothing at all.

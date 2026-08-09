@@ -13,6 +13,7 @@ off as real-world adoption.
 | Project | The problem it solves | Use it now |
 |---|---|---|
 | **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates duplicate scanner findings, explains each merge or blocker, measures scanner overlap, compares runs, and exports one offline interactive report without uploading evidence. | [Browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.4.2](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.2) |
+| **[Decimen field fork](https://github.com/CAOShurong/decimen-optical-transfer)** | Moves files, stdin, or text from a browser, terminal, or SSH machine to a phone camera using fountain-coded QR—no sender-side browser, phone app, pairing, or receiver-side network path. | [Open receiver](https://caoshurong.github.io/decimen-optical-transfer/receive/) · [installable CLI v0.4.0](https://github.com/CAOShurong/decimen-optical-transfer/releases/tag/v0.4.0-field.1) |
 | **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** | Tests whether an AI tutor produces unaided mastery, transfer, retention, and calibrated confidence—not merely a persuasive answer. | [Browser lab](https://caoshurong.github.io/didyoulearn/#lab) · [v0.1.0 wheel](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.0) |
 | **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Compares AI products on your own tasks using blind review, local history, and an auditable study mode. | [Personal lab](https://caoshurong.github.io/frontiertrials/try/) · [PyPI](https://pypi.org/project/frontiertrials/) |
 | **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Keeps the chain from experiment intent and instrument identity to raw data, uncertainty, analysis, and report. | [Live demonstration](https://caoshurong.github.io/benchlineage/) · [PyPI](https://pypi.org/project/benchlineage/) |
@@ -30,11 +31,15 @@ two-byte control protocol are now browsable instead of hidden inside a ZIP.
 
 ## Open-source contributions
 
-**[Decimen Optical Transfer — camera-choice fork](https://github.com/CAOShurong/decimen-optical-transfer)**
-adds explicit mobile camera/lens selection to Evan Crawley's MIT-licensed
-screen-to-camera file-transfer project. It addresses real reports of phones
-opening the front or telephoto camera and keeps decoded progress while capture
-switches lenses. [Try the fork](https://caoshurong.github.io/decimen-optical-transfer/).
+**[Decimen Optical Transfer — field-use fork](https://github.com/CAOShurong/decimen-optical-transfer)**
+adds an installable terminal sender and explicit mobile camera/lens selection
+to Evan Crawley's MIT-licensed screen-to-camera file-transfer project. The CLI
+sends files, binary stdin, or text from SSH and browserless machines through the
+same gzip, SHA-256, and deterministic fountain protocol as the web receiver.
+Release v0.4.0 was fresh-installed and exercised on Linux, Windows, and macOS;
+it addresses real upstream requests rather than inventing a disconnected demo.
+[Try the fork](https://caoshurong.github.io/decimen-optical-transfer/) or
+[install the CLI](https://github.com/CAOShurong/decimen-optical-transfer/releases/tag/v0.4.0-field.1).
 
 **[Teleplot PR #52](https://github.com/nesnes/teleplot/pull/52)** makes the
 Enter key in Teleplot's VS Code serial sender honor the selected CR, LF, or

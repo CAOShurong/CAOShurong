@@ -12,7 +12,7 @@ off as real-world adoption.
 
 | Project | The problem it solves | Use it now |
 |---|---|---|
-| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates duplicate scanner findings, explains each merge or blocker, compares runs, and exports one offline interactive report without uploading evidence. | [Browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.3.0](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.3.0) |
+| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates duplicate scanner findings, explains each merge or blocker, measures scanner overlap, compares runs, and exports one offline interactive report without uploading evidence. | [Browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.4.0](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.0) |
 | **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** | Tests whether an AI tutor produces unaided mastery, transfer, retention, and calibrated confidence—not merely a persuasive answer. | [Browser lab](https://caoshurong.github.io/didyoulearn/#lab) · [v0.1.0 wheel](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.0) |
 | **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Compares AI products on your own tasks using blind review, local history, and an auditable study mode. | [Personal lab](https://caoshurong.github.io/frontiertrials/try/) · [PyPI](https://pypi.org/project/frontiertrials/) |
 | **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Keeps the chain from experiment intent and instrument identity to raw data, uncertainty, analysis, and report. | [Live demonstration](https://caoshurong.github.io/benchlineage/) · [PyPI](https://pypi.org/project/benchlineage/) |

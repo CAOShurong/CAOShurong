@@ -2,7 +2,7 @@
 
 Electrical Engineering PhD researcher at CUHK. I build open-source tools for
 **trustworthy AI evaluation, reproducible experiments, security evidence, and
-practical engineering debugging**.
+practical engineering and offline-data problems**.
 
 My projects are usually local-first: the evidence stays inspectable, uncertainty
 is shown instead of hidden, and a demo is labelled as a demo rather than passed
@@ -12,6 +12,7 @@ off as real-world adoption.
 
 | Project | The problem it solves | Use it now |
 |---|---|---|
+| **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Finds files on unplugged external drives from one private offline catalog, with read-only scans, fast search, snapshot diffs, honest hash modes, physical-location notes, and QR labels. | [v0.1.1 downloads](https://github.com/CAOShurong/coldshelf/releases/latest) · [5-minute demo](https://github.com/CAOShurong/coldshelf#quick-start) |
 | **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates duplicate scanner findings, explains each merge or blocker, measures scanner overlap, compares runs, and exports one offline interactive report without uploading evidence. | [Browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.4.2](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.2) |
 | **[Decimen field fork](https://github.com/CAOShurong/decimen-optical-transfer)** | Moves files, stdin, or text from a browser, terminal, or SSH machine to a phone camera using fountain-coded QR—no sender-side browser, phone app, pairing, or receiver-side network path. | [Open receiver](https://caoshurong.github.io/decimen-optical-transfer/receive/) · [installable CLI v0.4.0](https://github.com/CAOShurong/decimen-optical-transfer/releases/tag/v0.4.0-field.1) |
 | **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** | Tests whether an AI tutor produces unaided mastery, transfer, retention, and calibrated confidence—not merely a persuasive answer. | [Browser lab](https://caoshurong.github.io/didyoulearn/#lab) · [v0.1.0 wheel](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.0) |

@@ -12,7 +12,7 @@ off as real-world adoption.
 
 | Project | The problem it solves | Use it now |
 |---|---|---|
-| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates duplicate findings across SARIF, Trivy, Grype, Snyk, CycloneDX, OSV, and CSV while preserving every source record and explaining each match or blocker. | [Browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.1.0](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.1.0) |
+| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates duplicate findings across SARIF, Trivy, Grype, Snyk, CycloneDX, OSV, and CSV while preserving every source record and explaining each match or blocker. | [Browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.1.1](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.1.1) |
 | **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** | Tests whether an AI tutor produces unaided mastery, transfer, retention, and calibrated confidence—not merely a persuasive answer. | [Browser lab](https://caoshurong.github.io/didyoulearn/#lab) · [v0.1.0 wheel](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.0) |
 | **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Compares AI products on your own tasks using blind review, local history, and an auditable study mode. | [Personal lab](https://caoshurong.github.io/frontiertrials/try/) · [PyPI](https://pypi.org/project/frontiertrials/) |
 | **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Keeps the chain from experiment intent and instrument identity to raw data, uncertainty, analysis, and report. | [Live demonstration](https://caoshurong.github.io/benchlineage/) · [PyPI](https://pypi.org/project/benchlineage/) |

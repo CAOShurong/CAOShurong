@@ -17,7 +17,7 @@ off as real-world adoption.
 | **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Keeps the chain from experiment intent and instrument identity to raw data, uncertainty, analysis, and report. | [Live demonstration](https://caoshurong.github.io/benchlineage/) · [PyPI](https://pypi.org/project/benchlineage/) |
 | **[ReproWeave](https://github.com/CAOShurong/reproweave)** | Maps paper claims to evidence, dependencies, available resources, and a reviewable replication plan. | [Evidence-map demo](https://caoshurong.github.io/reproweave/) · [PyPI](https://pypi.org/project/reproweave/) |
 | **[runproof](https://github.com/CAOShurong/runproof)** | Runs coding-agent work in isolated worktrees and accepts it only when user-declared checks pass. | [`pipx install runproof`](https://pypi.org/project/runproof/) |
-| **[termscope](https://github.com/CAOShurong/termscope)** | Plots live Arduino, ESP32, or STM32 serial data in a terminal, including over SSH. | [`pipx run termscope --demo`](https://pypi.org/project/termscope/) |
+| **[termscope](https://github.com/CAOShurong/termscope)** | Plots live Arduino, ESP32, or STM32 serial data in a terminal, including over SSH, and preserves Teleplot timestamps and batches. | [`pipx run termscope --demo`](https://pypi.org/project/termscope/) · [v0.2.0](https://github.com/CAOShurong/termscope/releases/tag/v0.2.0) |
 
 ## Hardware that exists off-screen
 
@@ -27,13 +27,18 @@ ultrasonic ranging, obstacle avoidance, four-sensor line tracking, servo
 scanning, and OLED output. Its complete STM32CubeIDE project, pin map, and
 two-byte control protocol are now browsable instead of hidden inside a ZIP.
 
-## Current open-source contribution
+## Open-source contributions
 
 **[Decimen Optical Transfer — camera-choice fork](https://github.com/CAOShurong/decimen-optical-transfer)**
 adds explicit mobile camera/lens selection to Evan Crawley's MIT-licensed
 screen-to-camera file-transfer project. It addresses real reports of phones
 opening the front or telephoto camera and keeps decoded progress while capture
 switches lenses. [Try the fork](https://caoshurong.github.io/decimen-optical-transfer/).
+
+**[Teleplot PR #52](https://github.com/nesnes/teleplot/pull/52)** makes the
+Enter key in Teleplot's VS Code serial sender honor the selected CR, LF, or
+CRLF ending, matching the Send button. The patch was submitted upstream and is
+awaiting maintainer review; it is not presented here as an upstream release.
 
 ## Smaller tools with narrow jobs
 

@@ -13,11 +13,13 @@ as demo data rather than presented as adoption.
 | Project | Use it when... | Start here |
 |---|---|---|
 | **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | You need to find a file on an unplugged external drive without reconnecting every disk. It keeps a private catalog with search, snapshots, duplicate evidence, physical-location notes, and QR labels. | [latest downloads](https://github.com/CAOShurong/coldshelf/releases/latest) · [5-minute demo](https://github.com/CAOShurong/coldshelf#quick-start) · [feedback](https://github.com/CAOShurong/coldshelf/discussions/5) |
+| **[AI Project Factory](https://github.com/CAOShurong/ai-project-factory)** | You work on the same repository with Codex, Claude, or a bare API and need one model-neutral fact, decision, and handoff layer instead of provider-specific memory. It scaffolds and checks that layer locally with no runtime dependencies. | [latest downloads](https://github.com/CAOShurong/ai-project-factory/releases/latest) · [getting started](https://github.com/CAOShurong/ai-project-factory#getting-started) · [validation evidence](https://github.com/CAOShurong/ai-project-factory/blob/main/VALIDATION.md) |
 | **[ByteThere](https://github.com/CAOShurong/bytethere)** | You are about to wipe, move, or archive a drive and need a read-only preflight for OneDrive/iCloud placeholders, broken links, incompatible names, case or Unicode collisions, path limits, and allocation anomalies. It checks metadata; it does **not** prove backup completeness or file readability. | [latest downloads](https://github.com/CAOShurong/bytethere/releases/latest) · [field-test discussion](https://github.com/CAOShurong/bytethere/discussions/1) |
 | **[OpaqueDrop](https://github.com/CAOShurong/opaquedrop)** | You want an accountless, self-hosted inbound file request where filenames and bytes are encrypted in the sender's browser to a recipient-held key. The server stores ciphertext, but hosted JavaScript remains in the server operator's trust boundary. | [latest downloads](https://github.com/CAOShurong/opaquedrop/releases/latest) · [threat model](https://github.com/CAOShurong/opaquedrop/blob/main/docs/THREAT_MODEL.md) · [feedback](https://github.com/CAOShurong/opaquedrop/discussions/1) |
 | **[WheelWhy](https://github.com/CAOShurong/wheelwhy)** | A Python wheel is rejected and you need a human-readable explanation of which Python, ABI, platform, or `Requires-Python` rule missed. It explains compatibility; it is not a full pip or uv resolver. | [latest downloads](https://github.com/CAOShurong/wheelwhy/releases/latest) · [bring a real wheel error](https://github.com/CAOShurong/wheelwhy/discussions/6) |
 | **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Several security scanners report overlapping findings and you need explainable correlation, merge blockers, scanner-overlap evidence, run comparison, and one offline report. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [latest release](https://github.com/CAOShurong/vulnfuse/releases/latest) |
 | **[TermScope](https://github.com/CAOShurong/termscope)** | You need live Arduino, ESP32, or STM32 telemetry in a terminal, including over pipes or SSH, with CSV record/replay and Teleplot stream support. | [`pipx run termscope --demo`](https://pypi.org/project/termscope/) · [latest release](https://github.com/CAOShurong/termscope/releases/latest) · [hardware reports wanted](https://github.com/CAOShurong/termscope/issues/2) |
+| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | You need an auditable chain from experiment intent and instrument identity through raw data, uncertainty, analysis, and reports, plus portable ELN import/export rather than a locked-in notebook. | [PyPI](https://pypi.org/project/benchlineage/) · [latest release](https://github.com/CAOShurong/benchlineage/releases/latest) · [ELN interoperability guide](https://github.com/CAOShurong/benchlineage/blob/main/docs/ELN_INTEROPERABILITY.md) |
 
 ## More focused tools
 
@@ -33,9 +35,6 @@ as demo data rather than presented as adoption.
   of JSONL/NDJSON streams and points back to outlier records.
 - **[ContextCost](https://github.com/CAOShurong/contextcost)** measures what a
   repository costs an AI coding agent to read and verifies proposed reductions.
-- **[AI Project Factory](https://github.com/CAOShurong/ai-project-factory)**
-  keeps a model-neutral fact and handoff layer across Codex, Claude, and bare
-  API workflows.
 
 ### Research and evaluation
 
@@ -47,11 +46,6 @@ as demo data rather than presented as adoption.
 - **[EvalInt](https://github.com/CAOShurong/evalint)** checks LLM evaluation
   sets for weak reliability, suspicious wrong-answer agreement, and
   near-duplicates.
-- **[BenchLineage](https://github.com/CAOShurong/benchlineage)** connects
-  experiment intent, instrument identity, raw data, uncertainty, analysis, and
-  reports, then exports and verifies interoperable ELN archives. Start with
-  [PyPI](https://pypi.org/project/benchlineage/) or the
-  [ELN interoperability guide](https://github.com/CAOShurong/benchlineage/blob/main/docs/ELN_INTEROPERABILITY.md).
 - **[ReproWeave](https://github.com/CAOShurong/reproweave)** maps paper claims
   to evidence, dependencies, available resources, and a reviewable replication
   plan.

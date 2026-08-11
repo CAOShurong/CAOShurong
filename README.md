@@ -60,7 +60,10 @@ car](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32)**
 is a photographed and video-demonstrated build with Bluetooth control,
 ultrasonic ranging, obstacle avoidance, four-sensor line tracking, servo
 scanning, and OLED output. The repository includes the STM32CubeIDE project,
-pin map, and two-byte control protocol.
+pin map, and two-byte control protocol. Its application-specific code and media
+do not yet have a repository-wide license; the component terms and remaining
+[licensing gap](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32#license-status)
+are documented explicitly, so do not assume reuse rights beyond those terms.
 
 The **[Decimen Optical Transfer field
 fork](https://github.com/CAOShurong/decimen-optical-transfer)** adds an

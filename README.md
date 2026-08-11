@@ -1,79 +1,102 @@
 # Shurong Cao
 
 Electrical Engineering PhD researcher at CUHK. I build open-source tools for
-**trustworthy AI evaluation, reproducible experiments, security evidence, and
-practical engineering and offline-data problems**.
+practical file and data problems, developer diagnostics, trustworthy AI
+evaluation, and reproducible engineering work.
 
-My projects are usually local-first: the evidence stays inspectable, uncertainty
-is shown instead of hidden, and a demo is labelled as a demo rather than passed
-off as real-world adoption.
+The common thread is inspectability: local-first operation where it matters,
+explicit limitations, real downloadable entry points, and demo data labelled
+as demo data rather than presented as adoption.
 
-## Start here
+## Featured tools
 
-| Project | The problem it solves | Use it now |
+| Project | Use it when... | Start here |
 |---|---|---|
-| **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Finds files on unplugged external drives from one private offline catalog, with read-only scans, fast search, snapshot diffs, honest hash modes, physical-location notes, and QR labels. | [v0.1.1 downloads](https://github.com/CAOShurong/coldshelf/releases/latest) · [5-minute demo](https://github.com/CAOShurong/coldshelf#quick-start) |
-| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates duplicate scanner findings, explains each merge or blocker, measures scanner overlap, compares runs, and exports one offline interactive report without uploading evidence. | [Browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.4.2](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.2) |
-| **[Decimen field fork](https://github.com/CAOShurong/decimen-optical-transfer)** | Moves files, stdin, or text from a browser, terminal, or SSH machine to a phone camera using fountain-coded QR—no sender-side browser, phone app, pairing, or receiver-side network path. | [Open receiver](https://caoshurong.github.io/decimen-optical-transfer/receive/) · [installable CLI v0.4.0](https://github.com/CAOShurong/decimen-optical-transfer/releases/tag/v0.4.0-field.1) |
-| **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** | Tests whether an AI tutor produces unaided mastery, transfer, retention, and calibrated confidence—not merely a persuasive answer. | [Browser lab](https://caoshurong.github.io/didyoulearn/#lab) · [v0.1.0 wheel](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.0) |
-| **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Compares AI products on your own tasks using blind review, local history, and an auditable study mode. | [Personal lab](https://caoshurong.github.io/frontiertrials/try/) · [PyPI](https://pypi.org/project/frontiertrials/) |
-| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Keeps the chain from experiment intent and instrument identity to raw data, uncertainty, analysis, and report. | [Live demonstration](https://caoshurong.github.io/benchlineage/) · [PyPI](https://pypi.org/project/benchlineage/) |
-| **[ReproWeave](https://github.com/CAOShurong/reproweave)** | Maps paper claims to evidence, dependencies, available resources, and a reviewable replication plan. | [Evidence-map demo](https://caoshurong.github.io/reproweave/) · [PyPI](https://pypi.org/project/reproweave/) |
-| **[runproof](https://github.com/CAOShurong/runproof)** | Runs coding-agent work in isolated worktrees and accepts it only when user-declared checks pass. | [`pipx install runproof`](https://pypi.org/project/runproof/) |
-| **[termscope](https://github.com/CAOShurong/termscope)** | Plots live Arduino, ESP32, or STM32 serial data in a terminal, including over SSH, and preserves Teleplot timestamps and batches. | [`pipx run termscope --demo`](https://pypi.org/project/termscope/) · [v0.2.0](https://github.com/CAOShurong/termscope/releases/tag/v0.2.0) |
+| **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | You need to find a file on an unplugged external drive without reconnecting every disk. It keeps a private catalog with search, snapshots, duplicate evidence, physical-location notes, and QR labels. | [v0.1.4 downloads](https://github.com/CAOShurong/coldshelf/releases/tag/v0.1.4) · [5-minute demo](https://github.com/CAOShurong/coldshelf#quick-start) · [feedback](https://github.com/CAOShurong/coldshelf/discussions/5) |
+| **[ByteThere](https://github.com/CAOShurong/bytethere)** | You are about to wipe, move, or archive a drive and need a read-only preflight for OneDrive/iCloud placeholders, broken links, incompatible names, case or Unicode collisions, path limits, and allocation anomalies. It checks metadata; it does **not** prove backup completeness or file readability. | [v0.1.0 downloads](https://github.com/CAOShurong/bytethere/releases/tag/v0.1.0) · [field-test discussion](https://github.com/CAOShurong/bytethere/discussions/1) |
+| **[OpaqueDrop](https://github.com/CAOShurong/opaquedrop)** | You want an accountless, self-hosted inbound file request where filenames and bytes are encrypted in the sender's browser to a recipient-held key. The server stores ciphertext, but hosted JavaScript remains in the server operator's trust boundary. | [v0.1.0 downloads](https://github.com/CAOShurong/opaquedrop/releases/tag/v0.1.0) · [threat model](https://github.com/CAOShurong/opaquedrop/blob/main/docs/THREAT_MODEL.md) · [feedback](https://github.com/CAOShurong/opaquedrop/discussions/1) |
+| **[WheelWhy](https://github.com/CAOShurong/wheelwhy)** | A Python wheel is rejected and you need a human-readable explanation of which Python, ABI, platform, or `Requires-Python` rule missed. It explains compatibility; it is not a full pip or uv resolver. | [v0.1.0 downloads](https://github.com/CAOShurong/wheelwhy/releases/tag/v0.1.0) · [bring a real wheel error](https://github.com/CAOShurong/wheelwhy/discussions/6) |
+| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Several security scanners report overlapping findings and you need explainable correlation, merge blockers, scanner-overlap evidence, run comparison, and one offline report. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.4.2](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.2) |
+| **[TermScope](https://github.com/CAOShurong/termscope)** | You need live Arduino, ESP32, or STM32 telemetry in a terminal, including over pipes or SSH, with CSV record/replay and Teleplot stream support. | [`pipx run termscope --demo`](https://pypi.org/project/termscope/) · [v0.2.0](https://github.com/CAOShurong/termscope/releases/tag/v0.2.0) · [hardware reports wanted](https://github.com/CAOShurong/termscope/issues/2) |
 
-## Hardware that exists off-screen
+## More focused tools
 
-**[STM32F103 multifunction robot car](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32)**
+### Developer diagnostics and verifiable automation
+
+- **[RunProof](https://github.com/CAOShurong/runproof)** runs coding-agent work
+  in isolated worktrees and accepts it only when user-declared checks pass.
+- **[WillItBreak](https://github.com/CAOShurong/willitbreak)** reports only
+  dependency API breaks that reach your Python call sites.
+- **[SlowImports](https://github.com/CAOShurong/slowimports)** measures Python
+  startup cost and identifies imports that can safely become lazy.
+- **[JSONXray](https://github.com/CAOShurong/jsonxray)** infers the real schema
+  of JSONL/NDJSON streams and points back to outlier records.
+- **[ContextCost](https://github.com/CAOShurong/contextcost)** measures what a
+  repository costs an AI coding agent to read and verifies proposed reductions.
+- **[AI Project Factory](https://github.com/CAOShurong/ai-project-factory)**
+  keeps a model-neutral fact and handoff layer across Codex, Claude, and bare
+  API workflows.
+
+### Research and evaluation
+
+- **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** evaluates whether
+  an AI tutor produces unaided mastery, transfer, retention, and calibrated
+  confidence—not merely a persuasive answer.
+- **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** supports
+  private blind comparisons of AI products on your own tasks.
+- **[EvalInt](https://github.com/CAOShurong/evalint)** checks LLM evaluation
+  sets for weak reliability, suspicious wrong-answer agreement, and
+  near-duplicates.
+- **[BenchLineage](https://github.com/CAOShurong/benchlineage)** connects
+  experiment intent, instrument identity, raw data, uncertainty, analysis, and
+  reports.
+- **[ReproWeave](https://github.com/CAOShurong/reproweave)** maps paper claims
+  to evidence, dependencies, available resources, and a reviewable replication
+  plan.
+- **[OhmJudge](https://github.com/CAOShurong/ohmjudge)** generates fresh
+  electrical-engineering tasks and grades answers locally with executable
+  rules.
+
+## Hardware and offline transfer
+
+The **[STM32F103 multifunction robot
+car](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32)**
 is a photographed and video-demonstrated build with Bluetooth control,
 ultrasonic ranging, obstacle avoidance, four-sensor line tracking, servo
-scanning, and OLED output. Its complete STM32CubeIDE project, pin map, and
-two-byte control protocol are now browsable instead of hidden inside a ZIP.
+scanning, and OLED output. The repository includes the STM32CubeIDE project,
+pin map, and two-byte control protocol.
+
+The **[Decimen Optical Transfer field
+fork](https://github.com/CAOShurong/decimen-optical-transfer)** adds an
+installable terminal and SSH sender plus explicit mobile camera selection to
+Evan Crawley's MIT-licensed screen-to-camera transfer project. It sends files,
+binary stdin, or text through fountain-coded animated QR without a
+receiver-side network path. [Try the receiver](https://caoshurong.github.io/decimen-optical-transfer/receive/)
+or [download v0.4.0-field.1](https://github.com/CAOShurong/decimen-optical-transfer/releases/tag/v0.4.0-field.1).
 
 ## Open-source contributions
 
-**[Decimen Optical Transfer — field-use fork](https://github.com/CAOShurong/decimen-optical-transfer)**
-adds an installable terminal sender and explicit mobile camera/lens selection
-to Evan Crawley's MIT-licensed screen-to-camera file-transfer project. The CLI
-sends files, binary stdin, or text from SSH and browserless machines through the
-same gzip, SHA-256, and deterministic fountain protocol as the web receiver.
-Release v0.4.0 was fresh-installed and exercised on Linux, Windows, and macOS;
-it addresses real upstream requests rather than inventing a disconnected demo.
-[Try the fork](https://caoshurong.github.io/decimen-optical-transfer/) or
-[install the CLI](https://github.com/CAOShurong/decimen-optical-transfer/releases/tag/v0.4.0-field.1).
-
-**[Teleplot PR #52](https://github.com/nesnes/teleplot/pull/52)** makes the
-Enter key in Teleplot's VS Code serial sender honor the selected CR, LF, or
-CRLF ending, matching the Send button. The patch was submitted upstream and is
-awaiting maintainer review; it is not presented here as an upstream release.
-
-## Smaller tools with narrow jobs
-
-- **[jsonxray](https://github.com/CAOShurong/jsonxray)** — infer what is really
-  inside JSONL/NDJSON, including outlier records, in constant memory.
-- **[evalint](https://github.com/CAOShurong/evalint)** — lint an LLM evaluation
-  set for weak reliability, wrong-answer agreement, and near-duplicates.
-- **[willitbreak](https://github.com/CAOShurong/willitbreak)** — report only
-  dependency API breaks that reach your Python call sites.
-- **[slowimports](https://github.com/CAOShurong/slowimports)** — measure Python
-  startup cost and identify imports that can safely become lazy.
-- **[contextcost](https://github.com/CAOShurong/contextcost)** — measure the
-  context cost of a repository and verify a proposed reduction with a second
-  walk.
-- **[OhmJudge](https://github.com/CAOShurong/ohmjudge)** — generate fresh EE
-  calculation tasks and grade model answers locally with executable rules.
+- **[Teleplot PR #52](https://github.com/nesnes/teleplot/pull/52)** makes the
+  Enter key in Teleplot's VS Code serial sender honor the selected CR, LF, or
+  CRLF ending, matching the Send button. It is awaiting maintainer review and
+  is not presented as an upstream release.
+- **[Awesome Software Supply Chain Security PR
+  #95](https://github.com/bureado/awesome-software-supply-chain-security/pull/95)**,
+  **[Awesome SBOM PR #66](https://github.com/awesomeSBOM/awesome-sbom/pull/66)**,
+  and **[Awesome CLI Apps PR
+  #356](https://github.com/toolleeo/awesome-cli-apps-in-a-csv/pull/356)** are
+  transparent submissions for VulnFuse and TermScope, currently awaiting
+  upstream review.
 
 ## What I try to make verifiable
 
 - Hosted demonstrations use synthetic or fictional data when no real study has
   been run, and say so visibly.
-- Research-oriented tools expose their assumptions, uncertainty, and evidence
-  receipts instead of collapsing them into one confident score.
-- Releases, documentation figures, and install paths are checked as real user
-  entry points—not inferred from source code alone.
-- Bug reports and small, reproducible contributions are welcome through each
-  repository's Issues and Contributing pages.
+- Security and research tools publish their threat models, assumptions, and
+  failure boundaries instead of collapsing them into one confident claim.
+- Releases, installation paths, checksums, and important failure modes are
+  exercised through public artifacts, not inferred from source code alone.
+- Stars, downloads, users, benchmarks, and testimonials are never fabricated.
 
-I am especially interested in measurement provenance, AI evaluation that
-survives scrutiny, embedded systems, and tools that turn a vague claim into a
-check someone else can rerun.
+Bug reports, real platform results, redacted failure cases, and focused pull
+requests are welcome through each project's Issues or Discussions area.

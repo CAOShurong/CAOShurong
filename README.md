@@ -12,7 +12,7 @@ self-submitted project listing is not presented as independent adoption.
 
 | Project | What it does | Verifiable entry points |
 |---|---|---|
-| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.0](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.0) · [merged ELN-format contribution](https://github.com/TheELNConsortium/TheELNFileFormat/pull/152) |
+| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.0](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.0) · [accepted ELN fixture](https://github.com/TheELNConsortium/TheELNFileFormat/pull/152) · [accepted specification clarification](https://github.com/TheELNConsortium/TheELNFileFormat/pull/153) |
 | **[WheelWhy](https://github.com/CAOShurong/wheelwhy)** | Explains why a Python wheel matches or misses a declared interpreter and platform; it is not a full pip or uv resolver. | [v0.3.1](https://github.com/CAOShurong/wheelwhy/releases/tag/v0.3.1) · [external feedback and fix](https://github.com/CAOShurong/wheelwhy/issues/14) · [upstream follow-up](https://github.com/pypa/pip/issues/10793#issuecomment-5262361213) |
 | **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Builds a private searchable catalog of unplugged drives, including snapshots, duplicate evidence and physical-location notes. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [quick start](https://github.com/CAOShurong/coldshelf#quick-start) · [limitations](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
 | **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates findings from SARIF, Trivy, Grype, Snyk, CycloneDX, OSV and CSV without hiding merge blockers or scanner disagreement. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [latest release](https://github.com/CAOShurong/vulnfuse/releases/latest) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
@@ -27,18 +27,21 @@ above are the small set I currently use to represent my maintenance work.
 - **Merged:** [TheELNFileFormat PR #152](https://github.com/TheELNConsortium/TheELNFileFormat/pull/152)
   adds a reproducible BenchLineage-generated `.eln` fixture and mapping. It
   passed the upstream schema and validator checks and was approved and merged.
+- **Merged:** [TheELNFileFormat PR #153](https://github.com/TheELNConsortium/TheELNFileFormat/pull/153)
+  clarifies `@type`, `additionalType` and `genre` in the public specification.
+  It was approved and merged, closing issue #105.
+- **Open:** [CycloneDX Python PR #1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028)
+  encodes local XML-schema paths as file URIs and adds a regression test for
+  package paths containing `#`, addressing upstream issue #551.
 - **Open:** [cibuildwheel PR #2966](https://github.com/pypa/cibuildwheel/pull/2966)
   removes an unconditional NuGet fallback source and adds regression coverage
   so configured package sources remain authoritative.
-- **Open:** [Teleplot PR #52](https://github.com/nesnes/teleplot/pull/52)
-  makes the Enter key honor the selected CR, LF or CRLF serial line ending,
-  matching the Send button.
 
-These links show one accepted external contribution and two proposed code
-fixes. They do **not** make me a module owner or core maintainer of those
-projects. Self-submissions that list my own tools in curated lists are excluded
-from this section because they are promotion, not independent maintenance or
-adoption.
+The two accepted contributions make me a **repeat external contributor** to
+TheELNFileFormat. They do **not** make me a module owner or core maintainer;
+the other PRs remain unaccepted proposals. Self-submissions that list my own
+tools in curated lists are excluded from this section because they are
+promotion, not independent maintenance or adoption.
 
 ## Maintenance boundaries
 

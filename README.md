@@ -26,8 +26,11 @@ Recent owned-project maintenance includes [VulnFuse PR #73](https://github.com/C
 which closed issue #72 in v0.4.24 by preserving Trivy SARIF image identity for
 OpenVEX correlation, and [TermScope PR #8](https://github.com/CAOShurong/termscope/pull/8),
 which closed issues #6 and #7 in v0.4.1 by tightening labelled-telemetry token
-boundaries. These owner-authored and owner-merged releases demonstrate active
-maintenance; they are not external contributions or independent adoption.
+boundaries. [JSONXray PR #7](https://github.com/CAOShurong/jsonxray/pull/7)
+closed issues #5 and #6 in [v0.2.1](https://github.com/CAOShurong/jsonxray/releases/tag/v0.2.1)
+by rejecting malformed streamed arrays. These owner-authored and owner-merged
+releases demonstrate active maintenance; they are not external contributions or
+independent adoption.
 
 ## Upstream contributions
 
@@ -47,9 +50,10 @@ maintenance; they are not external contributions or independent adoption.
   validates the specification's single-root-folder archive requirement. It
   passed the upstream check and was approved and merged; related issue #67
   remains open.
-- **Open:** [CycloneDX Python PR #1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028)
+- **Merged:** [CycloneDX Python PR #1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028)
   encodes local XML-schema paths as file URIs and adds a regression test for
-  package paths containing `#`, addressing upstream issue #551.
+  package paths containing `#`. All 47 public checks passed; a project member
+  merged it, closed issue #551 and released it in v11.11.2.
 - **Open:** [cibuildwheel PR #2966](https://github.com/pypa/cibuildwheel/pull/2966)
   removes an unconditional NuGet fallback source and adds regression coverage
   so configured package sources remain authoritative.
@@ -57,13 +61,18 @@ maintenance; they are not external contributions or independent adoption.
   fixes valid ELN imports that contain explicit ZIP directory entries while
   preserving rejection of genuine multi-root archives. It was merged into the
   upstream default branch; GitHub reported no reviews or checks for the PR.
+- **Merged:** [SampleDB PR #92](https://github.com/sciapp/sampledb/pull/92)
+  preserves flexible ELN metadata named `parts` while assigning collision-free
+  keys to generated nested-Dataset relationships. It was merged into the
+  upstream default branch; GitHub again reported no reviews or checks.
 
 The five accepted TheELNFileFormat contributions make me a **repeat external
-contributor** there. SampleDB #91 is one accepted contribution to that separate
-project. They do **not** make me a module owner or core maintainer; the remaining
-PRs are unaccepted proposals. Self-submissions that list my own tools in curated
-lists are excluded from this section because they are promotion, not independent
-maintenance or adoption.
+contributor** there. SampleDB #91 and #92 make me a repeat external contributor
+to that separate project; CycloneDX Python #1028 is one accepted contribution.
+They do **not** make me a module owner or core maintainer; cibuildwheel #2966
+remains an unaccepted proposal. Self-submissions that list my own tools in
+curated lists are excluded from this section because they are promotion, not
+independent maintenance or adoption.
 
 ## Maintenance boundaries
 

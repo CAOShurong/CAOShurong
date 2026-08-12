@@ -1,4 +1,4 @@
-# Shurong Cao
+# CAOShurong
 
 Electrical Engineering PhD researcher at CUHK. I maintain public tools for
 reproducible engineering, Python packaging diagnostics, local-first data work,

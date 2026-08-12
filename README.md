@@ -12,7 +12,7 @@ self-submitted project listing is not presented as independent adoption.
 
 | Project | What it does | Verifiable entry points |
 |---|---|---|
-| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.2](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.2) · [four accepted ELN contributions](https://github.com/TheELNConsortium/TheELNFileFormat/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged) |
+| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.2](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.2) · [five accepted ELN contributions](https://github.com/TheELNConsortium/TheELNFileFormat/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged) |
 | **[WheelWhy](https://github.com/CAOShurong/wheelwhy)** | Explains why a Python wheel matches or misses a declared interpreter and platform; it is not a full pip or uv resolver. | [v0.3.1](https://github.com/CAOShurong/wheelwhy/releases/tag/v0.3.1) · [external feedback and fix](https://github.com/CAOShurong/wheelwhy/issues/14) · [upstream follow-up](https://github.com/pypa/pip/issues/10793#issuecomment-5262361213) |
 | **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Builds a private searchable catalog of unplugged drives, including snapshots, duplicate evidence and physical-location notes. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [quick start](https://github.com/CAOShurong/coldshelf#quick-start) · [limitations](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
 | **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates findings from SARIF, Trivy, Grype, Snyk, CycloneDX, OSV and CSV without hiding merge blockers or scanner disagreement. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [latest release](https://github.com/CAOShurong/vulnfuse/releases/latest) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
@@ -36,6 +36,10 @@ above are the small set I currently use to represent my maintenance work.
 - **Merged:** [TheELNFileFormat PR #155](https://github.com/TheELNConsortium/TheELNFileFormat/pull/155)
   clarifies how child `Dataset` relationships are represented in the public
   specification. It was approved and merged, closing issue #116.
+- **Merged:** [TheELNFileFormat PR #156](https://github.com/TheELNConsortium/TheELNFileFormat/pull/156)
+  validates the specification's single-root-folder archive requirement. It
+  passed the upstream check and was approved and merged; related issue #67
+  remains open.
 - **Open:** [CycloneDX Python PR #1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028)
   encodes local XML-schema paths as file URIs and adds a regression test for
   package paths containing `#`, addressing upstream issue #551.
@@ -47,7 +51,7 @@ above are the small set I currently use to represent my maintenance work.
   preserving rejection of genuine multi-root archives. It was merged into the
   upstream default branch; GitHub reported no reviews or checks for the PR.
 
-The four accepted TheELNFileFormat contributions make me a **repeat external
+The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 is one accepted contribution to that separate
 project. They do **not** make me a module owner or core maintainer; the remaining
 PRs are unaccepted proposals. Self-submissions that list my own tools in curated

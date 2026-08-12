@@ -1,103 +1,54 @@
 # Shurong Cao
 
-Electrical Engineering PhD researcher at CUHK. I build open-source tools for
-practical file and data problems, developer diagnostics, trustworthy AI
-evaluation, and reproducible engineering work.
+Electrical Engineering PhD researcher at CUHK. I maintain public tools for
+reproducible engineering, Python packaging diagnostics, local-first data work,
+and explainable security evidence.
 
-The common thread is inspectability: local-first operation where it matters,
-explicit limitations, real downloadable entry points, and demo data labelled
-as demo data rather than presented as adoption.
+I try to make each claim inspectable: public releases, runnable entry points,
+documented limits, and direct links to upstream work. A download counter or a
+self-submitted project listing is not presented as independent adoption.
 
-## Featured tools
+## Maintained projects
 
-| Project | Use it when... | Start here |
+| Project | What it does | Verifiable entry points |
 |---|---|---|
-| **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | You need to find a file on an unplugged external drive without reconnecting every disk. It keeps a private catalog with search, snapshots, duplicate evidence, physical-location notes, and QR labels. | [latest downloads](https://github.com/CAOShurong/coldshelf/releases/latest) · [5-minute demo](https://github.com/CAOShurong/coldshelf#quick-start) · [feedback](https://github.com/CAOShurong/coldshelf/discussions/5) |
-| **[ScrubProof](https://github.com/CAOShurong/scrubproof)** | You need to share logs and diagnostics without silently shipping tokens, credentials, email addresses, or local paths. It builds an offline, explicitly scoped support bundle with a redaction ledger, per-file hashes, and an independent verification command; it cannot prove that unknown secret formats are absent. | [latest downloads](https://github.com/CAOShurong/scrubproof/releases/latest) · [quick start](https://github.com/CAOShurong/scrubproof#quick-start) · [threat model](https://github.com/CAOShurong/scrubproof/blob/main/docs/threat-model.md) |
-| **[Contact Preflight](https://github.com/CAOShurong/contact-preflight)** | You are moving a vCard address book into Google Contacts, iCloud Contacts, or Outlook and want to catch structural errors, provider limits, loss-prone fields, duplicate candidates, and unsafe batch sizes before importing. It is read-only and never auto-merges people. | [latest downloads](https://github.com/CAOShurong/contact-preflight/releases/latest) · [quick start](https://github.com/CAOShurong/contact-preflight#quick-start) · [privacy boundary](https://github.com/CAOShurong/contact-preflight#privacy-boundary) |
-| **[AI Project Factory](https://github.com/CAOShurong/ai-project-factory)** | You work on the same repository with Codex, Claude, or a bare API and need one model-neutral fact, decision, and handoff layer instead of provider-specific memory. It scaffolds and checks that layer locally with no runtime dependencies. | [latest downloads](https://github.com/CAOShurong/ai-project-factory/releases/latest) · [getting started](https://github.com/CAOShurong/ai-project-factory#getting-started) · [validation evidence](https://github.com/CAOShurong/ai-project-factory/blob/main/VALIDATION.md) |
-| **[ByteThere](https://github.com/CAOShurong/bytethere)** | You are about to wipe, move, or archive a drive and need a read-only preflight for OneDrive/iCloud placeholders, broken links, incompatible names, case or Unicode collisions, path limits, and allocation anomalies. It checks metadata; it does **not** prove backup completeness or file readability. | [latest downloads](https://github.com/CAOShurong/bytethere/releases/latest) · [field-test discussion](https://github.com/CAOShurong/bytethere/discussions/1) |
-| **[OpaqueDrop](https://github.com/CAOShurong/opaquedrop)** | You want an accountless, self-hosted inbound file request where filenames and bytes are encrypted in the sender's browser to a recipient-held key. The server stores ciphertext, but hosted JavaScript remains in the server operator's trust boundary. | [latest downloads](https://github.com/CAOShurong/opaquedrop/releases/latest) · [threat model](https://github.com/CAOShurong/opaquedrop/blob/main/docs/THREAT_MODEL.md) · [feedback](https://github.com/CAOShurong/opaquedrop/discussions/1) |
-| **[WheelWhy](https://github.com/CAOShurong/wheelwhy)** | A Python wheel is rejected and you need a human-readable explanation of which Python, ABI, platform, or `Requires-Python` rule missed. It explains compatibility; it is not a full pip or uv resolver. | [latest downloads](https://github.com/CAOShurong/wheelwhy/releases/latest) · [bring a real wheel error](https://github.com/CAOShurong/wheelwhy/discussions/6) |
-| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Several security scanners report overlapping findings and you need explainable correlation, merge blockers, scanner-overlap evidence, run comparison, and one offline report. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [latest release](https://github.com/CAOShurong/vulnfuse/releases/latest) |
-| **[TermScope](https://github.com/CAOShurong/termscope)** | You need live Arduino, ESP32, or STM32 telemetry in a terminal, including over pipes or SSH, with CSV record/replay and Teleplot stream support. | [`pipx run termscope --demo`](https://pypi.org/project/termscope/) · [latest release](https://github.com/CAOShurong/termscope/releases/latest) · [hardware reports wanted](https://github.com/CAOShurong/termscope/issues/2) |
-| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | You need an auditable chain from experiment intent and instrument identity through raw data, uncertainty, analysis, and reports, plus portable ELN import/export rather than a locked-in notebook. | [PyPI](https://pypi.org/project/benchlineage/) · [latest release](https://github.com/CAOShurong/benchlineage/releases/latest) · [ELN interoperability guide](https://github.com/CAOShurong/benchlineage/blob/main/docs/ELN_INTEROPERABILITY.md) |
+| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.0](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.0) · [merged ELN-format contribution](https://github.com/TheELNConsortium/TheELNFileFormat/pull/152) |
+| **[WheelWhy](https://github.com/CAOShurong/wheelwhy)** | Explains why a Python wheel matches or misses a declared interpreter and platform; it is not a full pip or uv resolver. | [v0.3.1](https://github.com/CAOShurong/wheelwhy/releases/tag/v0.3.1) · [external feedback and fix](https://github.com/CAOShurong/wheelwhy/issues/14) · [upstream follow-up](https://github.com/pypa/pip/issues/10793#issuecomment-5262361213) |
+| **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Builds a private searchable catalog of unplugged drives, including snapshots, duplicate evidence and physical-location notes. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [quick start](https://github.com/CAOShurong/coldshelf#quick-start) · [limitations](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
+| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates findings from SARIF, Trivy, Grype, Snyk, CycloneDX, OSV and CSV without hiding merge blockers or scanner disagreement. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [latest release](https://github.com/CAOShurong/vulnfuse/releases/latest) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
+| **[TermScope](https://github.com/CAOShurong/termscope)** | Plots Arduino, ESP32 and STM32 telemetry in a terminal over serial, pipes or SSH, with CSV record/replay. | [PyPI](https://pypi.org/project/termscope/) · [latest release](https://github.com/CAOShurong/termscope/releases/latest) · [hardware reports wanted](https://github.com/CAOShurong/termscope/issues/2) |
 
-## More focused tools
+[See all repositories](https://github.com/CAOShurong?tab=repositories) and
+[published Python packages](https://pypi.org/user/CAOShurong/). The projects
+above are the small set I currently use to represent my maintenance work.
 
-### Developer diagnostics and verifiable automation
+## Upstream contributions
 
-- **[RunProof](https://github.com/CAOShurong/runproof)** runs coding-agent work
-  in isolated worktrees and accepts it only when user-declared checks pass.
-- **[WillItBreak](https://github.com/CAOShurong/willitbreak)** reports only
-  dependency API breaks that reach your Python call sites.
-- **[SlowImports](https://github.com/CAOShurong/slowimports)** measures Python
-  startup cost and identifies imports that can safely become lazy.
-- **[JSONXray](https://github.com/CAOShurong/jsonxray)** infers the real schema
-  of JSONL/NDJSON streams and points back to outlier records.
-- **[ContextCost](https://github.com/CAOShurong/contextcost)** measures what a
-  repository costs an AI coding agent to read and verifies proposed reductions.
+- **Merged:** [TheELNFileFormat PR #152](https://github.com/TheELNConsortium/TheELNFileFormat/pull/152)
+  adds a reproducible BenchLineage-generated `.eln` fixture and mapping. It
+  passed the upstream schema and validator checks and was approved and merged.
+- **Open:** [cibuildwheel PR #2966](https://github.com/pypa/cibuildwheel/pull/2966)
+  removes an unconditional NuGet fallback source and adds regression coverage
+  so configured package sources remain authoritative.
+- **Open:** [Teleplot PR #52](https://github.com/nesnes/teleplot/pull/52)
+  makes the Enter key honor the selected CR, LF or CRLF serial line ending,
+  matching the Send button.
 
-### Research and evaluation
+These links show one accepted external contribution and two proposed code
+fixes. They do **not** make me a module owner or core maintainer of those
+projects. Self-submissions that list my own tools in curated lists are excluded
+from this section because they are promotion, not independent maintenance or
+adoption.
 
-- **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** evaluates whether
-  an AI tutor produces unaided mastery, transfer, retention, and calibrated
-  confidence—not merely a persuasive answer.
-- **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** supports
-  private blind comparisons of AI products on your own tasks.
-- **[EvalInt](https://github.com/CAOShurong/evalint)** checks LLM evaluation
-  sets for weak reliability, suspicious wrong-answer agreement, and
-  near-duplicates.
-- **[ReproWeave](https://github.com/CAOShurong/reproweave)** maps paper claims
-  to evidence, dependencies, available resources, and a reviewable replication
-  plan.
-- **[OhmJudge](https://github.com/CAOShurong/ohmjudge)** generates fresh
-  electrical-engineering tasks and grades answers locally with executable
-  rules.
+## Maintenance boundaries
 
-## Hardware and offline transfer
+- I am the **primary maintainer** of the owned repositories featured above.
+- I describe external work as merged or open contributions unless a project
+  publicly grants broader responsibility.
+- Synthetic/demo data is labelled as such; it is not presented as a user study
+  or production deployment.
+- Security and research tools publish assumptions and failure boundaries.
+- Stars, downloads, users, benchmarks and testimonials are never fabricated.
 
-The **[STM32F103 multifunction robot
-car](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32)**
-is a photographed and video-demonstrated build with Bluetooth control,
-ultrasonic ranging, obstacle avoidance, four-sensor line tracking, servo
-scanning, and OLED output. The repository includes the STM32CubeIDE project,
-pin map, and two-byte control protocol. Its application-specific code and media
-do not yet have a repository-wide license; the component terms and remaining
-[licensing gap](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32#license-status)
-are documented explicitly, so do not assume reuse rights beyond those terms.
-
-The **[Decimen Optical Transfer field
-fork](https://github.com/CAOShurong/decimen-optical-transfer)** adds an
-installable terminal and SSH sender plus explicit mobile camera selection to
-Evan Crawley's MIT-licensed screen-to-camera transfer project. It sends files,
-binary stdin, or text through fountain-coded animated QR without a
-receiver-side network path. [Try the receiver](https://caoshurong.github.io/decimen-optical-transfer/receive/)
-or [download v0.4.0-field.1](https://github.com/CAOShurong/decimen-optical-transfer/releases/tag/v0.4.0-field.1).
-
-## Open-source contributions
-
-- **[Teleplot PR #52](https://github.com/nesnes/teleplot/pull/52)** makes the
-  Enter key in Teleplot's VS Code serial sender honor the selected CR, LF, or
-  CRLF ending, matching the Send button. It is awaiting maintainer review and
-  is not presented as an upstream release.
-- **[Awesome Software Supply Chain Security PR
-  #95](https://github.com/bureado/awesome-software-supply-chain-security/pull/95)**,
-  **[Awesome SBOM PR #66](https://github.com/awesomeSBOM/awesome-sbom/pull/66)**,
-  and **[Awesome CLI Apps PR
-  #356](https://github.com/toolleeo/awesome-cli-apps-in-a-csv/pull/356)** are
-  transparent submissions for VulnFuse and TermScope, currently awaiting
-  upstream review.
-
-## What I try to make verifiable
-
-- Hosted demonstrations use synthetic or fictional data when no real study has
-  been run, and say so visibly.
-- Security and research tools publish their threat models, assumptions, and
-  failure boundaries instead of collapsing them into one confident claim.
-- Releases, installation paths, checksums, and important failure modes are
-  exercised through public artifacts, not inferred from source code alone.
-- Stars, downloads, users, benchmarks, and testimonials are never fabricated.
-
-Bug reports, real platform results, redacted failure cases, and focused pull
-requests are welcome through each project's Issues or Discussions area.
+Focused bug reports, real platform results and reviewable pull requests are
+welcome through each project's public Issues or Discussions.

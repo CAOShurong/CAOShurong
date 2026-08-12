@@ -1,0 +1,30 @@
+name: Profile links
+
+on:
+  pull_request:
+    paths:
+      - README.md
+      - .github/workflows/profile-links.yml
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - .github/workflows/profile-links.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: Check public links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check README links
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          args: --no-progress --verbose --accept 200,429 README.md

@@ -12,7 +12,7 @@ self-submitted project listing is not presented as independent adoption.
 
 | Project | What it does | Verifiable entry points |
 |---|---|---|
-| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.4](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.4) · [five accepted ELN contributions](https://github.com/TheELNConsortium/TheELNFileFormat/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged) |
+| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.5](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.5) · [five accepted ELN contributions](https://github.com/TheELNConsortium/TheELNFileFormat/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged) |
 | **[WheelWhy](https://github.com/CAOShurong/wheelwhy)** | Explains why a Python wheel matches or misses a declared interpreter and platform; it is not a full pip or uv resolver. | [v0.3.1](https://github.com/CAOShurong/wheelwhy/releases/tag/v0.3.1) · [external feedback and fix](https://github.com/CAOShurong/wheelwhy/issues/14) · [upstream follow-up](https://github.com/pypa/pip/issues/10793#issuecomment-5262361213) |
 | **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Builds a private searchable catalog of unplugged drives, including snapshots, duplicate evidence and physical-location notes. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [quick start](https://github.com/CAOShurong/coldshelf#quick-start) · [limitations](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
 | **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates findings from SARIF, Trivy, Grype, Snyk, CycloneDX, OSV and CSV without hiding merge blockers or scanner disagreement. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.4.24](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.24) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
@@ -28,9 +28,9 @@ OpenVEX correlation, and [TermScope PR #8](https://github.com/CAOShurong/termsco
 which closed issues #6 and #7 in v0.4.1 by tightening labelled-telemetry token
 boundaries. [JSONXray PR #7](https://github.com/CAOShurong/jsonxray/pull/7)
 closed issues #5 and #6 in [v0.2.1](https://github.com/CAOShurong/jsonxray/releases/tag/v0.2.1)
-by rejecting malformed streamed arrays. [BenchLineage PR #18](https://github.com/CAOShurong/benchlineage/pull/18)
-closed issues #14-#17 in [v0.3.4](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.4)
-by hardening Windows and Unicode interoperability, while [SlowImports PR #6](https://github.com/CAOShurong/slowimports/pull/6)
+by rejecting malformed streamed arrays. [BenchLineage PR #20](https://github.com/CAOShurong/benchlineage/pull/20)
+closed issue #19 in [v0.3.5](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.5)
+by adding explicit ELN data-license metadata, while [SlowImports PR #6](https://github.com/CAOShurong/slowimports/pull/6)
 closed issues #4 and #5 in [v0.2.1](https://github.com/CAOShurong/slowimports/releases/tag/v0.2.1)
 by preserving target failures and Unicode streams. These owner-authored and
 owner-merged releases demonstrate active maintenance; they are not external

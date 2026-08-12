@@ -42,15 +42,17 @@ above are the small set I currently use to represent my maintenance work.
 - **Open:** [cibuildwheel PR #2966](https://github.com/pypa/cibuildwheel/pull/2966)
   removes an unconditional NuGet fallback source and adds regression coverage
   so configured package sources remain authoritative.
-- **Open:** [SampleDB PR #91](https://github.com/sciapp/sampledb/pull/91)
-  ignores explicit ZIP directory entries while preserving rejection of genuine
-  multi-root ELN archives. GitHub currently reports no checks for this PR.
+- **Merged:** [SampleDB PR #91](https://github.com/sciapp/sampledb/pull/91)
+  fixes valid ELN imports that contain explicit ZIP directory entries while
+  preserving rejection of genuine multi-root archives. It was merged into the
+  upstream default branch; GitHub reported no reviews or checks for the PR.
 
-The four accepted contributions make me a **repeat external contributor** to
-TheELNFileFormat. They do **not** make me a module owner or core maintainer;
-the other PRs remain unaccepted proposals. Self-submissions that list my own
-tools in curated lists are excluded from this section because they are
-promotion, not independent maintenance or adoption.
+The four accepted TheELNFileFormat contributions make me a **repeat external
+contributor** there. SampleDB #91 is one accepted contribution to that separate
+project. They do **not** make me a module owner or core maintainer; the remaining
+PRs are unaccepted proposals. Self-submissions that list my own tools in curated
+lists are excluded from this section because they are promotion, not independent
+maintenance or adoption.
 
 ## Maintenance boundaries
 

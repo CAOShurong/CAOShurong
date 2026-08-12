@@ -15,12 +15,19 @@ self-submitted project listing is not presented as independent adoption.
 | **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.2](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.2) · [five accepted ELN contributions](https://github.com/TheELNConsortium/TheELNFileFormat/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged) |
 | **[WheelWhy](https://github.com/CAOShurong/wheelwhy)** | Explains why a Python wheel matches or misses a declared interpreter and platform; it is not a full pip or uv resolver. | [v0.3.1](https://github.com/CAOShurong/wheelwhy/releases/tag/v0.3.1) · [external feedback and fix](https://github.com/CAOShurong/wheelwhy/issues/14) · [upstream follow-up](https://github.com/pypa/pip/issues/10793#issuecomment-5262361213) |
 | **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Builds a private searchable catalog of unplugged drives, including snapshots, duplicate evidence and physical-location notes. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [quick start](https://github.com/CAOShurong/coldshelf#quick-start) · [limitations](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
-| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates findings from SARIF, Trivy, Grype, Snyk, CycloneDX, OSV and CSV without hiding merge blockers or scanner disagreement. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [latest release](https://github.com/CAOShurong/vulnfuse/releases/latest) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
-| **[TermScope](https://github.com/CAOShurong/termscope)** | Plots Arduino, ESP32 and STM32 telemetry in a terminal over serial, pipes or SSH, with CSV record/replay. | [PyPI](https://pypi.org/project/termscope/) · [latest release](https://github.com/CAOShurong/termscope/releases/latest) · [hardware reports wanted](https://github.com/CAOShurong/termscope/issues/2) |
+| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates findings from SARIF, Trivy, Grype, Snyk, CycloneDX, OSV and CSV without hiding merge blockers or scanner disagreement. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.4.24](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.24) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
+| **[TermScope](https://github.com/CAOShurong/termscope)** | Plots Arduino, ESP32 and STM32 telemetry in a terminal over serial, pipes or SSH, with CSV record/replay. | [PyPI](https://pypi.org/project/termscope/) · [v0.4.1](https://github.com/CAOShurong/termscope/releases/tag/v0.4.1) · [hardware reports wanted](https://github.com/CAOShurong/termscope/issues/2) |
 
 [See all repositories](https://github.com/CAOShurong?tab=repositories) and
 [published Python packages](https://pypi.org/user/CAOShurong/). The projects
 above are the small set I currently use to represent my maintenance work.
+
+Recent owned-project maintenance includes [VulnFuse PR #73](https://github.com/CAOShurong/vulnfuse/pull/73),
+which closed issue #72 in v0.4.24 by preserving Trivy SARIF image identity for
+OpenVEX correlation, and [TermScope PR #8](https://github.com/CAOShurong/termscope/pull/8),
+which closed issues #6 and #7 in v0.4.1 by tightening labelled-telemetry token
+boundaries. These owner-authored and owner-merged releases demonstrate active
+maintenance; they are not external contributions or independent adoption.
 
 ## Upstream contributions
 

@@ -74,6 +74,13 @@ contributions or independent adoption.
   flake8 and package builds, then requested changes because two rejected
   validation invocations printed errors but returned success exit code 0. This
   is actionable review evidence, not approval, acceptance or maintainer authority.
+- **Review:** [python-docx-template PR #648](https://github.com/elapouya/python-docx-template/pull/648#pullrequestreview-4927626895)
+  preserves optional `Subdoc` imports while sorting package imports. I ran all
+  37 test scripts, flake8, package builds and clean-wheel environments both
+  with and without `docxcompose`; normal and subdocument outputs rendered and
+  reopened successfully. I approved exact head `f583ed34`; all 14 upstream
+  checks pass. The PR remains open, so this is review evidence rather than
+  acceptance or maintainer authority.
 - **Open maintainer-path work:** [python-docx-template PR #662](https://github.com/elapouya/python-docx-template/pull/662)
   fixes escaped Jinja delimiters split across Word runs for issue #548, including
   the original attached document and Python 3.9/3.13 regression runs. I also
@@ -116,7 +123,7 @@ contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028, Keycloak #51697 and eLabFTW
 #7267 are one accepted contribution each. They do **not** make me a module owner or core
 maintainer. CycloneDX Python #1016 and specification #1019 are review
-contributions; python-docx-template #661 and #642 are independently tested
+contributions; python-docx-template #661, #642 and #648 are independently tested
 reviews, while python-docx-template #662 and cibuildwheel #2966 remain
 unaccepted proposals. The python-docx-template work follows a public
 candidate route but is not a maintainer appointment. The eLabFTW fixture is cross-producer

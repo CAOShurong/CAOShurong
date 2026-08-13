@@ -72,6 +72,8 @@ contributions or independent adoption.
   adds the licensed BenchLineage v0.3.5 demo as a cross-producer ELN import
   fixture after a maintainer welcomed the proposal in issue #7263. A real
   PHP/MySQL import selected an experiment and preserved all 20 linked uploads.
+  At tested head `baeb6e37`, the exact 20-name assertion is public, the CLA is
+  signed, and all current CodeQL, Codespell, CodeRabbit and CircleCI checks pass.
 - **Open:** [cibuildwheel PR #2966](https://github.com/pypa/cibuildwheel/pull/2966)
   removes an unconditional NuGet fallback source and adds regression coverage
   so configured package sources remain authoritative.

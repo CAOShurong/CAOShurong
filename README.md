@@ -11,7 +11,7 @@ self-submitted project listing is not presented as independent adoption.
 ## Maintained projects
 
 | Project | What it does | Verifiable entry points |
-|---|---|---|
+| --- | --- | --- |
 | **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.5](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.5) · [five accepted ELN contributions](https://github.com/TheELNConsortium/TheELNFileFormat/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged) |
 | **[WheelWhy](https://github.com/CAOShurong/wheelwhy)** | Explains why a Python wheel matches or misses a declared interpreter and platform; it is not a full pip or uv resolver. | [v0.3.1](https://github.com/CAOShurong/wheelwhy/releases/tag/v0.3.1) · [external feedback and fix](https://github.com/CAOShurong/wheelwhy/issues/14) · [upstream follow-up](https://github.com/pypa/pip/issues/10793#issuecomment-5262361213) |
 | **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Builds a private searchable catalog of unplugged drives, including snapshots, duplicate evidence and physical-location notes. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [quick start](https://github.com/CAOShurong/coldshelf#quick-start) · [limitations](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
@@ -109,6 +109,25 @@ contributions or independent adoption.
 - **Open:** [cibuildwheel PR #2966](https://github.com/pypa/cibuildwheel/pull/2966)
   removes an unconditional NuGet fallback source and adds regression coverage
   so configured package sources remain authoritative.
+- **Open after maintainer feedback:**
+  [tox PR #4022](https://github.com/tox-dev/tox/pull/4022)
+  provisions the requested tox version before reading version-specific
+  configuration. I added exact `tox l` and `tox c` behavior coverage requested
+  in review; the current head passes the full upstream check matrix and the
+  addressed review thread is resolved. The PR remains unaccepted.
+- **Open:** [BuildKit PR #7038](https://github.com/moby/buildkit/pull/7038)
+  makes `history.maxEntries=0` explicitly disable build-history persistence.
+  The focused integration test passed across nine worker variants and the
+  approved fork workflow matrix is green; no maintainer has accepted it yet.
+- **Open:** [Airflow PR #71535](https://github.com/apache/airflow/pull/71535)
+  refreshes a stale local bare Git origin when a requested bundle tracking ref
+  cannot be resolved. Focused, module, type, packaging and real promotion paths
+  passed locally; the large upstream matrix is still running, so this is not
+  reported as accepted or fully green.
+- **Open:** [Astropy PR #20234](https://github.com/astropy/astropy/pull/20234)
+  rejects FITS tables with more than 999 physical columns before writing a
+  partial file and adds the 999/1000 boundary regression. It remains awaiting
+  maintainer review and is not an accepted contribution.
 - **Merged:** [SampleDB PR #91](https://github.com/sciapp/sampledb/pull/91)
   fixes valid ELN imports that contain explicit ZIP directory entries while
   preserving rejection of genuine multi-root archives. It was merged into the
@@ -121,7 +140,8 @@ contributions or independent adoption.
 The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028, Keycloak #51697 and eLabFTW
-#7267 are one accepted contribution each. They do **not** make me a module owner or core
+PR #7267 are one accepted contribution each. They do **not** make me a module
+owner or core
 maintainer. CycloneDX Python #1016 and specification #1019 are review
 contributions; python-docx-template #661, #642 and #648 are independently tested
 reviews, while python-docx-template #662 and cibuildwheel #2966 remain

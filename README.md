@@ -58,6 +58,11 @@ contributions or independent adoption.
   encodes local XML-schema paths as file URIs and adds a regression test for
   package paths containing `#`. All 47 public checks passed; a project member
   merged it, closed issue #551 and released it in v11.11.2.
+- **Review:** [CycloneDX Python PR #1016](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1016)
+  initially lost a strict-valid CycloneDX 1.7 relationship during model round
+  trips. I reproduced the defect and requested bounded coverage; the external
+  author implemented it. I reran 770 related and 6,994 full tests on exact head
+  `ea7d2ca`, then approved that revision. The PR remains open and unaccepted.
 - **Merged:** [Keycloak PR #51697](https://github.com/keycloak/keycloak/pull/51697)
   reports OID4VCI credential-request errors consistently and adds regression
   coverage for missing claims metadata and invalid proof timing. It fixed
@@ -90,9 +95,10 @@ The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028 and Keycloak #51697 are one
 accepted contribution each. They do **not** make me a module owner or core
-maintainer. CycloneDX specification #1019 is a review contribution, while
-eLabFTW #7267 and cibuildwheel #2966 remain unaccepted proposals. The eLabFTW
-fixture is cross-producer integration evidence, not independent adoption.
+maintainer. CycloneDX Python #1016 and specification #1019 are review
+contributions, while eLabFTW #7267 and cibuildwheel #2966 remain unaccepted
+proposals. The eLabFTW fixture is cross-producer integration evidence, not
+independent adoption.
 Self-submissions
 that list my own tools in
 curated lists are excluded from this section because they are promotion, not

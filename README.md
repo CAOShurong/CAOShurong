@@ -81,6 +81,18 @@ contributions or independent adoption.
   reopened successfully. I approved exact head `f583ed34`; all 14 upstream
   checks pass. The PR remains open, so this is review evidence rather than
   acceptance or maintainer authority.
+- **Review:** [Argo CD PR #29175](https://github.com/argoproj/argo-cd/pull/29175#pullrequestreview-4928056635)
+  proposed boolean parsing that diverged from bundled Dex v2.45.1. I reproduced
+  three boundary failures and verified a `strconv.ParseBool` candidate with
+  focused and full `util/dex` tests plus `go vet`, then requested compatible
+  parsing and tests. This is actionable review evidence, not delegated Argo CD
+  responsibility or acceptance.
+- **Review:** [pandas PR #66623](https://github.com/pandas-dev/pandas/pull/66623#pullrequestreview-4928066161)
+  improved Arrow-string memory accounting in a clean installed wheel, but two
+  exact MultiIndex memory tests failed, the public doctest expectation was
+  stale, and the branch conflicted with `main`. I submitted a tested
+  `CHANGES_REQUESTED` review on exact head `ece0d447`. The PR remains open and
+  this does not establish pandas maintainer authority.
 - **Open maintainer-path work:** [python-docx-template PR #662](https://github.com/elapouya/python-docx-template/pull/662)
   fixes escaped Jinja delimiters split across Word runs for issue #548, including
   the original attached document and Python 3.9/3.13 regression runs. I also
@@ -143,8 +155,9 @@ to that separate project; CycloneDX Python #1028, Keycloak #51697 and eLabFTW
 PR #7267 are one accepted contribution each. They do **not** make me a module
 owner or core
 maintainer. CycloneDX Python #1016 and specification #1019 are review
-contributions; python-docx-template #661, #642 and #648 are independently tested
-reviews, while python-docx-template #662 and cibuildwheel #2966 remain
+contributions; python-docx-template #661, #642 and #648, Argo CD #29175 and
+pandas #66623 are independently tested reviews, while python-docx-template #662
+and cibuildwheel #2966 remain
 unaccepted proposals. The python-docx-template work follows a public
 candidate route but is not a maintainer appointment. The eLabFTW fixture is cross-producer
 integration evidence, not independent adoption.

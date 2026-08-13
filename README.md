@@ -68,6 +68,12 @@ contributions or independent adoption.
   I compared the published 0.20.2 source distribution with the exact PR head,
   rebuilt both package formats, ran 36 installed-wheel test scripts and the CLI
   path, and approved the third-party change. The PR remains open and unaccepted.
+- **Review:** [python-docx-template PR #642](https://github.com/elapouya/python-docx-template/pull/642#pullrequestreview-4927259884)
+  adds CLI template-syntax validation and JSON reports. On exact head `c1259ab`,
+  I verified source and installed-wheel behavior, all 36 non-runner scripts,
+  flake8 and package builds, then requested changes because two rejected
+  validation invocations printed errors but returned success exit code 0. This
+  is actionable review evidence, not approval, acceptance or maintainer authority.
 - **Open maintainer-path work:** [python-docx-template PR #662](https://github.com/elapouya/python-docx-template/pull/662)
   fixes escaped Jinja delimiters split across Word runs for issue #548, including
   the original attached document and Python 3.9/3.13 regression runs. I also
@@ -108,10 +114,10 @@ contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028 and Keycloak #51697 are one
 accepted contribution each. They do **not** make me a module owner or core
 maintainer. CycloneDX Python #1016 and specification #1019 are review
-contributions; python-docx-template #661 is another independently tested review,
-while python-docx-template #662, eLabFTW #7267 and cibuildwheel #2966 remain
-unaccepted proposals. The python-docx-template work follows a public candidate
-route but is not a maintainer appointment. The eLabFTW fixture is cross-producer
+contributions; python-docx-template #661 and #642 are independently tested
+reviews, while python-docx-template #662, eLabFTW #7267 and cibuildwheel #2966
+remain unaccepted proposals. The python-docx-template work follows a public
+candidate route but is not a maintainer appointment. The eLabFTW fixture is cross-producer
 integration evidence, not independent adoption.
 Self-submissions
 that list my own tools in

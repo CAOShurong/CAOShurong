@@ -63,6 +63,15 @@ contributions or independent adoption.
   coverage for missing claims metadata and invalid proof timing. It fixed
   help-wanted issue #51692, received maintainer approval, passed the upstream
   check matrix and was merged into the default branch.
+- **Review:** [CycloneDX specification PR #1019](https://github.com/CycloneDX/specification/pull/1019)
+  implements the schema defect I reported in issue #1018. I independently ran
+  the Java, Node and Buf gates on its exact head, approved it, and closed my
+  later duplicate #1020 to reduce maintainer work. The third-party PR remains
+  open and unaccepted.
+- **Open:** [eLabFTW PR #7267](https://github.com/elabftw/elabftw/pull/7267)
+  adds the licensed BenchLineage v0.3.5 demo as a cross-producer ELN import
+  fixture after a maintainer welcomed the proposal in issue #7263. A real
+  PHP/MySQL import selected an experiment and preserved all 20 linked uploads.
 - **Open:** [cibuildwheel PR #2966](https://github.com/pypa/cibuildwheel/pull/2966)
   removes an unconditional NuGet fallback source and adds regression coverage
   so configured package sources remain authoritative.
@@ -79,7 +88,10 @@ The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028 and Keycloak #51697 are one
 accepted contribution each. They do **not** make me a module owner or core
-maintainer; cibuildwheel #2966 remains an unaccepted proposal. Self-submissions
+maintainer. CycloneDX specification #1019 is a review contribution, while
+eLabFTW #7267 and cibuildwheel #2966 remain unaccepted proposals. The eLabFTW
+fixture is cross-producer integration evidence, not independent adoption.
+Self-submissions
 that list my own tools in
 curated lists are excluded from this section because they are promotion, not
 independent maintenance or adoption.

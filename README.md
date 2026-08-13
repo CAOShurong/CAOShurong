@@ -91,12 +91,14 @@ contributions or independent adoption.
   the Java, Node and Buf gates on its exact head, approved it, and closed my
   later duplicate #1020 to reduce maintainer work. The third-party PR remains
   open and unaccepted.
-- **Open:** [eLabFTW PR #7267](https://github.com/elabftw/elabftw/pull/7267)
+- **Merged:** [eLabFTW PR #7267](https://github.com/elabftw/elabftw/pull/7267)
   adds the licensed BenchLineage v0.3.5 demo as a cross-producer ELN import
   fixture after a maintainer welcomed the proposal in issue #7263. A real
   PHP/MySQL import selected an experiment and preserved all 20 linked uploads.
-  At tested head `baeb6e37`, the exact 20-name assertion is public, the CLA is
-  signed, and all current CodeQL, Codespell, CodeRabbit and CircleCI checks pass.
+  Maintainer `NicolasCARPi` approved exact head `baeb6e37`; all ten checks passed,
+  and merge `77b941e1` placed the byte-identical release asset on default `master`.
+  This is accepted external integration work, not independent user adoption or
+  eLabFTW maintainer authority.
 - **Open:** [cibuildwheel PR #2966](https://github.com/pypa/cibuildwheel/pull/2966)
   removes an unconditional NuGet fallback source and adds regression coverage
   so configured package sources remain authoritative.
@@ -111,12 +113,12 @@ contributions or independent adoption.
 
 The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
-to that separate project; CycloneDX Python #1028 and Keycloak #51697 are one
-accepted contribution each. They do **not** make me a module owner or core
+to that separate project; CycloneDX Python #1028, Keycloak #51697 and eLabFTW
+#7267 are one accepted contribution each. They do **not** make me a module owner or core
 maintainer. CycloneDX Python #1016 and specification #1019 are review
 contributions; python-docx-template #661 and #642 are independently tested
-reviews, while python-docx-template #662, eLabFTW #7267 and cibuildwheel #2966
-remain unaccepted proposals. The python-docx-template work follows a public
+reviews, while python-docx-template #662 and cibuildwheel #2966 remain
+unaccepted proposals. The python-docx-template work follows a public
 candidate route but is not a maintainer appointment. The eLabFTW fixture is cross-producer
 integration evidence, not independent adoption.
 Self-submissions

@@ -58,6 +58,11 @@ contributions or independent adoption.
   encodes local XML-schema paths as file URIs and adds a regression test for
   package paths containing `#`. All 47 public checks passed; a project member
   merged it, closed issue #551 and released it in v11.11.2.
+- **Merged:** [Keycloak PR #51697](https://github.com/keycloak/keycloak/pull/51697)
+  reports OID4VCI credential-request errors consistently and adds regression
+  coverage for missing claims metadata and invalid proof timing. It fixed
+  help-wanted issue #51692, received maintainer approval, passed the upstream
+  check matrix and was merged into the default branch.
 - **Open:** [cibuildwheel PR #2966](https://github.com/pypa/cibuildwheel/pull/2966)
   removes an unconditional NuGet fallback source and adds regression coverage
   so configured package sources remain authoritative.
@@ -72,9 +77,10 @@ contributions or independent adoption.
 
 The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
-to that separate project; CycloneDX Python #1028 is one accepted contribution.
-They do **not** make me a module owner or core maintainer; cibuildwheel #2966
-remains an unaccepted proposal. Self-submissions that list my own tools in
+to that separate project; CycloneDX Python #1028 and Keycloak #51697 are one
+accepted contribution each. They do **not** make me a module owner or core
+maintainer; cibuildwheel #2966 remains an unaccepted proposal. Self-submissions
+that list my own tools in
 curated lists are excluded from this section because they are promotion, not
 independent maintenance or adoption.
 

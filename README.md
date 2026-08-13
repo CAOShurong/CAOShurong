@@ -63,6 +63,18 @@ contributions or independent adoption.
   trips. I reproduced the defect and requested bounded coverage; the external
   author implemented it. I reran 770 related and 6,994 full tests on exact head
   `ea7d2ca`, then approved that revision. The PR remains open and unaccepted.
+- **Review:** [python-docx-template PR #661](https://github.com/elapouya/python-docx-template/pull/661)
+  makes the intended license and test contents of source distributions explicit.
+  I compared the published 0.20.2 source distribution with the exact PR head,
+  rebuilt both package formats, ran 36 installed-wheel test scripts and the CLI
+  path, and approved the third-party change. The PR remains open and unaccepted.
+- **Open maintainer-path work:** [python-docx-template PR #662](https://github.com/elapouya/python-docx-template/pull/662)
+  fixes escaped Jinja delimiters split across Word runs for issue #548, including
+  the original attached document and Python 3.9/3.13 regression runs. I also
+  [triaged issue #627](https://github.com/elapouya/python-docx-template/issues/627#issuecomment-5280267748)
+  with a two-page reproduction and an exact artifact request. The project owner
+  [publicly asks maintainer candidates to contribute first](https://github.com/elapouya/python-docx-template/issues/631);
+  these actions follow that path but do not grant me maintainer authority.
 - **Merged:** [Keycloak PR #51697](https://github.com/keycloak/keycloak/pull/51697)
   reports OID4VCI credential-request errors consistently and adds regression
   coverage for missing claims metadata and invalid proof timing. It fixed
@@ -96,9 +108,11 @@ contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028 and Keycloak #51697 are one
 accepted contribution each. They do **not** make me a module owner or core
 maintainer. CycloneDX Python #1016 and specification #1019 are review
-contributions, while eLabFTW #7267 and cibuildwheel #2966 remain unaccepted
-proposals. The eLabFTW fixture is cross-producer integration evidence, not
-independent adoption.
+contributions; python-docx-template #661 is another independently tested review,
+while python-docx-template #662, eLabFTW #7267 and cibuildwheel #2966 remain
+unaccepted proposals. The python-docx-template work follows a public candidate
+route but is not a maintainer appointment. The eLabFTW fixture is cross-producer
+integration evidence, not independent adoption.
 Self-submissions
 that list my own tools in
 curated lists are excluded from this section because they are promotion, not

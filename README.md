@@ -121,12 +121,12 @@ contributions or independent adoption.
 - **Open:** [cibuildwheel PR #2966](https://github.com/pypa/cibuildwheel/pull/2966)
   removes an unconditional NuGet fallback source and adds regression coverage
   so configured package sources remain authoritative.
-- **Open after maintainer feedback:**
+- **Merged after maintainer feedback:**
   [tox PR #4022](https://github.com/tox-dev/tox/pull/4022)
   provisions the requested tox version before reading version-specific
   configuration. I added exact `tox l` and `tox c` behavior coverage requested
-  in review; the current head passes the full upstream check matrix and the
-  addressed review thread is resolved. The PR remains unaccepted.
+  in review. Maintainer `gaborbernat` approved exact head `21de6da9`; all 30
+  checks passed, merge `c3f8d227` entered default `main`, and issue #4021 closed.
 - **Open:** [BuildKit PR #7038](https://github.com/moby/buildkit/pull/7038)
   makes `history.maxEntries=0` explicitly disable build-history persistence.
   The focused integration test passed across nine worker variants and the
@@ -151,8 +151,9 @@ contributions or independent adoption.
 
 The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
-to that separate project; CycloneDX Python #1028, Keycloak #51697 and eLabFTW
-PR #7267 are one accepted contribution each. They do **not** make me a module
+to that separate project; CycloneDX Python #1028, Keycloak #51697, eLabFTW
+PR #7267 and tox #4022 are one accepted contribution each. They do **not** make
+me a module
 owner or core
 maintainer. CycloneDX Python #1016 and specification #1019 are review
 contributions; python-docx-template #661, #642 and #648, Argo CD #29175 and

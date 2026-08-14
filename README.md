@@ -77,6 +77,14 @@ contributions or independent adoption.
   dependency reference sets. I approved exact head `caa74d7`; the PR remains
   open, and this is tested review evidence rather than assigned review duty,
   merge authority or maintainership.
+- **Review:** [CycloneDX Python PR #940](https://github.com/CycloneDX/cyclonedx-python-lib/pull/940#pullrequestreview-4934245554)
+  adds bounded, structured JSON/XML validation errors. On exact head
+  `ac93dbca`, I ran 1,620 focused and 6,959 full tests and scanned all 359
+  repository JSON fixtures. The scan reproduced a misleading nested-error
+  selection in 10 of 21 contextual errors, including the repository's mixed
+  declared/concluded-license fixture. I requested a tie-aware selection and a
+  regression. The PR remains open and conflicting; this is tested review
+  evidence, not accepted code, assigned duty, merge authority or maintainership.
 - **Review:** [python-docx-template PR #661](https://github.com/elapouya/python-docx-template/pull/661)
   makes the intended license and test contents of source distributions explicit.
   I compared the published 0.20.2 source distribution with the exact PR head,
@@ -176,7 +184,7 @@ to that separate project; CycloneDX Python #1028, Keycloak #51697, eLabFTW
 PR #7267 and tox #4022 are one accepted contribution each. They do **not** make
 me a module
 owner or core
-maintainer. CycloneDX Python #1007/#1015/#1016 and specification #1019 are review
+maintainer. CycloneDX Python #940/#1007/#1015/#1016 and specification #1019 are review
 contributions; python-docx-template #661, #642 and #648, Argo CD #29175 and
 pandas #66623 are independently tested reviews, while python-docx-template #662
 and cibuildwheel #2966 remain

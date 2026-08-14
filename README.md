@@ -138,8 +138,15 @@ contributions or independent adoption.
   reported as accepted or fully green.
 - **Open:** [Astropy PR #20234](https://github.com/astropy/astropy/pull/20234)
   rejects FITS tables with more than 999 physical columns before writing a
-  partial file and adds the 999/1000 boundary regression. It remains awaiting
-  maintainer review and is not an accepted contribution.
+  partial file and adds the 999/1000 boundary regression. Astropy member
+  `pllim` requested a plain-text changelog entry; I pushed the tested one-line
+  change and resolved the sole review thread. The review was not an approval,
+  and the PR remains unaccepted.
+- **Open:** [Kustomize PR #6224](https://github.com/kubernetes-sigs/kustomize/pull/6224)
+  adds legacy release-download support for pre-module tags and assets. A project
+  member issued `/ok-to-test`, and all 23 executable source, platform and
+  deployment checks pass. The official EasyCLA rerun still reports missing
+  authorization, so this remains a blocked proposal rather than accepted work.
 - **Merged:** [SampleDB PR #91](https://github.com/sciapp/sampledb/pull/91)
   fixes valid ELN imports that contain explicit ZIP directory entries while
   preserving rejection of genuine multi-root archives. It was merged into the

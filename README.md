@@ -69,6 +69,14 @@ contributions or independent adoption.
   builds, and a clean-wheel JSON/XML validation and downgrade round trip, then
   approved exact head `fd0ec256`. The PR remains open and unaccepted; this is
   review evidence rather than merge authority or maintainership.
+- **Review:** [CycloneDX Python PR #1007](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1007#pullrequestreview-4934164425)
+  removes quadratic dependency registration from `Bom.validate()`. I ran all
+  6,961 tests, exercised the complexity guard across 20 hash seeds, compared
+  base/candidate equality counts, and generated strict-valid 1.6 JSON at
+  1,000, 2,000 and 4,000 components while preserving exact component and
+  dependency reference sets. I approved exact head `caa74d7`; the PR remains
+  open, and this is tested review evidence rather than assigned review duty,
+  merge authority or maintainership.
 - **Review:** [python-docx-template PR #661](https://github.com/elapouya/python-docx-template/pull/661)
   makes the intended license and test contents of source distributions explicit.
   I compared the published 0.20.2 source distribution with the exact PR head,
@@ -168,7 +176,7 @@ to that separate project; CycloneDX Python #1028, Keycloak #51697, eLabFTW
 PR #7267 and tox #4022 are one accepted contribution each. They do **not** make
 me a module
 owner or core
-maintainer. CycloneDX Python #1015/#1016 and specification #1019 are review
+maintainer. CycloneDX Python #1007/#1015/#1016 and specification #1019 are review
 contributions; python-docx-template #661, #642 and #648, Argo CD #29175 and
 pandas #66623 are independently tested reviews, while python-docx-template #662
 and cibuildwheel #2966 remain

@@ -58,6 +58,13 @@ contributions or independent adoption.
   encodes local XML-schema paths as file URIs and adds a regression test for
   package paths containing `#`. All 47 public checks passed; a project member
   merged it, closed issue #551 and released it in v11.11.2.
+- **Open:** [CycloneDX JavaScript PR #1507](https://github.com/CycloneDX/cyclonedx-javascript-library/pull/1507)
+  maps string-valued `package.json` engine constraints to the official npm
+  CycloneDX taxonomy and ignores malformed non-string values. I ran all 4,166
+  tests, lint, standards and dependency checks, Node/web/declaration builds,
+  and a clean packed-tarball runtime probe. All four reported public checks
+  pass. The PR remains open and unaccepted; it does not establish maintainer
+  authority or independent adoption.
 - **Review:** [CycloneDX Python PR #1016](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1016)
   initially lost a strict-valid CycloneDX 1.7 relationship during model round
   trips. I reproduced the defect and requested bounded coverage; the external
@@ -181,7 +188,8 @@ contributions or independent adoption.
 The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028, Keycloak #51697, eLabFTW
-PR #7267 and tox #4022 are one accepted contribution each. They do **not** make
+PR #7267 and tox #4022 are one accepted contribution each. CycloneDX
+JavaScript #1507 is a separate open ecosystem contribution. They do **not** make
 me a module
 owner or core
 maintainer. CycloneDX Python #940/#1007/#1015/#1016 and specification #1019 are review

@@ -43,6 +43,30 @@ importer tests, and TheELN also keeps a BenchLineage fixture in its test matrix.
 Both integrations were proposed and authored by me, so they are durable
 cross-project compatibility contracts rather than independent adoption.
 
+## Account-wide governance and current boundaries
+
+The account-wide [`CAOShurong/.github`](https://github.com/CAOShurong/.github)
+defaults now include a public [CODE_OF_CONDUCT.md](https://github.com/CAOShurong/.github/blob/main/CODE_OF_CONDUCT.md)
+and [SECURITY.md](https://github.com/CAOShurong/.github/blob/main/SECURITY.md),
+after [PR #2](https://github.com/CAOShurong/.github/pull/2) merged at
+`e3621e3294926080a1e7ef3700cf9797246dfd21`. In the 2026-08-15 health
+snapshot, 20 of 23 owned non-fork repositories scored 100%; the other three
+lacked a detected license. This is owner governance only, not external
+maintainer authority or independent adoption.
+
+At the same snapshot, 23 authored pull requests remained open alongside 12
+accepted external contributions. [manual-approval #234](https://github.com/trstringer/manual-approval/pull/234)
+is open, non-draft and mergeable at head `6bd8130`; its three upstream
+`github-actions` suites are `action_required` with zero jobs. A separate
+[fork CI run](https://github.com/CAOShurong/manual-approval/actions/runs/31874648952)
+passed on that exact head, but that is not upstream CI acceptance or
+maintainer evidence. [TheELN issue #67](https://github.com/TheELNConsortium/TheELNFileFormat/issues/67)
+contains a bounded offer to help, not delegated responsibility. [tox #4020](https://github.com/tox-dev/tox/pull/4020)
+is covered by a policy that does not expose transient agent comments, so their
+absence is not treated as review or acceptance. [CycloneDX Rust Cargo #875](https://github.com/CycloneDX/cyclonedx-rust-cargo/pull/875)
+remains a no-action maintainer-scope reference, not applicant acceptance or
+authority.
+
 ## Upstream contributions
 
 - **Merged:** [TheELNFileFormat PR #152](https://github.com/TheELNConsortium/TheELNFileFormat/pull/152)

@@ -111,6 +111,18 @@ authority.
   failed its Build job while Test/Lint were skipped. The PR remains open, so
   this is reproducible review evidence, not acceptance, delegated duty,
   maintainer authority or independent adoption.
+- **Open, first contribution:** [GitUI PR #3016](https://github.com/gitui-org/gitui/pull/3016)
+  addresses open/help-wanted Windows issue [#1936](https://github.com/gitui-org/gitui/issues/1936)
+  at exact head `5d28b4488f014565756720819309bf501fde61e1`. With Windows
+  `core.autocrlf=true`, the original `cargo fmt -- --check --config
+  newline_style=Unix` produced exit 1 and 162 incorrect-newline findings; the
+  one-line `rustfmt.toml` change to `Auto` made `cargo fmt -- --check` and
+  `git diff --check` pass, and the workspace nextest run passed 313/313 with
+  `--no-default-features`. Upstream [CI run 31876657508](https://github.com/gitui-org/gitui/actions/runs/31876657508)
+  is `action_required` with zero jobs, not a pass or failure, and the PR has
+  no review or comment. GitUI's [co-maintainer route in issue #2084](https://github.com/gitui-org/gitui/issues/2084)
+  requires later contribution and review milestones; this open first
+  contribution is not accepted code, reviewer status or co-maintainer status.
 - **Review:** [CycloneDX Python PR #1016](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1016)
   initially lost a strict-valid CycloneDX 1.7 relationship during model round
   trips. I reproduced the defect and requested bounded coverage; the external

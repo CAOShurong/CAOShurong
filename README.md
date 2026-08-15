@@ -101,6 +101,16 @@ authority.
   state is still `CHANGES_REQUESTED` because only the reviewer can clear it, so
   this is review responsiveness rather than acceptance, maintainer authority or
   independent adoption.
+- **Review:** [manual-approval PR #206 review #4943438856](https://github.com/trstringer/manual-approval/pull/206#pullrequestreview-4943438856)
+  is a public `CHANGES_REQUESTED` review against exact third-party head
+  `dbfab57bc8890bfe5e645adc12423271ce28e0ae`. At that head, I reproduced the
+  same five compile blockers with `go test -mod=mod -count=1 ./...`, `go vet
+  -mod=mod ./...`, `go build -mod=mod ./...` and `golangci-lint v2.11.4`; the
+  corresponding base commands passed. Upstream CI run
+  [28285105918](https://github.com/trstringer/manual-approval/actions/runs/28285105918)
+  failed its Build job while Test/Lint were skipped. The PR remains open, so
+  this is reproducible review evidence, not acceptance, delegated duty,
+  maintainer authority or independent adoption.
 - **Review:** [CycloneDX Python PR #1016](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1016)
   initially lost a strict-valid CycloneDX 1.7 relationship during model round
   trips. I reproduced the defect and requested bounded coverage; the external

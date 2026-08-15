@@ -58,13 +58,18 @@ contributions or independent adoption.
   encodes local XML-schema paths as file URIs and adds a regression test for
   package paths containing `#`. All 47 public checks passed; a project member
   merged it, closed issue #551 and released it in v11.11.2.
-- **Open:** [CycloneDX JavaScript PR #1507](https://github.com/CycloneDX/cyclonedx-javascript-library/pull/1507)
+- **Open, changes requested and addressed:**
+  [CycloneDX JavaScript PR #1507](https://github.com/CycloneDX/cyclonedx-javascript-library/pull/1507)
   maps string-valued `package.json` engine constraints to the official npm
-  CycloneDX taxonomy and ignores malformed non-string values. I ran all 4,166
-  tests, lint, standards and dependency checks, Node/web/declaration builds,
-  and a clean packed-tarball runtime probe. All four reported public checks
-  pass. The PR remains open and unaccepted; it does not establish maintainer
-  authority or independent adoption.
+  CycloneDX taxonomy and ignores malformed non-string values. Maintainer
+  `jkowalleck` requested that the engine handling move inside `ComponentBuilder`
+  and that malformed `engines` values be covered for the array, `null` and
+  string cases. I implemented both and reran 8 focused and 4,155 full tests,
+  lint, eslint, knip, Node/web/declaration builds and a real installed-dist
+  probe. All four reported public checks pass at head `e3288058`. The review
+  state is still `CHANGES_REQUESTED` because only the reviewer can clear it, so
+  this is review responsiveness rather than acceptance, maintainer authority or
+  independent adoption.
 - **Review:** [CycloneDX Python PR #1016](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1016)
   initially lost a strict-valid CycloneDX 1.7 relationship during model round
   trips. I reproduced the defect and requested bounded coverage; the external
@@ -165,21 +170,37 @@ contributions or independent adoption.
   configuration. I added exact `tox l` and `tox c` behavior coverage requested
   in review. Maintainer `gaborbernat` approved exact head `21de6da9`; all 30
   checks passed, merge `c3f8d227` entered default `main`, and issue #4021 closed.
-- **Open:** [BuildKit PR #7038](https://github.com/moby/buildkit/pull/7038)
-  makes `history.maxEntries=0` explicitly disable build-history persistence.
-  The focused integration test passed across nine worker variants and the
-  approved fork workflow matrix is green; no maintainer has accepted it yet.
+- **Merged after maintainer approval:**
+  [rclone PR #9766](https://github.com/rclone/rclone/pull/9766)
+  implements pattern-based transfer ordering for help-wanted issue #3975.
+  Maintainer `ncw` approved exact head `c0e4e905` and merged it as `bb7c081e`
+  into default `master`, closing the issue. To be exact about the CI: the
+  `windows` job was failing at the approved head and a post-merge `master` lint
+  step also failed; the maintainer merged regardless, and I am not claiming
+  either job as passing or as something I fixed. This is one accepted
+  contribution, not rclone maintainership.
+- **Closed as superseded:** [BuildKit PR #7038](https://github.com/moby/buildkit/pull/7038)
+  made `history.maxEntries=0` explicitly disable build-history persistence. The
+  focused integration test passed across nine worker variants and the approved
+  fork workflow matrix was green. Maintainer `tonistiigi` then closed it in
+  favour of his own PR #7040. It was not rejected on code grounds, but it was
+  **not merged**, so I do not count it as an accepted contribution.
 - **Open:** [Airflow PR #71535](https://github.com/apache/airflow/pull/71535)
   refreshes a stale local bare Git origin when a requested bundle tracking ref
   cannot be resolved. Focused, module, type, packaging and real promotion paths
-  passed locally; the large upstream matrix is still running, so this is not
-  reported as accepted or fully green.
+  passed locally. The upstream matrix has now finished with no failing and no
+  pending job, though ten jobs were cancelled upstream, so I describe it as
+  "no failure" rather than fully green. It remains unaccepted.
 - **Open:** [Astropy PR #20234](https://github.com/astropy/astropy/pull/20234)
   rejects FITS tables with more than 999 physical columns before writing a
   partial file and adds the 999/1000 boundary regression. Astropy member
   `pllim` requested a plain-text changelog entry; I pushed the tested one-line
-  change and resolved the sole review thread. The review was not an approval,
-  and the PR remains unaccepted.
+  change and resolved the sole review thread. The previously gated fork
+  workflows have now run: every required test, build and changelog check passes
+  and both Codecov contexts are green. The one red context is an upstream job
+  explicitly labelled an allowed failure, and its failures are SciPy
+  development-version deprecation errors in unrelated modules, not in FITS. The
+  review was not an approval, and the PR remains unaccepted.
 - **Open:** [Kustomize PR #6224](https://github.com/kubernetes-sigs/kustomize/pull/6224)
   adds legacy release-download support for pre-module tags and assets. A project
   member issued `/ok-to-test`, and all 23 executable source, platform and
@@ -197,8 +218,11 @@ contributions or independent adoption.
 The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028, Keycloak #51697, eLabFTW
-PR #7267 and tox #4022 are one accepted contribution each. CycloneDX
-JavaScript #1507 is a separate open ecosystem contribution. They do **not** make
+PR #7267, tox #4022 and rclone #9766 are one accepted contribution each, for
+twelve accepted external contributions in total. CycloneDX
+JavaScript #1507 is a separate open ecosystem contribution with an addressed
+maintainer changes-request. BuildKit #7038 was closed as superseded and is not
+counted. They do **not** make
 me a module
 owner or core
 maintainer. CycloneDX Python #935/#940/#1007/#1015/#1016 and specification #1019 are review

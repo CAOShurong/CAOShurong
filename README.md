@@ -131,6 +131,13 @@ cross-project compatibility contracts rather than independent adoption.
   reopened successfully. I approved exact head `f583ed34`; all 14 upstream
   checks pass. The PR remains open, so this is review evidence rather than
   acceptance or maintainer authority.
+- **Review:** [python-docx-template PR #650](https://github.com/elapouya/python-docx-template/pull/650#pullrequestreview-4943236325)
+  adds hyperlink support across templated Word runs. On exact head `b98ff321`,
+  I ran all 38 direct test scripts, flake8, package builds, clean-wheel tests,
+  undeclared-variable and complex-URL cases, then verified both the visible
+  rendered text and the serialized relationship target before approving it.
+  The PR remains open, so this is review evidence rather than acceptance,
+  delegated duty, maintainer authority or independent adoption.
 - **Review:** [Argo CD PR #29175](https://github.com/argoproj/argo-cd/pull/29175#pullrequestreview-4928056635)
   proposed boolean parsing that diverged from bundled Dex v2.45.1. I reproduced
   three boundary failures and verified a `strconv.ParseBool` candidate with
@@ -248,7 +255,7 @@ me a module
 owner or core
 maintainer. CycloneDX Python #935/#940/#1007/#1015/#1016, CycloneDX
 JavaScript #1411 and specification #1019 are review contributions; rclone
-#9768, python-docx-template #661, #642 and #648, Argo CD #29175 and pandas
+#9768, python-docx-template #661, #642, #648 and #650, Argo CD #29175 and pandas
 #66623 are independently tested reviews, while python-docx-template #662
 and cibuildwheel #2966 remain
 unaccepted proposals. The python-docx-template work follows a public

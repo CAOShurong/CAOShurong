@@ -127,6 +127,19 @@ authority.
   no review or comment. GitUI's [co-maintainer route in issue #2084](https://github.com/gitui-org/gitui/issues/2084)
   requires later contribution and review milestones; this open first
   contribution is not accepted code, reviewer status or co-maintainer status.
+- **Review:** [GitUI PR #3015 review #4943518940](https://github.com/gitui-org/gitui/pull/3015#pullrequestreview-4943518940)
+  is a public `COMMENTED` review against exact head
+  `5c3d858a3525c52ef296a032b8a7e5e9eccb3863`. I reran `cargo fmt -- --check`
+  and `git diff --check`, focused asyncgit stash nextest (14 passed, 159
+  skipped), and the full asyncgit nextest suite (173 passed). A separate
+  pygit2 reproduction showed the baseline stored subdirectory becomes
+  unreopenable after libgit2 removes it while resolving to the worktree root
+  keeps the stash reopenable. Upstream [CI run 31874657724](https://github.com/gitui-org/gitui/actions/runs/31874657724)
+  is `action_required` with zero jobs; workspace clippy remains unverified
+  because the environment lacked `perl` and baseline `filetreelist` lint
+  denials remained. The PR's disclosed Log-tab/gix panic is recorded as a
+  follow-up, so this is review evidence, not acceptance, assigned reviewer
+  duty, maintainer authority, co-maintainer status or independent adoption.
 - **Review:** [CycloneDX Python PR #1016](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1016)
   initially lost a strict-valid CycloneDX 1.7 relationship during model round
   trips. I reproduced the defect and requested bounded coverage; the external

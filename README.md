@@ -36,6 +36,13 @@ by preserving target failures and Unicode streams. These owner-authored and
 owner-merged releases demonstrate active maintenance; they are not external
 contributions or independent adoption.
 
+A 2026-08-15 public snapshot recorded 692 rolling-month non-mirror PyPI events
+for BenchLineage. These are download events, including automation, not unique
+users. A byte-identical v0.3.5 fixture is exercised by eLabFTW's default-branch
+importer tests, and TheELN also keeps a BenchLineage fixture in its test matrix.
+Both integrations were proposed and authored by me, so they are durable
+cross-project compatibility contracts rather than independent adoption.
+
 ## Upstream contributions
 
 - **Merged:** [TheELNFileFormat PR #152](https://github.com/TheELNConsortium/TheELNFileFormat/pull/152)
@@ -136,6 +143,20 @@ contributions or independent adoption.
   stale, and the branch conflicted with `main`. I submitted a tested
   `CHANGES_REQUESTED` review on exact head `ece0d447`. The PR remains open and
   this does not establish pandas maintainer authority.
+- **Review:** [rclone PR #9768](https://github.com/rclone/rclone/pull/9768#pullrequestreview-4943139972)
+  changes OneDrive upload-session handling after a 404. I traced the source
+  history and current protocol guidance, reproduced one same-session PUT across
+  ten retry-enabled runs, and ran the full `backend/onedrive` suite. I requested
+  a permanent no-same-session-retry regression plus an explicit whole-operation
+  retry decision on exact head `673f7daa`. The PR remains open; this is tested
+  review evidence, not rclone authority or acceptance.
+- **Review:** [CycloneDX JavaScript PR #1411](https://github.com/CycloneDX/cyclonedx-javascript-library/pull/1411#pullrequestreview-4943152500)
+  removes an unmaintained email-format dependency. Its setup/build, 18 focused
+  and 4,180 full tests, TypeScript, ESLint and Knip passed, but a real 1.7
+  validator comparison showed that it rejects a quoted local-part address
+  accepted by current `main` and by the replaced dependency. I requested a
+  deliberate compatibility decision and regression on exact head `1fece39d`.
+  The PR remains changes-requested and unaccepted.
 - **Open maintainer-path work:** [python-docx-template PR #662](https://github.com/elapouya/python-docx-template/pull/662)
   fixes escaped Jinja delimiters split across Word runs for issue #548, including
   the original attached document and Python 3.9/3.13 regression runs. I also
@@ -225,9 +246,10 @@ maintainer changes-request. BuildKit #7038 was closed as superseded and is not
 counted. They do **not** make
 me a module
 owner or core
-maintainer. CycloneDX Python #935/#940/#1007/#1015/#1016 and specification #1019 are review
-contributions; python-docx-template #661, #642 and #648, Argo CD #29175 and
-pandas #66623 are independently tested reviews, while python-docx-template #662
+maintainer. CycloneDX Python #935/#940/#1007/#1015/#1016, CycloneDX
+JavaScript #1411 and specification #1019 are review contributions; rclone
+#9768, python-docx-template #661, #642 and #648, Argo CD #29175 and pandas
+#66623 are independently tested reviews, while python-docx-template #662
 and cibuildwheel #2966 remain
 unaccepted proposals. The python-docx-template work follows a public
 candidate route but is not a maintainer appointment. The eLabFTW fixture is cross-producer

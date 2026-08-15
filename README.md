@@ -54,6 +54,10 @@ snapshot, 20 of 23 owned non-fork repositories scored 100%; the other three
 lacked a detected license. This is owner governance only, not external
 maintainer authority or independent adoption.
 
+The current public inventory is 56 repositories: 23 non-fork repositories and
+33 contribution or legacy forks. The `manual-approval` and `gitui` forks are
+work carriers for upstream contributions, not owned projects or adoption.
+
 At the same snapshot, 23 authored pull requests remained open alongside 12
 accepted external contributions. [manual-approval #234](https://github.com/trstringer/manual-approval/pull/234)
 is open, non-draft and mergeable at head `6bd8130`; its three upstream

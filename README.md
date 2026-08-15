@@ -88,6 +88,13 @@ cross-project compatibility contracts rather than independent adoption.
   builds, and a clean-wheel JSON/XML validation and downgrade round trip, then
   approved exact head `fd0ec256`. The PR remains open and unaccepted; this is
   review evidence rather than merge authority or maintainership.
+- **Review:** [CycloneDX Python PR #980](https://github.com/CycloneDX/cyclonedx-python-lib/pull/980#pullrequestreview-4943269289)
+  adds `Service.trustZone` for CycloneDX 1.5 and later while preserving the 1.4
+  boundary. On exact head `25c9a4c4`, I ran 756 focused and 6,962 full tests,
+  flake8, mypy, package builds and a clean-wheel probe, then verified strict
+  JSON/XML validation and root/nested round trips for 1.5-1.7 plus omission and
+  rejection in 1.4. I approved the head, but the PR remains open and retains a
+  maintainer changes-request; this review does not override it or grant duty.
 - **Review:** [CycloneDX Python PR #1007](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1007#pullrequestreview-4934164425)
   removes quadratic dependency registration from `Bom.validate()`. I ran all
   6,961 tests, exercised the complexity guard across 20 hash seeds, compared
@@ -253,7 +260,7 @@ maintainer changes-request. BuildKit #7038 was closed as superseded and is not
 counted. They do **not** make
 me a module
 owner or core
-maintainer. CycloneDX Python #935/#940/#1007/#1015/#1016, CycloneDX
+maintainer. CycloneDX Python #935/#940/#980/#1007/#1015/#1016, CycloneDX
 JavaScript #1411 and specification #1019 are review contributions; rclone
 #9768, python-docx-template #661, #642, #648 and #650, Argo CD #29175 and pandas
 #66623 are independently tested reviews, while python-docx-template #662

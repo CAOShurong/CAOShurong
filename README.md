@@ -58,7 +58,7 @@ The current public inventory is 56 repositories: 23 non-fork repositories and
 33 contribution or legacy forks. The `manual-approval` and `gitui` forks are
 work carriers for upstream contributions, not owned projects or adoption.
 
-At the same snapshot, 23 authored pull requests remained open alongside 12
+At the same snapshot, 22 authored pull requests remained open alongside 14
 accepted external contributions. [manual-approval #234](https://github.com/trstringer/manual-approval/pull/234)
 is open, non-draft and mergeable at head `6bd8130`; its three upstream
 `github-actions` suites are `action_required` with zero jobs. A separate
@@ -89,6 +89,26 @@ authority.
   validates the specification's single-root-folder archive requirement. It
   passed the upstream check and was approved and merged; related issue #67
   remains open.
+- **Merged:** [Anchore Syft PR #5179](https://github.com/anchore/syft/pull/5179)
+  adds detection for the multi-arch ingress-nginx v1.9.6 binaries across amd64,
+  arm64, arm/v7 and s390x, each producing exactly one 1.9.6 package in real CLI
+  scans. Maintainer `wagoodman` approved and merged it as `5c6cf08a`. This is
+  a first contribution to Anchore Syft; it is not Syft maintainership, assigned
+  review duty or independent adoption.
+- **Merged:** [Plotly.js PR #7959](https://github.com/plotly/plotly.js/pull/7959)
+  fixes numeric `bundlecolors` sorting for parallel-categories paths (issue
+  #7952). Reviewer `camdecoster` requested NaN handling, I implemented it with
+  the JSDoc and a Jasmine regression test, and he dismissed his earlier
+  comment, approved and merged it as `95bfea16`. This is a first contribution
+  to Plotly.js; it is not maintainership, assigned review duty or adoption.
+- **Open, second contribution:** [eLabFTW PR #7306](https://github.com/elabftw/elabftw/pull/7306)
+  trims whitespace from CSV column names so headers like ` title ` are matched
+  to the expected `title` column instead of failing with a misleading error.
+  It applies to both the main CSV importer and the compounds importer, and
+  addresses issue #7024.
+- **Open, third contribution:** [eLabFTW PR #7307](https://github.com/elabftw/elabftw/pull/7307)
+  makes `prune:entries` remove orphaned `tags2entity` rows together with the
+  soft-deleted entity rows in one transaction, addressing issue #6952.
 - **Merged:** [CycloneDX Python PR #1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028)
   encodes local XML-schema paths as file URIs and adds a regression test for
   package paths containing `#`. All 47 public checks passed; a project member
@@ -316,8 +336,9 @@ authority.
 The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028, Keycloak #51697, eLabFTW
-PR #7267, tox #4022 and rclone #9766 are one accepted contribution each, for
-twelve accepted external contributions in total. CycloneDX
+PR #7267, tox #4022, rclone #9766, Anchore Syft #5179 and Plotly.js #7959 are
+one accepted contribution each, for
+fourteen accepted external contributions in total. CycloneDX
 JavaScript #1507 is a separate open ecosystem contribution with an addressed
 maintainer changes-request. BuildKit #7038 was closed as superseded and is not
 counted. They do **not** make
@@ -326,8 +347,8 @@ owner or core
 maintainer. CycloneDX Python #935/#940/#980/#1007/#1015/#1016, CycloneDX
 JavaScript #1411 and specification #1019 are review contributions; rclone
 #9768, python-docx-template #661, #642, #648 and #650, Argo CD #29175 and pandas
-#66623 are independently tested reviews, while python-docx-template #662
-and cibuildwheel #2966 remain
+#66623 are independently tested reviews, while python-docx-template #662,
+cibuildwheel #2966 and eLabFTW #7306/#7307 remain
 unaccepted proposals. The python-docx-template work follows a public
 candidate route but is not a maintainer appointment. The eLabFTW fixture is cross-producer
 integration evidence, not independent adoption.

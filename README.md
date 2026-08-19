@@ -58,7 +58,7 @@ The current public inventory is 56 repositories: 23 non-fork repositories and
 33 contribution or legacy forks. The `manual-approval` and `gitui` forks are
 work carriers for upstream contributions, not owned projects or adoption.
 
-At the same snapshot, 22 authored pull requests remained open alongside 14
+At the same snapshot, 21 authored pull requests remained open alongside 15
 accepted external contributions. [manual-approval #234](https://github.com/trstringer/manual-approval/pull/234)
 is open, non-draft and mergeable at head `6bd8130`; its three upstream
 `github-actions` suites are `action_required` with zero jobs. A separate
@@ -113,18 +113,17 @@ authority.
   encodes local XML-schema paths as file URIs and adds a regression test for
   package paths containing `#`. All 47 public checks passed; a project member
   merged it, closed issue #551 and released it in v11.11.2.
-- **Open, changes requested and addressed:**
-  [CycloneDX JavaScript PR #1507](https://github.com/CycloneDX/cyclonedx-javascript-library/pull/1507)
+- **Merged:** [CycloneDX JavaScript PR #1507](https://github.com/CycloneDX/cyclonedx-javascript-library/pull/1507)
   maps string-valued `package.json` engine constraints to the official npm
   CycloneDX taxonomy and ignores malformed non-string values. Maintainer
   `jkowalleck` requested that the engine handling move inside `ComponentBuilder`
   and that malformed `engines` values be covered for the array, `null` and
   string cases. I implemented both and reran 8 focused and 4,155 full tests,
   lint, eslint, knip, Node/web/declaration builds and a real installed-dist
-  probe. All four reported public checks pass at head `e3288058`. The review
-  state is still `CHANGES_REQUESTED` because only the reviewer can clear it, so
-  this is review responsiveness rather than acceptance, maintainer authority or
-  independent adoption.
+  probe. The reviewer then dismissed the change request, approved twice and
+  merged it as `2a816627`, releasing v10.2.0. This is a first contribution to
+  CycloneDX JavaScript; it is not CycloneDX team membership, maintainership,
+  assigned review duty or independent adoption.
 - **Review:** [manual-approval PR #206 review #4943438856](https://github.com/trstringer/manual-approval/pull/206#pullrequestreview-4943438856)
   is a public `CHANGES_REQUESTED` review against exact third-party head
   `dbfab57bc8890bfe5e645adc12423271ce28e0ae`. At that head, I reproduced the
@@ -336,9 +335,10 @@ authority.
 The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028, Keycloak #51697, eLabFTW
-PR #7267, tox #4022, rclone #9766, Anchore Syft #5179 and Plotly.js #7959 are
+PR #7267, tox #4022, rclone #9766, Anchore Syft #5179, Plotly.js #7959 and
+CycloneDX JavaScript #1507 are
 one accepted contribution each, for
-fourteen accepted external contributions in total. CycloneDX
+fifteen accepted external contributions in total. CycloneDX
 JavaScript #1507 is a separate open ecosystem contribution with an addressed
 maintainer changes-request. BuildKit #7038 was closed as superseded and is not
 counted. They do **not** make

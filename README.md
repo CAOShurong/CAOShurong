@@ -59,7 +59,7 @@ The current public inventory is 57 repositories: 24 non-fork repositories and
 33 contribution or legacy forks. The `manual-approval` and `gitui` forks are
 work carriers for upstream contributions, not owned projects or adoption.
 
-At the same snapshot, 21 authored pull requests remained open alongside 15
+At the same snapshot, 21 authored pull requests remained open alongside 16
 accepted external contributions. [manual-approval #234](https://github.com/trstringer/manual-approval/pull/234)
 is open, non-draft and mergeable at head `6bd8130`; its three upstream
 `github-actions` suites are `action_required` with zero jobs. A separate
@@ -90,6 +90,12 @@ authority.
   validates the specification's single-root-folder archive requirement. It
   passed the upstream check and was approved and merged; related issue #67
   remains open.
+- **Merged:** [TheELNFileFormat PR #157](https://github.com/TheELNConsortium/TheELNFileFormat/pull/157)
+  adds a web `.eln` checker that reuses the test suite checks. Maintainer
+  `SteffenBrinckmann` reviewed six requested changes; I implemented all of
+  them (a unified `runChecks` entry point, path/upload support, Streamlit
+  alignment, ordered results, tests, and the consortium logo), and he merged
+  it as `401e7aa5`. This makes me a six-time accepted TheELN contributor.
 - **Merged:** [Anchore Syft PR #5179](https://github.com/anchore/syft/pull/5179)
   adds detection for the multi-arch ingress-nginx v1.9.6 binaries across amd64,
   arm64, arm/v7 and s390x, each producing exactly one 1.9.6 package in real CLI
@@ -336,12 +342,12 @@ authority.
 The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028, Keycloak #51697, eLabFTW
-PR #7267, tox #4022, rclone #9766, Anchore Syft #5179, Plotly.js #7959 and
-CycloneDX JavaScript #1507 are
-one accepted contribution each, for
-fifteen accepted external contributions in total. CycloneDX
-JavaScript #1507 is a separate open ecosystem contribution with an addressed
-maintainer changes-request. BuildKit #7038 was closed as superseded and is not
+PR #7267, tox #4022, rclone #9766, Anchore Syft #5179, Plotly.js #7959,
+CycloneDX JavaScript #1507 and TheELNFileFormat #157 are
+one accepted contribution each in their respective projects, for
+sixteen accepted external contributions in total. TheELNFileFormat #157 is
+the sixth accepted contribution in that one project, keeping it the strongest
+repeat relationship. BuildKit #7038 was closed as superseded and is not
 counted. They do **not** make
 me a module
 owner or core

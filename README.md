@@ -59,7 +59,7 @@ The current public inventory is 57 repositories: 24 non-fork repositories and
 33 contribution or legacy forks. The `manual-approval` and `gitui` forks are
 work carriers for upstream contributions, not owned projects or adoption.
 
-At the same snapshot, 21 authored pull requests remained open alongside 16
+At the same snapshot, 20 authored pull requests remained open alongside 17
 accepted external contributions. [manual-approval #234](https://github.com/trstringer/manual-approval/pull/234)
 is open, non-draft and mergeable at head `6bd8130`; its three upstream
 `github-actions` suites are `action_required` with zero jobs. A separate
@@ -108,11 +108,11 @@ authority.
   the JSDoc and a Jasmine regression test, and he dismissed his earlier
   comment, approved and merged it as `95bfea16`. This is a first contribution
   to Plotly.js; it is not maintainership, assigned review duty or adoption.
-- **Open, second contribution:** [eLabFTW PR #7306](https://github.com/elabftw/elabftw/pull/7306)
+- **Merged:** [eLabFTW PR #7306](https://github.com/elabftw/elabftw/pull/7306)
   trims whitespace from CSV column names so headers like ` title ` are matched
   to the expected `title` column instead of failing with a misleading error.
-  It applies to both the main CSV importer and the compounds importer, and
-  addresses issue #7024.
+  Maintainer `NicolasCARPi` approved and merged it. It applies to both the
+  main CSV importer and the compounds importer, and addresses issue #7024.
 - **Open, third contribution:** [eLabFTW PR #7307](https://github.com/elabftw/elabftw/pull/7307)
   makes `prune:entries` remove orphaned `tags2entity` rows together with the
   soft-deleted entity rows in one transaction, addressing issue #6952.
@@ -342,10 +342,10 @@ authority.
 The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028, Keycloak #51697, eLabFTW
-PR #7267, tox #4022, rclone #9766, Anchore Syft #5179, Plotly.js #7959,
+PR #7267 and #7306, tox #4022, rclone #9766, Anchore Syft #5179, Plotly.js #7959,
 CycloneDX JavaScript #1507 and TheELNFileFormat #157 are
 one accepted contribution each in their respective projects, for
-sixteen accepted external contributions in total. TheELNFileFormat #157 is
+seventeen accepted external contributions in total. TheELNFileFormat #157 is
 the sixth accepted contribution in that one project, keeping it the strongest
 repeat relationship. BuildKit #7038 was closed as superseded and is not
 counted. They do **not** make

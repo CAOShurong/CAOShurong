@@ -13,7 +13,7 @@ self-submitted project listing is not presented as independent adoption.
 | Project | What it does | Verifiable entry points |
 | --- | --- | --- |
 | **[ResearchBench](https://github.com/CAOShurong/researchbench)** | A research-capability evaluation framework prototype for AI academic and research abilities: paper comprehension, idea generation, literature synthesis, experimental design, peer review, code reproduction, and open question identification. Currently uses placeholder keyword scoring; expert-validated datasets and evidence-based evaluation are planned. | [v0.1.0](https://github.com/CAOShurong/researchbench/releases/tag/v0.1.0) · [design document](https://github.com/CAOShurong/researchbench/blob/master/RESEARCH_BENCHMARK.md) · [7 task categories](https://github.com/CAOShurong/researchbench#task-categories) |
-| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.5](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.5) · [five accepted ELN contributions](https://github.com/TheELNConsortium/TheELNFileFormat/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged) |
+| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.7](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.7) · [five accepted ELN contributions](https://github.com/TheELNConsortium/TheELNFileFormat/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged) |
 | **[WheelWhy](https://github.com/CAOShurong/wheelwhy)** | Explains why a Python wheel matches or misses a declared interpreter and platform; it is not a full pip or uv resolver. | [v0.3.1](https://github.com/CAOShurong/wheelwhy/releases/tag/v0.3.1) · [external feedback and fix](https://github.com/CAOShurong/wheelwhy/issues/14) · [upstream follow-up](https://github.com/pypa/pip/issues/10793#issuecomment-5262361213) |
 | **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Builds a private searchable catalog of unplugged drives, including snapshots, duplicate evidence and physical-location notes. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [quick start](https://github.com/CAOShurong/coldshelf#quick-start) · [limitations](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
 | **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates findings from SARIF, Trivy, Grype, Snyk, CycloneDX, OSV and CSV without hiding merge blockers or scanner disagreement. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.4.24](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.24) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
@@ -113,7 +113,16 @@ authority.
   to the expected `title` column instead of failing with a misleading error.
   Maintainer `NicolasCARPi` approved and merged it. It applies to both the
   main CSV importer and the compounds importer, and addresses issue #7024.
-- **Open, third contribution:** [eLabFTW PR #7307](https://github.com/elabftw/elabftw/pull/7307)
+- **Merged:** [eLabFTW PR #7319](https://github.com/elabftw/elabftw/pull/7319)
+  fixes the show-mode page-width regression reported in issue #7302: the
+  dashboard quick links carry `mode=show`, which re-applied the
+  `max-width-70` width cap for users preferring the tabular display,
+  while the same filter built from the search page rendered full width.
+  I traced it to the `enableWide` condition (PR #7041 gated only the
+  no-mode branch), fixed the one-line condition, and maintainer
+  `NicolasCARPi` merged it as `197e71d1`, closing issue #7302. This is the
+  third accepted eLabFTW contribution after #7267 and #7306.
+- **Open, fourth contribution:** [eLabFTW PR #7307](https://github.com/elabftw/elabftw/pull/7307)
   makes `prune:entries` remove orphaned `tags2entity` rows together with the
   soft-deleted entity rows in one transaction, addressing issue #6952.
 - **Merged:** [CycloneDX Python PR #1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028)
@@ -344,10 +353,12 @@ contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028, Keycloak #51697, eLabFTW
 PR #7267 and #7306, tox #4022, rclone #9766, Anchore Syft #5179, Plotly.js #7959,
 CycloneDX JavaScript #1507 and TheELNFileFormat #157 are
-one accepted contribution each in their respective projects, for
-seventeen accepted external contributions in total. TheELNFileFormat #157 is
-the sixth accepted contribution in that one project, keeping it the strongest
-repeat relationship. BuildKit #7038 was closed as superseded and is not
+one accepted contribution each in their respective projects; eLabFTW PR #7319
+(merged by `NicolasCARPi` as `197e71d1`, closing issue #7302) joins #7267 and
+#7306 there as the third accepted contribution in that project, for
+eighteen accepted external contributions in total. TheELNFileFormat #157 is
+the sixth accepted contribution in that one project, with eLabFTW now the
+strongest active repeat relationship alongside it. BuildKit #7038 was closed as superseded and is not
 counted. They do **not** make
 me a module
 owner or core

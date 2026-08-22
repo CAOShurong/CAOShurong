@@ -122,9 +122,14 @@ authority.
   no-mode branch), fixed the one-line condition, and maintainer
   `NicolasCARPi` merged it as `197e71d1`, closing issue #7302. This is the
   third accepted eLabFTW contribution after #7267 and #7306.
-- **Open, fourth contribution:** [eLabFTW PR #7307](https://github.com/elabftw/elabftw/pull/7307)
+- **Merged:** [eLabFTW PR #7307](https://github.com/elabftw/elabftw/pull/7307)
   makes `prune:entries` remove orphaned `tags2entity` rows together with the
   soft-deleted entity rows in one transaction, addressing issue #6952.
+  Maintainer `NicolasCARPi` requested changes (race condition, scalability,
+  missing regression test), I addressed all three, and he approved and merged
+  it as `8db29efc`. This is the fourth accepted eLabFTW contribution
+  (#7267, #7306, #7319, #7307) and the first there to complete a full
+  maintainer changes-requested cycle.
 - **Merged:** [CycloneDX Python PR #1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028)
   encodes local XML-schema paths as file URIs and adds a regression test for
   package paths containing `#`. All 47 public checks passed; a project member
@@ -356,9 +361,13 @@ CycloneDX JavaScript #1507 and TheELNFileFormat #157 are
 one accepted contribution each in their respective projects; eLabFTW PR #7319
 (merged by `NicolasCARPi` as `197e71d1`, closing issue #7302) joins #7267 and
 #7306 there as the third accepted contribution in that project, for
-eighteen accepted external contributions in total. TheELNFileFormat #157 is
-the sixth accepted contribution in that one project, with eLabFTW now the
-strongest active repeat relationship alongside it. BuildKit #7038 was closed as superseded and is not
+eighteen accepted external contributions in total, before eLabFTW PR #7307
+(approved by `NicolasCARPi` after an addressed changes-requested cycle and
+merged as `8db29efc`, closing issue #6952) brought the total to **nineteen
+accepted external contributions** and made eLabFTW a four-time accepted
+project (#7267, #7306, #7319, #7307) — the deepest active repeat
+relationship by recent engagement, with TheELNFileFormat (six accepted)
+the longest-standing. BuildKit #7038 was closed as superseded and is not
 counted. They do **not** make
 me a module
 owner or core

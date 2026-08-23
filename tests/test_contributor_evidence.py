@@ -23,9 +23,9 @@ class ContributorEvidenceTests(unittest.TestCase):
         contributions = self.data["contributions"]
         repositories = {item[0] for item in contributions}
         organizations = {repo.split("/", 1)[0] for repo in repositories}
-        self.assertEqual(19, len(contributions))
-        self.assertEqual(10, len(repositories))
-        self.assertEqual(9, len(organizations))
+        self.assertEqual(20, len(contributions))
+        self.assertEqual(11, len(repositories))
+        self.assertEqual(10, len(organizations))
 
     def test_svg_is_well_formed_safe_and_deterministic(self) -> None:
         first = MODULE.render(self.data, self.digest)

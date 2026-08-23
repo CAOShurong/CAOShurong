@@ -347,6 +347,15 @@ authority.
   explicitly labelled an allowed failure, and its failures are SciPy
   development-version deprecation errors in unrelated modules, not in FITS. The
   review was not an approval, and the PR remains unaccepted.
+- **Merged:** [Astropy PR #20256](https://github.com/astropy/astropy/pull/20256)
+  fixes the IERS DegradedAccuracy table handling so degraded-accuracy rows are
+  merged instead of silently overwriting the predictive table (bug found while
+  writing a regression test for issue #20242). Astropy member `mhvk` reviewed,
+  requested a changelog rename, approved after the fix, and merged it as
+  `9f4de8d6`. He then opened follow-up #20262 for a forgotten test adjustment;
+  I reproduced the failure locally on the merge commit and posted an exact-head
+  verification of his PR. This is a first contribution to Astropy; it is not
+  maintainership or delegated review duty.
 - **Open:** [Kustomize PR #6224](https://github.com/kubernetes-sigs/kustomize/pull/6224)
   adds legacy release-download support for pre-module tags and assets. A project
   member issued `/ok-to-test`, and all 23 executable source, platform and
@@ -375,7 +384,10 @@ merged as `8db29efc`, closing issue #6952) brought the total to **nineteen
 accepted external contributions** and made eLabFTW a four-time accepted
 project (#7267, #7306, #7319, #7307) — the deepest active repeat
 relationship by recent engagement, with TheELNFileFormat (six accepted)
-the longest-standing. BuildKit #7038 was closed as superseded and is not
+the longest-standing. Astropy #20256 (merged by `mhvk` as `9f4de8d6`,
+with his follow-up #20262 verified by me at exact head) then brought the
+total to **twenty accepted external contributions** across eleven upstream
+organizations. BuildKit #7038 was closed as superseded and is not
 counted. They do **not** make
 me a module
 owner or core

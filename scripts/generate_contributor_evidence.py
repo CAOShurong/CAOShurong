@@ -40,7 +40,10 @@ def load_manifest(path: Path = MANIFEST) -> tuple[dict[str, Any], str]:
 
     if len(data.get("boundaries", [])) < 3:
         raise ValueError("claim boundaries are required")
-    return data, hashlib.sha256(raw).hexdigest()
+    canonical = json.dumps(
+        data, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+    ).encode("utf-8")
+    return data, hashlib.sha256(canonical).hexdigest()
 
 
 def render(data: dict[str, Any], digest: str) -> str:

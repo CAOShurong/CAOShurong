@@ -1,5 +1,13 @@
 # CAOShurong
 
+![CAOShurong contributor evidence graph](assets/contributor-evidence.svg)
+
+<sub>Public evidence snapshot, generated deterministically from the
+[manifest](data/contributor-evidence.json) by the
+[validator](scripts/generate_contributor_evidence.py). A merged change is not
+presented as maintainership; an owner-controlled counter is not presented as
+adoption.</sub>
+
 Electrical Engineering PhD researcher at CUHK. I maintain public tools for
 reproducible engineering, Python packaging diagnostics, local-first data work,
 and explainable security evidence.

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -36,6 +37,18 @@ class ContributorEvidenceTests(unittest.TestCase):
         self.assertNotIn("<script", first.casefold())
         self.assertNotIn("foreignobject", first.casefold())
         self.assertNotIn("<image", first.casefold())
+
+    def test_manifest_digest_is_line_ending_independent(self) -> None:
+        source = MODULE.MANIFEST.read_bytes().replace(b"\r\n", b"\n")
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            lf = root / "lf.json"
+            crlf = root / "crlf.json"
+            lf.write_bytes(source)
+            crlf.write_bytes(source.replace(b"\n", b"\r\n"))
+            _, lf_digest = MODULE.load_manifest(lf)
+            _, crlf_digest = MODULE.load_manifest(crlf)
+        self.assertEqual(lf_digest, crlf_digest)
 
     def test_checked_in_asset_is_current(self) -> None:
         expected = MODULE.render(self.data, self.digest)

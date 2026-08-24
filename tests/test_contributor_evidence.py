@@ -23,7 +23,7 @@ class ContributorEvidenceTests(unittest.TestCase):
         contributions = self.data["contributions"]
         repositories = {item[0] for item in contributions}
         organizations = {repo.split("/", 1)[0] for repo in repositories}
-        self.assertEqual(21, len(contributions))
+        self.assertEqual(22, len(contributions))
         self.assertEqual(12, len(repositories))
         self.assertEqual(11, len(organizations))
 

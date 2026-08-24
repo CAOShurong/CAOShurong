@@ -371,6 +371,14 @@ authority.
 - **Open:** [Syft PR #5220](https://github.com/anchore/syft/pull/5220) fixes
   #5211: requested-version metadata loss for packages whose version comes from
   a sibling same-name entry. Independent regression test included, CI green.
+- **Open:** [rclone PR #9815](https://github.com/rclone/rclone/pull/9815)
+  fixes #9634: `sync/move --delete-empty-src-dirs` was permanently disabled
+  for any run sharing a stats `_group` with an earlier failed job, because
+  the empty-dir deletion gate read group-wide error counts that only
+  `core/stats-reset` clears. The gate now checks the current run's own error
+  state; a regression test seeds an unrelated group error and asserts the
+  subsequent clean move still removes emptied directories (fails on master),
+  and the full `fs/sync` suite passes locally.
 - **Open:** [eLabFTW PR #7336](https://github.com/elabftw/elabftw/pull/7336)
   implements the Ctrl+S save path for both TinyMCE and Markdown editors,
   following the fix direction maintainer `NicolasCARPi` gave on issue #7075.

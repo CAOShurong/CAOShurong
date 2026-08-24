@@ -398,13 +398,25 @@ authority.
   preserves flexible ELN metadata named `parts` while assigning collision-free
   keys to generated nested-Dataset relationships. It was merged into the
   upstream default branch; GitHub again reported no reviews or checks.
+- **Merged:** [regl-line2d PR #56](https://github.com/gl-vis/regl-line2d/pull/56)
+  fixes the renderer half of [Plotly.js issue #7955](https://github.com/plotly/plotly.js/issues/7955):
+  when callers supply a view `range`, line vertex positions are normalized by
+  that range instead of static data bounds, so `scattergl` lines and markers no
+  longer drift apart under deep zoom. Reviewer `dy` requested that my scratch
+  verification script become a runnable test; I replaced it with a tape-based
+  CPU-exact regression (`test/range-normalize.js`, 25 assertions including a
+  discrimination subtest proving the old path drifts ~5 px at 1e-6 zoom), and
+  he merged head `c2972eb` as `90d30fa1`. This is a first contribution to
+  gl-vis; it is not maintainership or delegated review duty.
 
 The five accepted TheELNFileFormat contributions make me a **repeat external
 contributor** there. SampleDB #91 and #92 make me a repeat external contributor
 to that separate project; CycloneDX Python #1028, Keycloak #51697, eLabFTW
 PR #7267 and #7306, tox #4022, rclone #9766, Anchore Syft #5179, Plotly.js #7959,
 CycloneDX JavaScript #1507 and TheELNFileFormat #157 are
-one accepted contribution each in their respective projects; eLabFTW PR #7319
+one accepted contribution each in their respective projects (regl-line2d #56
+joined that group on 2026-08-24, merged by `dy` as `90d30fa1` after an
+addressed changes-requested cycle); eLabFTW PR #7319
 (merged by `NicolasCARPi` as `197e71d1`, closing issue #7302) joins #7267 and
 #7306 there as the third accepted contribution in that project, for
 eighteen accepted external contributions in total, before eLabFTW PR #7307
@@ -416,8 +428,10 @@ relationship by recent engagement, with TheELNFileFormat (six accepted)
 the longest-standing. Astropy #20256 (merged by `mhvk` as `9f4de8d6`,
 with his follow-up #20262 verified by me at exact head) then brought the
 total to **twenty accepted external contributions** across eleven upstream
-organizations. BuildKit #7038 was closed as superseded and is not
-counted. They do **not** make
+organizations, and regl-line2d #56 (merged by `dy` as `90d30fa1`,
+2026-08-24) brought the total to **twenty-one accepted external
+contributions** across twelve upstream repositories. BuildKit #7038 was
+closed as superseded and is not counted. They do **not** make
 me a module
 owner or core
 maintainer. CycloneDX Python #935/#940/#980/#1007/#1015/#1016, CycloneDX

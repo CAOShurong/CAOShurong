@@ -1,129 +1,134 @@
 {
-  "schema_version": 1,
-  "observed_at": "2026-08-23T16:45:00Z",
-  "source_command": "gh search prs --author CAOShurong --merged --limit 1000 --json repository,number,title,url,closedAt",
-  "contributions": [
-    [
-      "CycloneDX/cyclonedx-javascript-library",
-      1507,
-      "supply_chain"
-    ],
-    [
-      "CycloneDX/cyclonedx-python-lib",
-      1028,
-      "supply_chain"
-    ],
-    [
-      "TheELNConsortium/TheELNFileFormat",
-      152,
-      "scientific"
-    ],
-    [
-      "TheELNConsortium/TheELNFileFormat",
-      153,
-      "scientific"
-    ],
-    [
-      "TheELNConsortium/TheELNFileFormat",
-      154,
-      "scientific"
-    ],
-    [
-      "TheELNConsortium/TheELNFileFormat",
-      155,
-      "scientific"
-    ],
-    [
-      "TheELNConsortium/TheELNFileFormat",
-      156,
-      "scientific"
-    ],
-    [
-      "TheELNConsortium/TheELNFileFormat",
-      157,
-      "scientific"
-    ],
-    [
-      "anchore/syft",
-      5179,
-      "supply_chain"
-    ],
-    [
-      "astropy/astropy",
-      20256,
-      "scientific"
-    ],
-    [
-      "elabftw/elabftw",
-      7267,
-      "systems"
-    ],
-    [
-      "elabftw/elabftw",
-      7306,
-      "systems"
-    ],
-    [
-      "elabftw/elabftw",
-      7307,
-      "systems"
-    ],
-    [
-      "elabftw/elabftw",
-      7319,
-      "systems"
-    ],
-    [
-      "keycloak/keycloak",
-      51697,
-      "systems"
-    ],
-    [
-      "plotly/plotly.js",
-      7959,
-      "systems"
-    ],
-    [
-      "rclone/rclone",
-      9766,
-      "systems"
-    ],
-    [
-      "sciapp/sampledb",
-      91,
-      "scientific"
-    ],
-    [
-      "sciapp/sampledb",
-      92,
-      "scientific"
-    ],
-    [
-      "tox-dev/tox",
-      4022,
-      "systems"
-    ]
+ "schema_version": 1,
+ "observed_at": "2026-08-25T06:30:00Z",
+ "source_command": "gh search prs --author CAOShurong --merged --limit 1000 --json repository,number,title,url,closedAt",
+ "contributions": [
+  [
+   "CycloneDX/cyclonedx-javascript-library",
+   1507,
+   "supply_chain"
   ],
-  "tracks": {
-    "scientific": [
-      "SCIENTIFIC REPRODUCIBILITY",
-      "ELN formats, validation, provenance",
-      "#67e8f9"
-    ],
-    "supply_chain": [
-      "SUPPLY-CHAIN INTEGRITY",
-      "SBOM semantics, artifact identity",
-      "#a78bfa"
-    ],
-    "systems": [
-      "SYSTEMS RELIABILITY",
-      "Reproduction, regression, release",
-      "#34d399"
-    ]
-  },
-  "boundaries": [
-    "A merged contribution is not external maintainership.",
-    "Owner activity and counters are not independent adoption.",
-    "Snapshot values must be regenerated from public state."
+  [
+   "CycloneDX/cyclonedx-python-lib",
+   1028,
+   "supply_chain"
+  ],
+  [
+   "TheELNConsortium/TheELNFileFormat",
+   152,
+   "scientific"
+  ],
+  [
+   "TheELNConsortium/TheELNFileFormat",
+   153,
+   "scientific"
+  ],
+  [
+   "TheELNConsortium/TheELNFileFormat",
+   154,
+   "scientific"
+  ],
+  [
+   "TheELNConsortium/TheELNFileFormat",
+   155,
+   "scientific"
+  ],
+  [
+   "TheELNConsortium/TheELNFileFormat",
+   156,
+   "scientific"
+  ],
+  [
+   "TheELNConsortium/TheELNFileFormat",
+   157,
+   "scientific"
+  ],
+  [
+   "anchore/syft",
+   5179,
+   "supply_chain"
+  ],
+  [
+   "astropy/astropy",
+   20256,
+   "scientific"
+  ],
+  [
+   "elabftw/elabftw",
+   7267,
+   "systems"
+  ],
+  [
+   "elabftw/elabftw",
+   7306,
+   "systems"
+  ],
+  [
+   "elabftw/elabftw",
+   7307,
+   "systems"
+  ],
+  [
+   "elabftw/elabftw",
+   7319,
+   "systems"
+  ],
+  [
+   "gl-vis/regl-line2d",
+   56,
+   "systems"
+  ],
+  [
+   "keycloak/keycloak",
+   51697,
+   "systems"
+  ],
+  [
+   "plotly/plotly.js",
+   7959,
+   "systems"
+  ],
+  [
+   "rclone/rclone",
+   9766,
+   "systems"
+  ],
+  [
+   "sciapp/sampledb",
+   91,
+   "scientific"
+  ],
+  [
+   "sciapp/sampledb",
+   92,
+   "scientific"
+  ],
+  [
+   "tox-dev/tox",
+   4022,
+   "systems"
   ]
+ ],
+ "tracks": {
+  "scientific": [
+   "SCIENTIFIC REPRODUCIBILITY",
+   "ELN formats, validation, provenance",
+   "#67e8f9"
+  ],
+  "supply_chain": [
+   "SUPPLY-CHAIN INTEGRITY",
+   "SBOM semantics, artifact identity",
+   "#a78bfa"
+  ],
+  "systems": [
+   "SYSTEMS RELIABILITY",
+   "Reproduction, regression, release",
+   "#34d399"
+  ]
+ },
+ "boundaries": [
+  "A merged contribution is not external maintainership.",
+  "Owner activity and counters are not independent adoption.",
+  "Snapshot values must be regenerated from public state."
+ ]
 }

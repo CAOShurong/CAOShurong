@@ -361,6 +361,25 @@ authority.
   member issued `/ok-to-test`, and all 23 executable source, platform and
   deployment checks pass. The official EasyCLA rerun still reports missing
   authorization, so this remains a blocked proposal rather than accepted work.
+- **Open:** [Syft PR #5218](https://github.com/anchore/syft/pull/5218) adds
+  Gradle `versions.lock` (consistent-versions plugin) lockfile parsing with an
+  end-to-end verified fixture; CI green, awaiting maintainer review.
+- **Open:** [Syft PR #5219](https://github.com/anchore/syft/pull/5219) fixes
+  unclaimed issue #5163: uber-jar version is now read from the root
+  `version.properties` instead of being dropped. First-party workflow run needs
+  maintainer approval (`ACTION_REQUIRED`), all runnable checks green.
+- **Open:** [Syft PR #5220](https://github.com/anchore/syft/pull/5220) fixes
+  #5211: requested-version metadata loss for packages whose version comes from
+  a sibling same-name entry. Independent regression test included, CI green.
+- **Open:** [eLabFTW PR #7336](https://github.com/elabftw/elabftw/pull/7336)
+  implements the Ctrl+S save path for both TinyMCE and Markdown editors,
+  following the fix direction maintainer `NicolasCARPi` gave on issue #7075.
+  He has already reviewed once; two scoped fix commits (listener scope,
+  no-shift modifier, eslint compliance) were pushed in response and are under
+  re-review.
+- **Open:** [Plotly.js PR #7977](https://github.com/plotly/plotly.js/pull/7977)
+  fixes #7832: `node.pad` warning no longer fires for geometry-derived
+  effective padding; full jasmine suite passes (82 SUCCESS / 3 SKIPPED).
 - **Merged:** [SampleDB PR #91](https://github.com/sciapp/sampledb/pull/91)
   fixes valid ELN imports that contain explicit ZIP directory entries while
   preserving rejection of genuine multi-root archives. It was merged into the

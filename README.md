@@ -380,6 +380,16 @@ authority.
 - **Open:** [Plotly.js PR #7977](https://github.com/plotly/plotly.js/pull/7977)
   fixes #7832: `node.pad` warning no longer fires for geometry-derived
   effective padding; full jasmine suite passes (82 SUCCESS / 3 SKIPPED).
+- **Open:** [Plotly.js PR #7978](https://github.com/plotly/plotly.js/pull/7978)
+  fixes unclaimed issue #7946: sankey nodes clipped at the plot edge are now
+  laid out with corrected bounds; CI fully green on the current head after a
+  draft-log leak repair.
+- **Open (branch ready):** Syft fix for #5214 is implemented on fork branch
+  `codex/5214-binary-overlap-name-match` (head `0e7ca57d`): binary packages
+  are only excluded when owned by a same-named OS/Bitnami package, restoring
+  ownership-overlap name matching; regression tests added, root-cause analysis
+  posted upstream (comment 5390845932). PR opens once the repo-scoped
+  same-family block window (#5211/#5214 cluster) passes.
 - **Merged:** [SampleDB PR #91](https://github.com/sciapp/sampledb/pull/91)
   fixes valid ELN imports that contain explicit ZIP directory entries while
   preserving rejection of genuine multi-root archives. It was merged into the

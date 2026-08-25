@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="400" viewBox="0 0 1600 400" role="img" aria-label="Shurong Cao — Electrical Engineering PhD researcher">
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101a2b"/>
+      <stop offset="1" stop-color="#1b2f4a"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7fb3ff" stop-opacity="0.0"/>
+      <stop offset="0.35" stop-color="#7fb3ff" stop-opacity="0.55"/>
+      <stop offset="0.75" stop-color="#9ad1ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#9ad1ff" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="400" fill="url(#ink)"/>
+
+  <!-- faint grid, like engineering paper -->
+  <g stroke="#ffffff" stroke-opacity="0.045" stroke-width="1">
+    <path d="M 0 50 H 1600 M 0 100 H 1600 M 0 150 H 1600 M 0 200 H 1600 M 0 250 H 1600 M 0 300 H 1600 M 0 350 H 1600"/>
+    <path d="M 100 0 V 400 M 200 0 V 400 M 300 0 V 400 M 400 0 V 400 M 500 0 V 400 M 600 0 V 400 M 700 0 V 400 M 800 0 V 400 M 900 0 V 400 M 1000 0 V 400 M 1100 0 V 400 M 1200 0 V 400 M 1300 0 V 400 M 1400 0 V 400 M 1500 0 V 400"/>
+  </g>
+
+  <!-- signal traces: a damped response and its envelope (EE motif) -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M 950 200
+             C 1000 200, 1010 60, 1050 200
+             S 1100 340, 1140 200
+             S 1190 100, 1230 200
+             S 1280 280, 1320 200
+             S 1370 160, 1410 200
+             S 1460 230, 1500 200"
+          stroke="url(#wave)" stroke-width="2.5"/>
+    <path d="M 950 200
+             C 1010 120, 1030 90, 1060 130
+             S 1120 260, 1160 250
+             S 1240 170, 1290 190
+             S 1400 210, 1500 200"
+          stroke="#7fb3ff" stroke-opacity="0.22" stroke-width="1.5" stroke-dasharray="1 6"/>
+    <path d="M 950 200
+             C 1010 280, 1030 310, 1060 270
+             S 1120 140, 1160 150
+             S 1240 230, 1290 210
+             S 1400 190, 1500 200"
+          stroke="#7fb3ff" stroke-opacity="0.22" stroke-width="1.5" stroke-dasharray="1 6"/>
+    <!-- measurement cursor -->
+    <line x1="1140" y1="120" x2="1140" y2="280" stroke="#9ad1ff" stroke-opacity="0.35" stroke-width="1"/>
+    <circle cx="1140" cy="200" r="3.5" fill="#9ad1ff" fill-opacity="0.8"/>
+  </g>
+
+  <!-- identity -->
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#f4f1ea">
+    <text x="110" y="150" font-size="64" letter-spacing="0.5">Shurong Cao</text>
+    <text x="112" y="205" font-size="26" fill="#c8d4e8" font-style="italic">Electrical Engineering PhD researcher, CUHK</text>
+  </g>
+
+  <!-- focus areas -->
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#aebfd8">
+    <text x="112" y="286">Reproducible research tooling</text>
+    <text x="112" y="322">Measurement &amp; provenance</text>
+    <text x="112" y="358">Explainable security evidence</text>
+  </g>
+  <g stroke="#3d5a85" stroke-width="1">
+    <line x1="112" y1="238" x2="480" y2="238" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- small caps footer -->
+  <text x="110" y="382" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#6d7f9c">OPEN SOURCE &#183; VERIFIED CLAIMS &#183; PUBLIC EVIDENCE</text>
+</svg>

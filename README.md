@@ -1,6 +1,6 @@
 # CAOShurong
 
-![CAOShurong contributor evidence graph](assets/contributor-evidence.svg)
+![Shurong Cao — Electrical Engineering PhD researcher](assets/banner.svg)
 
 <sub>Public evidence snapshot, generated deterministically from the
 [manifest](data/contributor-evidence.json) by the
@@ -18,12 +18,16 @@ self-submitted project listing is not presented as independent adoption.
 
 ## Featured projects
 
+The six repositories pinned above are the current featured set:
+BenchLineage, VulnFuse, WillItBreak, FrontierTrials, TermScope and ColdShelf.
+
 | Project | What it does | Verifiable entry points |
 | --- | --- | --- |
 | **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.7](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.7) · [five accepted ELN contributions](https://github.com/TheELNConsortium/TheELNFileFormat/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged) |
 | **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates findings from SARIF, Trivy, Grype, Snyk, CycloneDX, OSV and CSV without hiding merge blockers or scanner disagreement. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.4.24](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.24) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
 | **[WillItBreak](https://github.com/CAOShurong/willitbreak)** | Diffs a package's public API between two versions and reports only the breaking changes that reach your call sites, with file and line numbers. Zero dependencies. | [README](https://github.com/CAOShurong/willitbreak#readme) |
 | **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Runs capability trials against frontier models behind one config and compares the runs, privately. | [try it](https://caoshurong.github.io/frontiertrials/try/) · [study report](https://caoshurong.github.io/frontiertrials/demo/trial-report.html) |
+| **[TermScope](https://github.com/CAOShurong/termscope)** | Plots Arduino, ESP32 and STM32 telemetry in a terminal over serial, pipes or SSH, with CSV record/replay. | [PyPI](https://pypi.org/project/termscope/) · [v0.4.1](https://github.com/CAOShurong/termscope/releases/tag/v0.4.1) · [hardware reports wanted](https://github.com/CAOShurong/termscope/issues/2) |
 
 ## Other maintained tools
 
@@ -41,11 +45,8 @@ Experimental projects — useful, but not yet stable or broadly validated.
 | **[OhmJudge](https://github.com/CAOShurong/ohmjudge)** | Answer-free, auditable electrical-engineering model evaluations — no API key required. | [README](https://github.com/CAOShurong/ohmjudge#readme) |
 | **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** | Outcome-based evaluation for AI tutors — which one actually helps you understand. | [README](https://github.com/CAOShurong/didyoulearn#readme) |
 | **[EvalInt](https://github.com/CAOShurong/evalint)** | Lint your LLM eval set: reliability, items scored against a reference. | [docs](https://github.com/CAOShurong/evalint/tree/main/docs) |
-| **[ResearchBench](https://github.com/CAOShurong/researchbench)** | A working researcher's running comparison of AI systems on real research tasks — no API keys, no synthetic datasets, judgment by the person who needed the answer. | [design doc](https://github.com/CAOShurong/researchbench/blob/main/RESEARCH_BENCHMARK.md) |
+| **[ResearchBench](https://github.com/CAOShurong/researchbench)** | A working researcher's running comparison of AI systems on real research tasks — no API keys, no synthetic datasets, judgment by the person who needed the answer. | [design doc](https://github.com/CAOShurong/researchbench/blob/master/RESEARCH_BENCHMARK.md) |
 
-[See all repositories](https://github.com/CAOShurong?tab=repositories) and
-[published Python packages](https://pypi.org/user/CAOShurong/). The projects
-above are the small set I currently use to represent my maintenance work.
 [See all repositories](https://github.com/CAOShurong?tab=repositories) and
 [published Python packages](https://pypi.org/user/CAOShurong/). The projects
 above are the small set I currently use to represent my maintenance work.

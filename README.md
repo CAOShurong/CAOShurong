@@ -16,21 +16,36 @@ I try to make each claim inspectable: public releases, runnable entry points,
 documented limits, and direct links to upstream work. A download counter or a
 self-submitted project listing is not presented as independent adoption.
 
-## Maintained projects
+## Featured projects
 
 | Project | What it does | Verifiable entry points |
 | --- | --- | --- |
 | **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Records experiment provenance, calibration, uncertainty and evidence, with portable ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.7](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.7) · [five accepted ELN contributions](https://github.com/TheELNConsortium/TheELNFileFormat/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged) |
-| **[WheelWhy](https://github.com/CAOShurong/wheelwhy)** | Explains why a Python wheel matches or misses a declared interpreter and platform; it is not a full pip or uv resolver. | [v0.3.1](https://github.com/CAOShurong/wheelwhy/releases/tag/v0.3.1) · [external feedback and fix](https://github.com/CAOShurong/wheelwhy/issues/14) · [upstream follow-up](https://github.com/pypa/pip/issues/10793#issuecomment-5262361213) |
-| **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Builds a private searchable catalog of unplugged drives, including snapshots, duplicate evidence and physical-location notes. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [quick start](https://github.com/CAOShurong/coldshelf#quick-start) · [limitations](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
 | **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Correlates findings from SARIF, Trivy, Grype, Snyk, CycloneDX, OSV and CSV without hiding merge blockers or scanner disagreement. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.4.24](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.24) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
-| **[TermScope](https://github.com/CAOShurong/termscope)** | Plots Arduino, ESP32 and STM32 telemetry in a terminal over serial, pipes or SSH, with CSV record/replay. | [PyPI](https://pypi.org/project/termscope/) · [v0.4.1](https://github.com/CAOShurong/termscope/releases/tag/v0.4.1) · [hardware reports wanted](https://github.com/CAOShurong/termscope/issues/2) |
-| **[contextcost](https://github.com/CAOShurong/contextcost)** | Measures how much LLM context a repository costs to read, identifies the generated/vendored/data files that waste it, and re-measures after a proposed cut so the saving is real, not estimated. | [PyPI](https://pypi.org/project/contextcost/) · [v0.4.0](https://github.com/CAOShurong/contextcost/releases/tag/v0.4.0) · [GitHub Action](https://github.com/CAOShurong/contextcost/blob/main/action.yml) · [MCP server](https://github.com/CAOShurong/contextcost?tab=readme-ov-file#model-context-protocol-mcp) |
-| **[EvalInt](https://github.com/CAOShurong/evalint)** | Evaluates the response behaviour of LLMs on structured probes (schema, determinism, reasoning) with reproducible run records. | [docs](https://github.com/CAOShurong/evalint/tree/main/docs) · [issues board](https://github.com/CAOShurong/evalint/issues) |
-| **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** | Captures what an assistant actually did in a session and renders it as a reviewable learning log with evidence links. | [README](https://github.com/CAOShurong/didyoulearn#readme) |
-| **[OhmJudge](https://github.com/CAOShurong/ohmjudge)** | Scores regex/grammar matches against a reference with tolerance bands and a CLI report. | [README](https://github.com/CAOShurong/ohmjudge#readme) |
-| **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Runs capability trials against frontier models behind one config and compares the runs. | [README](https://github.com/CAOShurong/frontiertrials#readme) |
+| **[WillItBreak](https://github.com/CAOShurong/willitbreak)** | Diffs a package's public API between two versions and reports only the breaking changes that reach your call sites, with file and line numbers. Zero dependencies. | [README](https://github.com/CAOShurong/willitbreak#readme) |
+| **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Runs capability trials against frontier models behind one config and compares the runs, privately. | [try it](https://caoshurong.github.io/frontiertrials/try/) · [study report](https://caoshurong.github.io/frontiertrials/demo/trial-report.html) |
 
+## Other maintained tools
+
+| Project | What it does | Verifiable entry points |
+| --- | --- | --- |
+| **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Builds a private searchable catalog of unplugged drives, including snapshots, duplicate evidence and physical-location notes. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [quick start](https://github.com/CAOShurong/coldshelf#quick-start) · [limitations](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
+| **[contextcost](https://github.com/CAOShurong/contextcost)** | Measures how much LLM context a repository costs to read, identifies the generated/vendored/data files that waste it, and re-measures after a proposed cut so the saving is real, not estimated. | [PyPI](https://pypi.org/project/contextcost/) · [v0.5.0](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.0) · [GitHub Action](https://github.com/CAOShurong/contextcost/blob/main/action.yml) · [MCP server](https://github.com/CAOShurong/contextcost?tab=readme-ov-file#model-context-protocol-mcp) |
+
+## Research prototypes
+
+Experimental projects — useful, but not yet stable or broadly validated.
+
+| Project | What it does | Verifiable entry points |
+| --- | --- | --- |
+| **[OhmJudge](https://github.com/CAOShurong/ohmjudge)** | Answer-free, auditable electrical-engineering model evaluations — no API key required. | [README](https://github.com/CAOShurong/ohmjudge#readme) |
+| **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** | Outcome-based evaluation for AI tutors — which one actually helps you understand. | [README](https://github.com/CAOShurong/didyoulearn#readme) |
+| **[EvalInt](https://github.com/CAOShurong/evalint)** | Lint your LLM eval set: reliability, items scored against a reference. | [docs](https://github.com/CAOShurong/evalint/tree/main/docs) |
+| **[ResearchBench](https://github.com/CAOShurong/researchbench)** | A working researcher's running comparison of AI systems on real research tasks — no API keys, no synthetic datasets, judgment by the person who needed the answer. | [design doc](https://github.com/CAOShurong/researchbench/blob/main/RESEARCH_BENCHMARK.md) |
+
+[See all repositories](https://github.com/CAOShurong?tab=repositories) and
+[published Python packages](https://pypi.org/user/CAOShurong/). The projects
+above are the small set I currently use to represent my maintenance work.
 [See all repositories](https://github.com/CAOShurong?tab=repositories) and
 [published Python packages](https://pypi.org/user/CAOShurong/). The projects
 above are the small set I currently use to represent my maintenance work.

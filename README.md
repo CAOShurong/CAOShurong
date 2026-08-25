@@ -392,12 +392,21 @@ authority.
   fixes unclaimed issue #7946: sankey nodes clipped at the plot edge are now
   laid out with corrected bounds; CI fully green on the current head after a
   draft-log leak repair.
-- **Open (branch ready):** Syft fix for #5214 is implemented on fork branch
-  `codex/5214-binary-overlap-name-match` (head `0e7ca57d`): binary packages
-  are only excluded when owned by a same-named OS/Bitnami package, restoring
-  ownership-overlap name matching; regression tests added, root-cause analysis
-  posted upstream (comment 5390845932). PR opens once the repo-scoped
-  same-family block window (#5211/#5214 cluster) passes.
+- **Open (draft):** [Syft PR #5227](https://github.com/anchore/syft/pull/5227)
+  fixes #5214: binary packages are only excluded when owned by a same-named
+  OS/Bitnami package, restoring the ownership-overlap name matching dropped in
+  refactors; regression tests added, root-cause analysis posted upstream
+  (comment 5390845932). Created 2026-08-25 when the repo-scoped PR-creation
+  window reopened.
+- **Open (draft):** [Syft PR #5228](https://github.com/anchore/syft/pull/5228)
+  fixes #5204: yarn v1 dev-only classification now uses the union of edges
+  across same-name lockfile entries instead of a last-entry-wins map, so
+  production dependencies sharing a name with another version are no longer
+  silently misclassified as dev-only and dropped from the SBOM.
+- **Open (draft):** [Syft PR #5229](https://github.com/anchore/syft/pull/5229)
+  fixes #5177: PE VERSIONINFO parsing prefers the US-English StringTable over
+  the last-parsed language block, so multi-language binaries (e.g. DPInst.exe)
+  report the English ProductName and a matchable CPE instead of Spanish text.
 - **Merged:** [SampleDB PR #91](https://github.com/sciapp/sampledb/pull/91)
   fixes valid ELN imports that contain explicit ZIP directory entries while
   preserving rejection of genuine multi-root archives. It was merged into the

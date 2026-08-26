@@ -99,6 +99,13 @@ Ordered roughly newest-first within each section.
 
 ## Open pull requests (proposals awaiting maintainer decision)
 
+- **[xarray #11544](https://github.com/pydata/xarray/pull/11544)** — fixes
+  GH#7527: `idxmax`/`idxmin` (DataArray and Dataset) silently promoted the
+  integer coordinate label dtype to float64 on floating-point data even for
+  fully-valid reduction slices. Root cause in `_calc_idxminmax`: `.where` ran
+  unconditionally with the default float fill value. Fix gates the fill on
+  `allna.any()` so valid slices keep their coordinate dtype. Carries a
+  regression test and updated docstring examples. First PR to pydata/xarray.
 - **[eLabFTW #7336](https://github.com/elabftw/elabftw/pull/7336)** — Ctrl+S
   save path for both TinyMCE and Markdown editors, following the fix direction
   `NicolasCARPi` gave on issue #7075. Reviewed once; two scoped fix commits
@@ -228,6 +235,12 @@ Each review ran the project's real test suite on the exact head under review.
 - **rclone #9810** — `ListR` disable timing; **#9807** — ModTime isolation
   without iCloud; **#9634** — empty-dir deletion gate (led to PR #9815).
 - **HolmesGPT #2046** — design feedback at the author's invitation.
+- **xarray #10267** — stale-triage: tried to reproduce the "repeated dimension
+  name in DataTree" failure against current main and at the historical points
+  where the asserting test was introduced and the night before #10623;
+  `open_groups`/`open_dataset` were identical at every point with both engines,
+  so the bug was fixed as a side effect of the DataTree/netCDF IO rework
+  (most likely #10623). Recommended closing as already-fixed.
 
 ## Closed / superseded
 

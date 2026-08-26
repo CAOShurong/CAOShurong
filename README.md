@@ -95,14 +95,3 @@ Three things, all publicly inspectable:
 
 The full, dated log with per-PR detail is in
 [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
-
-## Scope and boundaries
-
-- I am the **primary maintainer** of the owned repositories featured above.
-- External work is described as merged or open contributions unless a project
-  publicly grants broader responsibility.
-- Synthetic or demo data is labelled as such; it is never presented as a user
-  study or production deployment.
-- Security and research tools publish their assumptions and failure
-  boundaries.
-- Stars, downloads, users, benchmarks and testimonials are never fabricated.

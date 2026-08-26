@@ -86,10 +86,11 @@ Three things, all publicly inspectable:
 - **Build tools I use.** Reproducible-engineering, Python-packaging diagnostics,
   local-first data and explainable-security tooling, maintained openly with
   releases and runnable entry points (above).
-- **Fix things where I am a user.** 21 accepted pull requests across 12
+- **Fix things where I am a user.** 22 accepted pull requests across 13
   upstream projects — eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX,
-  Keycloak, Plotly.js, rclone, Syft, tox and regl-line2d. I reproduce each
-  issue locally and ship a test with the fix.
+  Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, restic and
+  argoproj/argo-workflows. I reproduce each issue locally and ship a test with
+  the fix.
 - **Help maintainers decide.** Root-cause analyses on upstream issues and
   tested reviews of third-party changes in the same communities.
 

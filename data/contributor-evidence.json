@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "observed_at": "2026-08-25T06:30:00Z",
+ "observed_at": "2026-08-26",
  "source_command": "gh search prs --author CAOShurong --merged --limit 1000 --json repository,number,title,url,closedAt",
  "contributions": [
   [
@@ -107,6 +107,11 @@
    "tox-dev/tox",
    4022,
    "systems"
+  ],
+  [
+   "argoproj/argo-workflows",
+   16818,
+   "infrastructure"
   ]
  ],
  "tracks": {

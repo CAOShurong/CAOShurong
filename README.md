@@ -76,8 +76,11 @@ Upstream contributions (fixes, reviews and triage in other projects) are
 tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 21 merged,
 60 open across 30 upstream projects (live GitHub counts, re-verified
 2026-08-26). Latest:
-[restic#22029](https://github.com/restic/restic/pull/22029), a design-docs
-fix resolving restic/restic#22013.
+[zarr-python#4289](https://github.com/zarr-developers/zarr-python/pull/4289), a
+docs fix (resolves zarr-developers/zarr-python#3681) switching non-persistence
+examples to in-memory stores so the docs build no longer writes ~20 arrays to
+local disk; and [restic#22029](https://github.com/restic/restic/pull/22029), a
+design-docs fix resolving restic/restic#22013.
 
 ## What I do
 

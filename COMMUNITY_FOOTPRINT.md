@@ -21,6 +21,7 @@ place instead of being scattered across other people's repos.
 - [jax-ml/jax#40185](https://github.com/jax-ml/jax/issues/40185) — triage RCA (sigma^2 intermediate)
 - [beetbox/beets#6950](https://github.com/beetbox/beets/pull/6950) — docs dead-link fix (first PR to repo)
 - [anchore/grype#3630](https://github.com/anchore/grype/issues/3630) — discussion: direction-2 prototype
+- [zarr-developers/zarr-python#4289](https://github.com/zarr-developers/zarr-python/pull/4289) — P3 docs 修复 PR（fixes #3681）：文档示例里非持久化演示（~20 处数组）原本在构建时写盘到本地 `data/`，改为内存存储（`memory://`/`MemoryStore`/空 dict），持久化演示块改为各自清理自己的临时目录；`tests/test_docs.py` 61 passed/2 skipped 全绿（额外修掉一个 ZipStore 父目录未被创建的隐藏脆弱性）
 
 ## 2026-08-25
 

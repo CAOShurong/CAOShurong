@@ -74,19 +74,21 @@ is what the row says. Refreshed 2026-08-26.
 
 Upstream contributions (fixes, reviews and triage in other projects) are
 tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 67 open across 34 upstream organisations (live GitHub counts). Latest:
+[dask#12560](https://github.com/dask/dask/pull/12560#issuecomment-5425786759),
+an exact-head verification review of the fix for `str.split(expand=True)`
+silently reporting `object`/`str` metadata while computing `string` columns:
+a pandas-vs-meta-vs-computed matrix across three input dtypes and two
+`convert-string` settings shows every probe internally consistent at head,
+the full dask-expr suite passes 4329 tests with zero failures, the red
+`nightly` CI job is attributed to unrelated scipy-sparse deprecation fallout,
+and the review documents a pre-existing hash-seed-dependent metadata leak on
+main with a minimal reproducer;
 [zarr-python#4290](https://github.com/zarr-developers/zarr-python/pull/4290),
 which honors explicit rectilinear chunk-grid requests whose edges happen to be
 uniform: since 3.3.0 a nested-sequence spec like `[[10, 10, 4]]` was silently
 collapsed to a regular grid, and the two diverge under `resize` — the regular
 grid extends the uniform pattern while the rectilinear grid appends an edge, so
-append-only workloads got a chunk-rewriting layout they never asked for;
-[xarray#11543](https://github.com/pydata/xarray/pull/11543), an independent
-exact-head verification review of the fix for silently byte-swapped netCDF4
-attribute writes: the corruption was reproduced on pristine base (`>f8 [0,1]`
-stored as `[0, 3.03865e-319]` with no warning), cured at head across every
-probed case (including classic-format output and scalar/read-only attribute
-edge cases), the new regression test fails on base and passes on head, and the
-431-test backend selection shows zero behavioural drift; and
+append-only workloads got a chunk-rewriting layout they never asked for; and
 [rclone#9823](https://github.com/rclone/rclone/pull/9823), a
 fix for a nil-ETag panic in S3 multipart uploads (#9822): an UploadPart
 success without an ETag header is now treated as retryable so the chunk is

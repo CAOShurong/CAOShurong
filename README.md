@@ -87,7 +87,7 @@ Three things, all publicly inspectable:
 - **Build tools I use.** Reproducible-engineering, Python-packaging diagnostics,
   local-first data and explainable-security tooling, maintained openly with
   releases and runnable entry points (above).
-- **Fix things where I am a user.** 22 accepted pull requests across 13
+- **Fix things where I am a user.** 22 accepted pull requests across 12
   upstream projects — eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX,
   Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d and
   argoproj/argo-workflows. I reproduce each issue locally and ship a test with

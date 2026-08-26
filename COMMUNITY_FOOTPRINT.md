@@ -43,9 +43,10 @@ Counts re-verified against the GitHub API on 2026-08-26 (evening; search:
 merged; open items are all external). A PR counts here only once GitHub
 shows it merged.
 
-- External merged PRs: **23 / 100** across 13 upstream projects
-  (newest: [rclone#9823](https://github.com/rclone/rclone/pull/9823) pending review —
-  latest merge: [argo-workflows#16818](https://github.com/argoproj/argo-workflows/pull/16818),
-  merged 2026-08-26 — first argoproj contribution)
+- External merged PRs: **22 / 100** across 12 upstream projects
+  (latest merge: [argo-workflows#16818](https://github.com/argoproj/argo-workflows/pull/16818),
+  merged 2026-08-26 — first argoproj contribution. Note: GitHub search
+  under-counts by one — TheELNFileFormat #152 is MERGED per direct API but
+  missing from the search index; totals here use direct-API verification)
 - Open external PRs: **64** across **32** upstream organisations
 - Communities active in: eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, pydantic, ruff, jax, numpy, restic, tqdm, beets, sigstore, grype, and more.

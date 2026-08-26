@@ -72,7 +72,10 @@ signal that these are maintained, not parked.
 
 Upstream contributions (fixes, reviews and triage in other projects) are
 tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 40 open
-across 19 organisations.
+across 19 organisations. Latest:
+[restic#22029](https://github.com/restic/restic/pull/22029), a design-docs
+fix resolving restic/restic#22013.
+
 ## What I do
 
 Three things, all publicly inspectable:

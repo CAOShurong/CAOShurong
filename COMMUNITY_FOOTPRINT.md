@@ -7,6 +7,7 @@ place instead of being scattered across other people's repos.
 
 ## 2026-08-26
 
+- [restic/restic#22029](https://github.com/restic/restic/pull/22029) — docs fix PR: resolve the design.rst contradiction on which files are encrypted (`data/` was wrongly listed as a plaintext exception; fixes #22013)
 - [rclone/rclone#9798](https://github.com/rclone/rclone/issues/9798) — triage RCA comment: iclouddrive bundle-version static analysis root cause
 - [jax-ml/jax#40150](https://github.com/jax-ml/jax/issues/40150) — XLA-CPU thunk regression design comment (repro + scale analysis)
 - [sigstore/cosign#5072](https://github.com/sigstore/cosign/pull/5072) — docs dead-link fix PR (2 links)

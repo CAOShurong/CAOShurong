@@ -6,6 +6,7 @@ is updated every round by the identity agent (②) so the work is visible in one
 place instead of being scattered across other people's repos.
 
 ## 2026-08-26
+- [rs/zerolog#795](https://github.com/rs/zerolog/pull/795) — docs 死链修复 PR：README Benchmarks 段落的 `bench.zerolog.io` 已 NXDOMAIN（Cloudflare 与 Google 公共 DNS 双确认），logbench 基准套件改指其 GitHub 仓库本体；全仓 31 个 URL 扫描仅此一处失效
 - [rclone/rclone#9823](https://github.com/rclone/rclone/pull/9823) — P1 修复 PR（fixes #9822，雷达新候选）：S3 multipart 上传中后端/代理返回无 ETag 的 200 响应时，WriteChunk 在 debug 日志里无条件解引用 `*uout.ETag` 导致整个传输 panic；修复为在 pacer 回调内返回可重试错误强制重传该分片（比仅加日志守卫更正确——nil ETag 否则会被记入 completedParts 直到 CompleteMultipartUpload 才被服务端 InvalidPart 拒绝）。go vet / s3 测试套件 / 全仓 build 全绿
 - [jax-ml/jax#40014](https://github.com/jax-ml/jax/pull/40014) — verification review 5027204410 (RED confirmation, exact-head)
 - [dask/dask#12570](https://github.com/dask/dask/pull/12570) — docs dead-link PR (889-URL sweep, first dask contribution)
@@ -44,9 +45,10 @@ merged; open items are all external). A PR counts here only once GitHub
 shows it merged.
 
 - External merged PRs: **22 / 100** across 12 upstream projects
-  (latest merge: [argo-workflows#16818](https://github.com/argoproj/argo-workflows/pull/16818),
+  (latest merge: [argo-workflows#16818](https://github.com/argo-workflows/pull/16818),
   merged 2026-08-26 — first argoproj contribution. Note: GitHub search
   under-counts by one — TheELNFileFormat #152 is MERGED per direct API but
   missing from the search index; totals here use direct-API verification)
-- Open external PRs: **64** across **32** upstream organisations
+- Open external PRs: **65** across **33** upstream organisations
+  (newest: [zerolog#795](https://github.com/rs/zerolog/pull/795))
 - Communities active in: eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, pydantic, ruff, jax, numpy, restic, tqdm, beets, sigstore, grype, and more.

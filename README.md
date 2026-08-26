@@ -73,8 +73,10 @@ is what the row says. Refreshed 2026-08-26.
 | **[ResearchBench](https://github.com/CAOShurong/researchbench)** | v0.1.0 · 2026-08-21 | Landscape research batch 2: PaperQA2, SciCode-Verified and MLAgentBench compared, with a synthesis note (2026-08-22). |
 
 Upstream contributions (fixes, reviews and triage in other projects) are
-tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 64 open across 32 upstream organisations (live GitHub counts). Latest:
-[rclone#9823](https://github.com/rclone/rclone/pull/9823), a
+tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 65 open across 33 upstream organisations (live GitHub counts). Latest:
+[zerolog#795](https://github.com/rs/zerolog/pull/795), which
+repoints the README benchmark reference at the logbench repository after its
+host died (NXDOMAIN); [rclone#9823](https://github.com/rclone/rclone/pull/9823), a
 fix for a nil-ETag panic in S3 multipart uploads (#9822): an UploadPart
 success without an ETag header is now treated as retryable so the chunk is
 resent instead of crashing the transfer; and [restic#22029](https://github.com/restic/restic/pull/22029), a

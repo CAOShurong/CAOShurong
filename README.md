@@ -51,7 +51,28 @@ Experimental projects — useful, but not yet stable or broadly validated.
 [published Python packages](https://pypi.org/user/CAOShurong/). The projects
 above are the small set I currently use to represent my maintenance work.
 
-Recent owned-project maintenance includes [VulnFuse PR #73](https://github.com/CAOShurong/vulnfuse/pull/73) (v0.4.24), [TermScope PR #8](https://github.com/CAOShurong/termscope/pull/8) (v0.4.1), [JSONXray PR #7](https://github.com/CAOShurong/jsonxray/pull/7) (v0.2.1), [BenchLineage PR #20](https://github.com/CAOShurong/benchlineage/pull/20) (v0.3.5) and [SlowImports PR #6](https://github.com/CAOShurong/slowimports/pull/6) (v0.2.1). These owner-authored and owner-merged releases, and a 2026-08-15 snapshot recording 692 rolling-month BenchLineage download events, demonstrate active maintenance. [CONTRIBUTIONS.md](CONTRIBUTIONS.md) holds the full upstream log.
+## Recent activity
+
+Each line is the latest release or commit on that repository — a running
+signal that these are maintained, not parked.
+
+| Project | Last release | Last push |
+| --- | --- | --- |
+| BenchLineage | v0.3.7 | 2026-08-22 |
+| VulnFuse | v0.4.24 | 2026-08-24 |
+| WillItBreak | v0.1.3 | 2026-08-12 |
+| FrontierTrials | v0.4.1 | 2026-08-11 |
+| TermScope | v0.4.1 | 2026-08-12 |
+| ColdShelf | v0.1.7 | 2026-08-12 |
+| contextcost | v0.5.1 | 2026-08-26 |
+| OhmJudge | v0.3.0 | 2026-08-23 |
+| DidYouLearn | v0.1.1 | 2026-08-23 |
+| EvalInt | v0.2.30 | 2026-08-11 |
+| ResearchBench | v0.1.0 | 2026-08-22 |
+
+Upstream contributions (fixes, reviews and triage in other projects) are
+tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 40 open
+across 19 organisations.
 ## What I do
 
 Three things, all publicly inspectable:

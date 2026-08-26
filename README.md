@@ -51,24 +51,26 @@ Experimental projects — useful, but not yet stable or broadly validated.
 [published Python packages](https://pypi.org/user/CAOShurong/). The projects
 above are the small set I currently use to represent my maintenance work.
 
-## Recent activity
+## Latest changes
 
-Each line is the latest release or commit on that repository — a running
-signal that these are maintained, not parked.
+What actually landed in each repository lately — the newest release or
+substantive commit per project, newest first, drawn from each repository's
+own git log. Where only dependency or CI upkeep moved since a release, that
+is what the row says. Refreshed 2026-08-26.
 
-| Project | Last release | Last push |
+| Project | Latest | What landed |
 | --- | --- | --- |
-| BenchLineage | v0.3.7 | 2026-08-22 |
-| VulnFuse | v0.4.24 | 2026-08-24 |
-| WillItBreak | v0.1.3 | 2026-08-12 |
-| FrontierTrials | v0.4.1 | 2026-08-11 |
-| TermScope | v0.4.1 | 2026-08-12 |
-| ColdShelf | v0.1.7 | 2026-08-12 |
-| contextcost | v0.5.1 | 2026-08-26 |
-| OhmJudge | v0.3.0 | 2026-08-23 |
-| DidYouLearn | v0.1.1 | 2026-08-23 |
-| EvalInt | v0.2.30 | 2026-08-11 |
-| ResearchBench | v0.1.0 | 2026-08-22 |
+| **[contextcost](https://github.com/CAOShurong/contextcost)** | [v0.5.2](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.2) · 2026-08-26 | Fixed the estimator exceeding its own published error bound on lockfile-heavy repositories; shipped an exact-tokenizer (`cl100k_base`) counting study across real repos. |
+| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | [v0.3.7](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.7) · 2026-08-23 | Version pins made consistent everywhere (audit constants, CITATION.cff, `__version__`) after the v0.3.6 wheel shipped internally inconsistent metadata. |
+| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | [v0.4.24](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.24) · 2026-08-12 | Preserved scanner image identity when correlating Trivy SARIF findings; routine dependency upkeep since. |
+| **[WillItBreak](https://github.com/CAOShurong/willitbreak)** | [v0.1.3](https://github.com/CAOShurong/willitbreak/releases/tag/v0.1.3) · 2026-08-12 | `--ascii` now escapes Unicode report content instead of emitting it raw ([#5](https://github.com/CAOShurong/willitbreak/pull/5)). |
+| **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | [v0.4.1](https://github.com/CAOShurong/frontiertrials/releases/tag/v0.4.1) · 2026-08-12 | Secured the generated blind-judging packets so trial answers can't leak between runs ([#13](https://github.com/CAOShurong/frontiertrials/pull/13)). |
+| **[TermScope](https://github.com/CAOShurong/termscope)** | [v0.4.1](https://github.com/CAOShurong/termscope/releases/tag/v0.4.1) · 2026-08-12 | Fixed token boundaries in labelled telemetry output ([#8](https://github.com/CAOShurong/termscope/pull/8)). |
+| **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | [v0.1.7](https://github.com/CAOShurong/coldshelf/releases/tag/v0.1.7) · 2026-08-12 | Version-agnostic installation verification ([#16](https://github.com/CAOShurong/coldshelf/pull/16)). |
+| **[EvalInt](https://github.com/CAOShurong/evalint)** | [v0.2.30](https://github.com/CAOShurong/evalint/releases/tag/v0.2.30) · 2026-08-12 | Promptfoo ingestion audited end to end: named metrics, test-case identity, and errors kept out of scores ([#55](https://github.com/CAOShurong/evalint/pull/55), [#57](https://github.com/CAOShurong/evalint/pull/57), [#59](https://github.com/CAOShurong/evalint/pull/59)). |
+| **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** | [v0.1.1](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.1) · 2026-08-12 | Release and package-publishing pipeline hardened; attestations moved to the current GitHub action. |
+| **[OhmJudge](https://github.com/CAOShurong/ohmjudge)** | [v0.3.0](https://github.com/CAOShurong/ohmjudge/releases/tag/v0.3.0) · 2026-08-11 | Answer-free blind response collection ([#1](https://github.com/CAOShurong/ohmjudge/pull/1)); CodeQL workflow hardening since. |
+| **[ResearchBench](https://github.com/CAOShurong/researchbench)** | v0.1.0 · 2026-08-21 | Landscape research batch 2: PaperQA2, SciCode-Verified and MLAgentBench compared, with a synthesis note (2026-08-22). |
 
 Upstream contributions (fixes, reviews and triage in other projects) are
 tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 40 open

@@ -73,11 +73,13 @@ is what the row says. Refreshed 2026-08-26.
 | **[ResearchBench](https://github.com/CAOShurong/researchbench)** | v0.1.0 · 2026-08-21 | Landscape research batch 2: PaperQA2, SciCode-Verified and MLAgentBench compared, with a synthesis note (2026-08-22). |
 
 Upstream contributions (fixes, reviews and triage in other projects) are
-tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 66 open across 34 upstream organisations (live GitHub counts). Latest:
-[ort#12352](https://github.com/oss-review-toolkit/ort/pull/12352),
-which repoints the license-handling guide to the relocated
-`declared-license-mapping.yml` after a Gradle module refactor left the
-documented path returning 404;
+tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 67 open across 34 upstream organisations (live GitHub counts). Latest:
+[zarr-python#4290](https://github.com/zarr-developers/zarr-python/pull/4290),
+which honors explicit rectilinear chunk-grid requests whose edges happen to be
+uniform: since 3.3.0 a nested-sequence spec like `[[10, 10, 4]]` was silently
+collapsed to a regular grid, and the two diverge under `resize` — the regular
+grid extends the uniform pattern while the rectilinear grid appends an edge, so
+append-only workloads got a chunk-rewriting layout they never asked for;
 [xarray#11543](https://github.com/pydata/xarray/pull/11543), an independent
 exact-head verification review of the fix for silently byte-swapped netCDF4
 attribute writes: the corruption was reproduced on pristine base (`>f8 [0,1]`

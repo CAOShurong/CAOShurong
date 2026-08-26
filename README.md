@@ -74,13 +74,18 @@ is what the row says. Refreshed 2026-08-26.
 
 Upstream contributions (fixes, reviews and triage in other projects) are
 tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 65 open across 33 upstream organisations (live GitHub counts). Latest:
-[zerolog#795](https://github.com/rs/zerolog/pull/795), which
-repoints the README benchmark reference at the logbench repository after its
-host died (NXDOMAIN); [rclone#9823](https://github.com/rclone/rclone/pull/9823), a
+[astropy#20265](https://github.com/astropy/astropy/pull/20265), an independent
+exact-head verification review proving the fix for #20257 works: the reported
+TypeError is a *deferred* failure — `np.strings.find` on a string MaskedColumn
+silently leaves a stale string fill_value on its int64 result, and only blows
+up later at repr/fill time (reproduced at base, cured at head; table suite
+2425 passed) — with two non-blocking suggestions (avoid the private
+`ma.core._check_fill_value`, add masked-row test coverage);
+[rclone#9823](https://github.com/rclone/rclone/pull/9823), a
 fix for a nil-ETag panic in S3 multipart uploads (#9822): an UploadPart
 success without an ETag header is now treated as retryable so the chunk is
-resent instead of crashing the transfer; and [restic#22029](https://github.com/restic/restic/pull/22029), a
-design-docs fix resolving restic/restic#22013.
+resent instead of crashing the transfer; and [zerolog#795](https://github.com/rs/zerolog/pull/795),
+which repoints the README benchmark reference after its host died (NXDOMAIN).
 
 ## What I do
 

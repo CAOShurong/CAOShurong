@@ -6,6 +6,7 @@ is updated every round by the identity agent (②) so the work is visible in one
 place instead of being scattered across other people's repos.
 
 ## 2026-08-26
+- [astropy/astropy#20265](https://github.com/astropy/astropy/pull/20265) — exact-head 验证型审查（base `3011554f` / head `c7af2c41` 双 worktree 实测）：确认修复有效——issue #20257 的报错实为"延迟爆炸"（`find` 本身不炸，陈旧的字符串 fill_value 留在 int64 结果上，直到 repr/filled 才 TypeError；astroquery 式 Table 过滤工作流在 base 复炸、head 通过）；无行为变化检查全过（比较 ufunc、非换 dtype ufunc 的自定义 fill 均原样保留）；table 套件 2425 passed + masked 套件 1192 passed 全绿。附两条非阻塞建议：`ma.core._check_fill_value` 是 numpy 私有 API 且为 astropy 首次使用（给出等价公开替代），回归测试建议补 masked 变体与合法自定义 fill 存活性断言
 - [rs/zerolog#795](https://github.com/rs/zerolog/pull/795) — docs 死链修复 PR：README Benchmarks 段落的 `bench.zerolog.io` 已 NXDOMAIN（Cloudflare 与 Google 公共 DNS 双确认），logbench 基准套件改指其 GitHub 仓库本体；全仓 31 个 URL 扫描仅此一处失效
 - [rclone/rclone#9823](https://github.com/rclone/rclone/pull/9823) — P1 修复 PR（fixes #9822，雷达新候选）：S3 multipart 上传中后端/代理返回无 ETag 的 200 响应时，WriteChunk 在 debug 日志里无条件解引用 `*uout.ETag` 导致整个传输 panic；修复为在 pacer 回调内返回可重试错误强制重传该分片（比仅加日志守卫更正确——nil ETag 否则会被记入 completedParts 直到 CompleteMultipartUpload 才被服务端 InvalidPart 拒绝）。go vet / s3 测试套件 / 全仓 build 全绿
 - [jax-ml/jax#40014](https://github.com/jax-ml/jax/pull/40014) — verification review 5027204410 (RED confirmation, exact-head)

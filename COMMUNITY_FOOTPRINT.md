@@ -6,6 +6,8 @@ is updated every round by the identity agent (②) so the work is visible in one
 place instead of being scattered across other people's repos.
 
 ## 2026-08-26
+- [jax-ml/jax#40014](https://github.com/jax-ml/jax/pull/40014) — verification review 5027204410 (RED confirmation, exact-head)
+- [dask/dask#12570](https://github.com/dask/dask/pull/12570) — docs dead-link PR (889-URL sweep, first dask contribution)
 
 - [astropy/astropy#19717](https://github.com/astropy/astropy/pull/19717) — exact-head 验证型审查（63b6b5f7）：确认修复有效（masked 全套件 1193 通过），但发现旧格式 pickle 向后兼容破坏（MaskedQuantity 旧 pickle 加载 TypeError，MRO 不对称机制已实证），并指出回归测试用 `MaskedNDArray([1,2,3])` 把数据误当 shape
 - [astropy/astropy#20272](https://github.com/astropy/astropy/pull/20272) — 修复 PR：Masked 数组的 mask 若自身是 Masked/np.ma 数组会被嵌套存储导致静默丢值（fixes #20246，610+1288 测试全绿）

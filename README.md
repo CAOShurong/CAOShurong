@@ -88,7 +88,7 @@ Three things, all publicly inspectable:
   releases and runnable entry points (above).
 - **Fix things where I am a user.** 22 accepted pull requests across 13
   upstream projects — eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX,
-  Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, restic and
+  Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d and
   argoproj/argo-workflows. I reproduce each issue locally and ship a test with
   the fix.
 - **Help maintainers decide.** Root-cause analyses on upstream issues and

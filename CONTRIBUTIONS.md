@@ -4,8 +4,15 @@ The README keeps the summary; this file keeps the receipts. Every entry here
 is a public GitHub artifact (merged PR, open PR, review, or analysis thread).
 Ordered roughly newest-first within each section.
 
-## Merged (21 across 12 upstream repositories)
+## Merged (22 across 13 upstream repositories)
 
+- **[argoproj/argo-workflows #16818](https://github.com/argoproj/argo-workflows/pull/16818)** —
+  docs: fixes two dead RBAC manifest links in `docs/security.md`. The
+  `workflow-controller-clusterrole.yaml` and `workflow-aggregate-roles.yaml#L4`
+  links pointed at `manifests/cluster-install/workflow-controller-rbac/`, which
+  was R100-renamed to `.../cluster-install-no-crds/workflow-controller-rbac/` in
+  #14599 (2025-06-25); both 404'd since. First contribution to argoproj
+  (CNCF graduated project). Merged 2026-08-26.
 - **[regl-line2d #56](https://github.com/gl-vis/regl-line2d/pull/56)** — fixes
   the renderer half of [Plotly.js issue #7955](https://github.com/plotly/plotly.js/issues/7955):
   when callers supply a view `range`, line vertex positions are normalized by

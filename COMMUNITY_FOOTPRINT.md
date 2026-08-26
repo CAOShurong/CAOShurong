@@ -29,6 +29,11 @@ place instead of being scattered across other people's repos.
 
 ## Totals (rolling)
 
-- External merged PRs: **22 / 100**
-- Open external PRs: **40** across **19** upstream organisations
+Counts re-verified against the GitHub API on 2026-08-26 (search:
+`is:pr author:CAOShurong is:merged` / `is:open`, own org excluded from
+merged; open items are all external). A PR counts here only once GitHub
+shows it merged.
+
+- External merged PRs: **21 / 100** across 12 upstream projects
+- Open external PRs: **60** across **34** upstream organisations
 - Communities active in: eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, pydantic, ruff, jax, numpy, restic, tqdm, beets, sigstore, grype, and more.

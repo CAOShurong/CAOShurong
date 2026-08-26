@@ -34,7 +34,7 @@ BenchLineage, VulnFuse, WillItBreak, FrontierTrials, TermScope and ColdShelf.
 | Project | What it does | Verifiable entry points |
 | --- | --- | --- |
 | **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | Builds a private searchable catalog of unplugged drives, including snapshots, duplicate evidence and physical-location notes. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [quick start](https://github.com/CAOShurong/coldshelf#quick-start) · [limitations](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
-| **[contextcost](https://github.com/CAOShurong/contextcost)** | Measures how much LLM context a repository costs to read, identifies the generated/vendored/data files that waste it, and re-measures after a proposed cut so the saving is real, not estimated. | [PyPI](https://pypi.org/project/contextcost/) · [v0.5.0](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.0) · [GitHub Action](https://github.com/CAOShurong/contextcost/blob/main/action.yml) · [MCP server](https://github.com/CAOShurong/contextcost?tab=readme-ov-file#model-context-protocol-mcp) |
+| **[contextcost](https://github.com/CAOShurong/contextcost)** | Measures how much LLM context a repository costs to read, identifies the generated/vendored/data files that waste it, and re-measures after a proposed cut so the saving is real, not estimated. | [PyPI](https://pypi.org/project/contextcost/) · [v0.5.2](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.2) · [GitHub Action](https://github.com/CAOShurong/contextcost/blob/main/action.yml) · [MCP server](https://github.com/CAOShurong/contextcost?tab=readme-ov-file#model-context-protocol-mcp) |
 
 ## Research prototypes
 
@@ -73,8 +73,9 @@ is what the row says. Refreshed 2026-08-26.
 | **[ResearchBench](https://github.com/CAOShurong/researchbench)** | v0.1.0 · 2026-08-21 | Landscape research batch 2: PaperQA2, SciCode-Verified and MLAgentBench compared, with a synthesis note (2026-08-22). |
 
 Upstream contributions (fixes, reviews and triage in other projects) are
-tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 40 open
-across 19 organisations. Latest:
+tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 21 merged,
+60 open across 30 upstream projects (live GitHub counts, re-verified
+2026-08-26). Latest:
 [restic#22029](https://github.com/restic/restic/pull/22029), a design-docs
 fix resolving restic/restic#22013.
 

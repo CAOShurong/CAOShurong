@@ -73,7 +73,7 @@ is what the row says. Refreshed 2026-08-26.
 | **[ResearchBench](https://github.com/CAOShurong/researchbench)** | v0.1.0 · 2026-08-21 | Landscape research batch 2: PaperQA2, SciCode-Verified and MLAgentBench compared, with a synthesis note (2026-08-22). |
 
 Upstream contributions (fixes, reviews and triage in other projects) are
-tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 20 merged, 63 open across 36 upstream organisations (live GitHub counts).. Latest:
+tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 20 merged, 63 open across 36 upstream organisations (live GitHub counts). Latest:
 [zarr-python#4289](https://github.com/zarr-developers/zarr-python/pull/4289), a
 docs fix (resolves zarr-developers/zarr-python#3681) switching non-persistence
 examples to in-memory stores so the docs build no longer writes ~20 arrays to

@@ -77,8 +77,10 @@ tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 24 merged across
 13 upstream owners; 68 open across 35 upstream owners (live GitHub counts).
 Latest:
 [cibuildwheel#2977](https://github.com/pypa/cibuildwheel/pull/2977), a docs-only
-fix for four dead CircleCI/CPython documentation links (the replacement URLs
-were checked live; exact head `0ac3d2da`; OPEN/MERGEABLE at the audit); then
+refresh of three dead CircleCI/CPython links and one legacy CircleCI redirect
+(canonical destinations and anchors checked live; exact head `f8f58971`;
+OPEN/MERGEABLE with five successful contexts, one neutral check and no pending
+or failing checks at the audit); then
 [tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042), a docs-only fix for
 the dead virtualenv discovery link (old URL 404, replacement URL 200; exact
 head `4ef082c9`; `tox run -e docs`, `tox run -e fix`, and targeted pre-commit

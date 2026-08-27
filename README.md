@@ -74,6 +74,7 @@ is what the row says. Refreshed 2026-08-26.
 
 Upstream contributions (fixes, reviews and triage in other projects) are
 tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 66 open across 35 upstream organisations (live GitHub counts). Latest:
+[gitleaks#2249](https://github.com/gitleaks/gitleaks/pull/2249#pullrequestreview-5039796619), a verification review of an external author's fix for the file-read sibling of our own #2252 — a partial scan (an unreadable file) was silently reported as `no leaks found` exit 0. Reviewed from exact head `509fce15`: `go build`/`go vet`/`go test ./sources/` all clean, and the root cause (goroutine errors via `s.Sema.Go` are never read because no `.Wait()` is ever called) was independently confirmed by grep; recommended a sibling fix for the same defect class; before that,
 [gitleaks#2252](https://github.com/gitleaks/gitleaks/pull/2252), a fix for a
 CI-safety bug where a failing git scan is silently reported as a clean pass
 (built `master`, reproduced a `0 commits scanned` run that still exits `0` with

@@ -221,6 +221,7 @@ Each review ran the project's real test suite on the exact head under review.
 - **Syft** — #5225, #5216, #5198 (found a Windows CRLF edge case in the
   competing fix for my #5177 analysis), #5145 (real arm64 vmlinuz E2E probe).
 - **Plotly.js #7967, HolmesGPT #2418** — exact-head verification reviews.
+- **gitleaks #2249** — verification review (rev 204) of external author `vaibhav8a`'s fix for the file-read sibling of our #2252: an unreadable file made `Fragments` return `nil` and `findingSummaryAndExit` print `no leaks found` exit 0. Reviewed from exact head `509fce15` — `go build`/`go vet`/`go test ./sources/` clean; independently confirmed via grep that `s.Sema.Go`/`d.Sema.Go` errors are never read (no `.Wait()` is ever called), so the old `return nil` could never reach the caller; flagged the same defect class in the mid-read `return err` path as an out-of-scope sibling fix.
 
 ## Analysis threads (root-cause comments on upstream issues)
 

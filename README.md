@@ -83,8 +83,8 @@ were checked live; exact head `0ac3d2da`; OPEN/MERGEABLE at the audit); then
 the dead virtualenv discovery link (old URL 404, replacement URL 200; exact
 head `4ef082c9`; `tox run -e docs`, `tox run -e fix`, and targeted pre-commit
 hooks reported passing; OPEN/MERGEABLE with reviewer `rahuldevikar` requested,
-20 of 30 current contexts successful, 2 unrelated `tox env type` failures and
-8 still running); before that,
+28 of 30 current contexts successful (all jobs complete), and 2 unrelated
+`tox env type` failures); before that,
 [gitleaks#2249](https://github.com/gitleaks/gitleaks/pull/2249#pullrequestreview-5039796619), a verification review of an external author's fix for the file-read sibling of our own #2252 — a partial scan (an unreadable file) was silently reported as `no leaks found` exit 0. Reviewed from exact head `509fce15`: `go build`/`go vet`/`go test ./sources/` all clean, and the root cause (goroutine errors via `s.Sema.Go` are never read because no `.Wait()` is ever called) was independently confirmed by grep; recommended a sibling fix for the same defect class; before that,
 [gitleaks#2252](https://github.com/gitleaks/gitleaks/pull/2252), a fix for a
 CI-safety bug where a failing git scan is silently reported as a clean pass

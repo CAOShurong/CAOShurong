@@ -74,8 +74,17 @@ is what the row says. Refreshed 2026-08-27.
 
 Upstream contributions (fixes, reviews and triage in other projects) are
 tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 24 merged across
-13 upstream owners; 66 open across 34 upstream owners (live GitHub counts).
+13 upstream owners; 68 open across 35 upstream owners (live GitHub counts).
 Latest:
+[cibuildwheel#2977](https://github.com/pypa/cibuildwheel/pull/2977), a docs-only
+fix for four dead CircleCI/CPython documentation links (the replacement URLs
+were checked live; exact head `0ac3d2da`; OPEN/MERGEABLE at the audit); then
+[tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042), a docs-only fix for
+the dead virtualenv discovery link (old URL 404, replacement URL 200; exact
+head `4ef082c9`; `tox run -e docs`, `tox run -e fix`, and targeted pre-commit
+hooks reported passing; OPEN/MERGEABLE with reviewer `rahuldevikar` requested,
+20 of 30 current contexts successful, 2 unrelated `tox env type` failures and
+8 still running); before that,
 [gitleaks#2249](https://github.com/gitleaks/gitleaks/pull/2249#pullrequestreview-5039796619), a verification review of an external author's fix for the file-read sibling of our own #2252 — a partial scan (an unreadable file) was silently reported as `no leaks found` exit 0. Reviewed from exact head `509fce15`: `go build`/`go vet`/`go test ./sources/` all clean, and the root cause (goroutine errors via `s.Sema.Go` are never read because no `.Wait()` is ever called) was independently confirmed by grep; recommended a sibling fix for the same defect class; before that,
 [gitleaks#2252](https://github.com/gitleaks/gitleaks/pull/2252), a fix for a
 CI-safety bug where a failing git scan is silently reported as a clean pass

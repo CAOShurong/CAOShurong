@@ -5,12 +5,26 @@ reviews, triage and design comments in other projects' communities. This file
 is updated every round by the identity agent (②) so the work is visible in one
 place instead of being scattered across other people's repos.
 
+## 2026-08-28
+- [apache/magpie#1118](https://github.com/apache/magpie/pull/1118) — merged by
+  `potiuk` on 2026-08-27 as `e8c3a346` from exact head `0949ce9a`; adds stable
+  per-PR progress headers and interaction-progress evaluation fixtures to the
+  `pr-management-triage` skill loop.
+- [plotly/plotly.js#7981](https://github.com/plotly/plotly.js/pull/7981) —
+  merged by `emilykl` on 2026-08-27 as `cc143a1c` from exact head `77fc5032`;
+  corrects the `showspikes` hovermode documentation across cartesian modes.
+- [rclone/rclone#9818](https://github.com/rclone/rclone/pull/9818) — merged by
+  `albertony` on 2026-08-27 as `413138f5` from exact head `31813d16`; repairs
+  dead Sia and Storj backend-documentation links after their sites moved.
+- [tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042) — merged by
+  `gaborbernat` on 2026-08-27 as `2a4a2157` from exact head `4ef082c9`; updates
+  the virtualenv discovery link and adds the required changelog fragment.
+
 ## 2026-08-27
 - [github/github-mcp-server#3146](https://github.com/github/github-mcp-server/pull/3146) — the follow-up revision preserves the feature query through OAuth protected-resource metadata discovery and makes query/header precedence presence-based, addressing the review's two requested changes. Exact head `81d42309`; all **13/13** check-runs are successful. The PR is OPEN with `mergeable=true` but currently behind `main`, awaiting maintainer re-review; not merged yet.
 - [github/github-mcp-server#3150](https://github.com/github/github-mcp-server/pull/3150) — after the requested rebase, the least-privilege `public_repo` scope change is at exact head `660bd4f1` and reports `mergeable=true`. GitHub has seven completed `action_required` workflows (license, lint, Docker, docs, build/test, CodeQL and MCP diff), so the PR is blocked on the first-time-contributor workflow-approval gate; no CI result is claimed and it is not merged.
 - [pypa/pip#13580](https://github.com/pypa/pip/issues/13580#issuecomment-5439692007) — P4 design discussion backed by a current-main reproduction (`6154f119`): an explicitly requested wheel named `mismatch-2.0-py3-none-any.whl` with embedded `Version: 1.0` installs successfully as `mismatch-1.0` with no warning, while the same candidate selected through `--find-links` is correctly rejected as inconsistent. The comment isolates the missing explicit-link check, proposes a deprecation-to-rejection path using semantic `Version` comparison, flags placeholder/symlink/nightly URL compatibility for maintainer direction, and discloses Codex assistance. This is issue-triage evidence, not a PR, merge, or maintainer role.
 - [pypa/cibuildwheel#2977](https://github.com/pypa/cibuildwheel/pull/2977) — docs-only refresh for three dead external links and one legacy redirect: CircleCI's open-source guide and canonical configuration reference, plus the CPython Android and iOS testbed README paths. The replacement URLs and destination headings were checked live from exact head `f8f58971`; the PR is OPEN/MERGEABLE with no reviewer requested, five successful contexts, one neutral check and no pending or failing checks at this audit. Not merged or accepted yet.
-- [tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042) — docs-only dead-link fix: `docs/explanation.rst` now points virtualenv discovery at `https://virtualenv.pypa.io/en/stable/how-to/usage.html#select-a-python-version` instead of the removed `https://virtualenv.pypa.io/en/latest/user_guide.html#python-discovery` page (old URL 404, replacement 200); added `docs/changelog/4042.doc.rst`. Exact head `4ef082c9`; the PR reports `tox run -e docs`, `tox run -e fix`, and targeted pre-commit hooks passing. Live at final audit: OPEN/MERGEABLE, reviewer `rahuldevikar` requested, 0 reviews/comments, 28 of 30 contexts successful (all jobs complete), and 2 `tox env type` failures attributed in the PR to unrelated dependency drift. Not merged or accepted yet.
 - [gitleaks/gitleaks#2249](https://github.com/gitleaks/gitleaks/pull/2249#pullrequestreview-5039796619) — P2 验证型审查（rev 204，对外部作者 `vaibhav8a` 的 exact head `509fce15`，closes #2232；review id `5039796619`，状态 COMMENTED，已披露 AI 辅助）：这是我们自己 #2252 的**文件读取孪生**——两者都修「静默判绿」类 CI 安全隐患（部分扫描被报成 `no leaks found` exit 0）。从 exact head 实测：`go build ./...` 干净、`go vet ./sources/... ./cmd/...` 干净、`go test ./sources/` 通过（4 个新测试里 2 个因权限位在 Windows runner 上按设计 self-skip，macOS/Linux CI 才跑到新的 `else` 分支）。**独立用 grep 确认了作者根因**：`s.Sema.Go(...)`/`d.Sema.Go(...)` 出现在 `sources/files.go`、`sources/git.go`、`detect/files.go`、`detect/git.go`，但**非测试代码里从来没有调用过 `.Sema.Wait()`（任何 Wait 都没有）**，于是 goroutine 内的错误被静默累积、永不被读取——原先 `return nil` 这个唯一回传通道因此永远到不了 `DetectSource`。修复（把读不到的文件错误收集进 mutex 保护的**本地** slice、join 进 `Fragments` 返回值）在不改变共享 semgroup 语义的前提下把错误送回调用方，并终于让 `cmd/root.go` 既有的 partial-scan 分支从文件打开路径可达。另指出一处作者正确地留在 scope 外的同源 defect：同一 goroutine 末尾的 `return err`（读取中途的 fragment-scan 错误）仍走 `s.Sema.Go`，因此被同一个「缺 Wait」的洞吞掉——建议用同样的本地错误收集模式补一个孪生修复。审查是诚实的 review 证据，不是接受/委派职责/合并权/维护权
 - [gitleaks/gitleaks#2252](https://github.com/gitleaks/gitleaks/pull/2252) — P1 修复 PR（由 #1464 根因讨论升级而来，首次向该仓库做 PR 贡献）：CI 安全隐患——已失败的 git 扫描会被静默判绿。复现：在 `master`（`718896a`，即 #2252 的 base）源码构建后，非法 `--log-opts` 区间触发 git 扫描失败（`ERR [git] … stderr is not empty` + `0 commits scanned`），进程仍以 **0** 退出并打印 `no leaks found`。根因：`sources/git.go` 把 stderr 错误经 `yield(Fragment{}, err)` 传入 `DetectSource`，而 `DetectSource` 的片段回调仅 `logging.Error` 后 `return nil`，于是 `DetectSource` 返回 `nil`，`findingSummaryAndExit` 落到 `len(findings)==0 → 0`；#1461 只修了 diff/`DetectGit` 一侧，默认 `detect` 路径残留。修复：`DetectSource` 直接 `return err`（让 `cmd/root.go` 既有 `if err != nil { os.Exit(1) }` 生效），并移除 `cmd/detect.go`/`cmd/git.go`/`cmd/protect.go` 三处重写 `err` 的多余 swallow（benign 的「rename detection was skipped」类 warning 不进该 channel，partial-scan 行为不变、已采集 finding 仍先写出再非零退出）。回归测试 `TestDetectGitFailedScanPropagatesError` 自建临时仓库断言非法 `--log-opts` 返回非 nil 错误、合法扫描不报错；在 pristine `master` 上 RED、补丁后 GREEN；二进制实测非法扫描 exit 1、合法 scan exit 0。`go build/vet` + `go test ./detect/ ./sources/` 全绿，PR MERGEABLE，review required
 - [mikefarah/yq#2840](https://github.com/mikefarah/yq/pull/2840) — docs 死链修复 PR（首次向该仓库贡献）：README 中 strict-confinement 说明指向的 `docs.snapcraft.io/snap-confinement/6233` 已 404（Snapcraft 文档迁移至 `snapcraft.io/docs`），改指现存活的 `snapcraft.io/docs/snap-confinement`（curl 跟随重定向 200 验证）；全仓外链清扫仅此一处真实失效（linux.die.net / StackOverflow 的 403 为反爬拦截，浏览器访问正常）。+1/-1，无 CLA/DCO 门槛，MERGEABLE
@@ -54,18 +68,18 @@ place instead of being scattered across other people's repos.
 ## Totals (rolling)
 
 Counts were re-verified against the direct GitHub GraphQL/REST API on
-2026-08-27. The merged set comes from the user's paginated `pullRequests`
+2026-08-28. The merged set comes from the user's paginated `pullRequests`
 connection, with TheELNFileFormat #152 directly rechecked because GitHub search
 still omits it. Open items are external base repositories. A PR counts here
 only once GitHub shows it merged.
 
-- External merged PRs: **24 / 100** across **14** upstream repositories and
-  **13** upstream owners. The latest merges are
-  [rclone#9823](https://github.com/rclone/rclone/pull/9823) and
-  [ORT#12352](https://github.com/oss-review-toolkit/ort/pull/12352), both merged
-  2026-08-26 by upstream maintainers.
-- Open external PRs: **68** across **39** repositories and **35** upstream
-  owners (newest: [cibuildwheel#2977](https://github.com/pypa/cibuildwheel/pull/2977);
-  [tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042) is the preceding
-  new PR in this audit).
+- External merged PRs: **28 / 100** across **15** upstream repositories and
+  **14** upstream owners. The latest merges are
+  [apache/magpie#1118](https://github.com/apache/magpie/pull/1118),
+  [plotly.js#7981](https://github.com/plotly/plotly.js/pull/7981),
+  [rclone#9818](https://github.com/rclone/rclone/pull/9818), and
+  [tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042), all merged
+  2026-08-27 by upstream maintainers.
+- Open external PRs: **66** across **38** repositories and **34** upstream
+  owners (newest: [github-mcp-server#3149](https://github.com/github/github-mcp-server/pull/3149)).
 - Communities active in: eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, pydantic, ruff, jax, restic, tqdm, beets, sigstore, grype, and more.

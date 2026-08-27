@@ -4,7 +4,22 @@ The README keeps the summary; this file keeps the receipts. Every entry here
 is a public GitHub artifact (merged PR, open PR, review, or analysis thread).
 Ordered roughly newest-first within each section.
 
-## Merged (24 across 14 upstream repositories)
+## Merged (28 across 15 upstream repositories)
+
+- **[Apache Magpie #1118](https://github.com/apache/magpie/pull/1118)** — adds
+  stable per-PR progress headers to the `pr-management-triage` interaction
+  loop and four acceptance fixtures. Maintainer `potiuk` merged exact head
+  `0949ce9a` as `e8c3a346` on 2026-08-27.
+- **[Plotly.js #7981](https://github.com/plotly/plotly.js/pull/7981)** — corrects
+  the `showspikes` documentation so it describes cursor-position behavior
+  across all cartesian hovermodes. `emilykl` merged exact head `77fc5032` as
+  `cc143a1c` on 2026-08-27.
+- **[rclone #9818](https://github.com/rclone/rclone/pull/9818)** — repairs two
+  dead backend-documentation links (Sia and Storj) after their sites moved.
+  `albertony` merged exact head `31813d16` as `413138f5` on 2026-08-27.
+- **[tox-dev/tox #4042](https://github.com/tox-dev/tox/pull/4042)** — updates
+  the dead virtualenv discovery link and adds the required changelog fragment.
+  `gaborbernat` merged exact head `4ef082c9` as `2a4a2157` on 2026-08-27.
 
 - **[oss-review-toolkit/ort #12352](https://github.com/oss-review-toolkit/ort/pull/12352)** —
   repairs the user-facing license-handling guide after the declared-license
@@ -117,7 +132,6 @@ Ordered roughly newest-first within each section.
 ## Open pull requests (proposals awaiting maintainer decision)
 
 - **[pypa/cibuildwheel #2977](https://github.com/pypa/cibuildwheel/pull/2977)** — docs-only refresh for three dead external links and one legacy redirect: CircleCI's moved open-source guide and canonical configuration reference, plus CPython's relocated Android and iOS testbed READMEs. Replacement URLs and destination headings were checked live; exact head `f8f58971`; the PR is OPEN/MERGEABLE with no reviewer requested, five successful contexts, one neutral check, and no pending or failing checks at the 2026-08-27 audit. Not accepted until merged.
-- **[tox-dev/tox #4042](https://github.com/tox-dev/tox/pull/4042)** — docs-only fix for the dead virtualenv discovery link in `docs/explanation.rst`: the removed `virtualenv.pypa.io/en/latest/user_guide.html#python-discovery` URL is replaced with `virtualenv.pypa.io/en/stable/how-to/usage.html#select-a-python-version`, with the required changelog fragment. Exact head `4ef082c9`; the PR reports the replacement URL, `tox run -e docs`, `tox run -e fix`, and targeted pre-commit hooks verified. Live state: OPEN/MERGEABLE, reviewer `rahuldevikar` requested, 0 reviews/comments, 28 of 30 contexts successful (all jobs complete), and 2 `tox env type` failures attributed in the PR to unrelated dependency drift. Not accepted until merged.
 - **[gitleaks/gitleaks #2252](https://github.com/gitleaks/gitleaks/pull/2252)** — fixes a CI-safety bug (gitleaks#1464): a failed git scan was silently reported as a clean pass. Root cause: the git-stderr error is routed through `DetectSource`'s per-fragment callback, which logged and returned `nil`, so the error never reached `findingSummaryAndExit` and the process exited `0` ("no leaks found") despite `0 commits scanned`. Fix: `DetectSource` propagates the error so the existing `os.Exit(1)` path fires; benign git warnings are not routed through this channel, so partial scans keep their behavior. Includes regression test `TestDetectGitFailedScanPropagatesError` (RED on pristine `master`, GREEN with the patch). First PR to gitleaks; MERGEABLE.
 - **[mikefarah/yq #2840](https://github.com/mikefarah/yq/pull/2840)** — docs dead-link fix: README's strict-confinement note pointed at the dead `docs.snapcraft.io/snap-confinement/6233` URL (404 after the Snapcraft docs moved to `snapcraft.io/docs`); replaced with the live `snapcraft.io/docs/snap-confinement` page (HTTP 200 verified). First PR to mikefarah/yq; no CLA/DCO gate; MERGEABLE.
 - **[xarray #11544](https://github.com/pydata/xarray/pull/11544)** — fixes
@@ -135,8 +149,6 @@ Ordered roughly newest-first within each section.
   colorbar `dtick` log/date string forms documented as unsupported.
 - **[Plotly.js #7986](https://github.com/plotly/plotly.js/pull/7986)** —
   Sankey `node.pad` clamp warning restore (fixes #7832).
-- **[Plotly.js #7981](https://github.com/plotly/plotly.js/pull/7981)** —
-  `showspikes` hovermode description fix (issue #7595).
 - **[Plotly.js #7978](https://github.com/plotly/plotly.js/pull/7978)** —
   sankey nodes clipped at the plot edge laid out with corrected bounds
   (fixes #7946); CI green after a draft-log leak repair.

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "observed_at": "2026-08-27T19:05:00+08:00",
+ "observed_at": "2026-08-28T05:08:31+08:00",
  "source_command": "gh api graphql: paginated user.pullRequests(states:MERGED); external base repositories only",
  "contributions": [
   [
@@ -121,6 +121,26 @@
   [
    "argoproj/argo-workflows",
    16818,
+   "systems"
+  ],
+  [
+   "apache/magpie",
+   1118,
+   "systems"
+  ],
+  [
+   "plotly/plotly.js",
+   7981,
+   "systems"
+  ],
+  [
+   "rclone/rclone",
+   9818,
+   "systems"
+  ],
+  [
+   "tox-dev/tox",
+   4042,
    "systems"
   ]
  ],

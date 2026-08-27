@@ -73,20 +73,19 @@ is what the row says. Refreshed 2026-08-27.
 | **[ResearchBench](https://github.com/CAOShurong/researchbench)** | v0.1.0 · 2026-08-21 | Landscape research batch 2: PaperQA2, SciCode-Verified and MLAgentBench compared, with a synthesis note (2026-08-22). |
 
 Upstream contributions (fixes, reviews and triage in other projects) are
-tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 24 merged across
-13 upstream owners; 68 open across 35 upstream owners (live GitHub counts).
-Latest:
-[cibuildwheel#2977](https://github.com/pypa/cibuildwheel/pull/2977), a docs-only
-refresh of three dead CircleCI/CPython links and one legacy CircleCI redirect
-(canonical destinations and anchors checked live; exact head `f8f58971`;
-OPEN/MERGEABLE with five successful contexts, one neutral check and no pending
-or failing checks at the audit); then
-[tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042), a docs-only fix for
-the dead virtualenv discovery link (old URL 404, replacement URL 200; exact
-head `4ef082c9`; `tox run -e docs`, `tox run -e fix`, and targeted pre-commit
-hooks reported passing; OPEN/MERGEABLE with reviewer `rahuldevikar` requested,
-28 of 30 current contexts successful (all jobs complete), and 2 unrelated
-`tox env type` failures); before that,
+tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 28 merged across
+14 upstream owners; 66 open across 34 upstream owners (live GitHub counts).
+The latest accepted merges are
+[apache/magpie#1118](https://github.com/apache/magpie/pull/1118),
+[plotly.js#7981](https://github.com/plotly/plotly.js/pull/7981),
+[rclone#9818](https://github.com/rclone/rclone/pull/9818), and
+[tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042), all merged by
+upstream maintainers on 2026-08-27. Current open work includes
+[github-mcp-server#3149](https://github.com/github/github-mcp-server/pull/3149)
+(exact head `d4711bfc`, focused tests and `go vet` passing) and
+[zarr-python#4289](https://github.com/zarr-developers/zarr-python/pull/4289)
+(exact head `b7c0821e`, docs gates passing; one matrix failure is being
+reconciled); before that,
 [gitleaks#2249](https://github.com/gitleaks/gitleaks/pull/2249#pullrequestreview-5039796619), a verification review of an external author's fix for the file-read sibling of our own #2252 — a partial scan (an unreadable file) was silently reported as `no leaks found` exit 0. Reviewed from exact head `509fce15`: `go build`/`go vet`/`go test ./sources/` all clean, and the root cause (goroutine errors via `s.Sema.Go` are never read because no `.Wait()` is ever called) was independently confirmed by grep; recommended a sibling fix for the same defect class; before that,
 [gitleaks#2252](https://github.com/gitleaks/gitleaks/pull/2252), a fix for a
 CI-safety bug where a failing git scan is silently reported as a clean pass
@@ -126,9 +125,9 @@ Three things, all publicly inspectable:
 - **Build tools I use.** Reproducible-engineering, Python-packaging diagnostics,
   local-first data and explainable-security tooling, maintained openly with
   releases and runnable entry points (above).
-- **Fix things where I am a user.** 24 accepted pull requests across 14
-  upstream repositories — eLabFTW, TheELNFileFormat, SampleDB, Astropy,
-  CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d,
+- **Fix things where I am a user.** 28 accepted pull requests across 15
+  upstream repositories — Apache Magpie, eLabFTW, TheELNFileFormat, SampleDB,
+  Astropy, CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d,
   argoproj/argo-workflows and ORT. I reproduce each issue locally and ship a
   test with the fix.
 - **Help maintainers decide.** Root-cause analyses on upstream issues and

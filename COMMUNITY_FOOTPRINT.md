@@ -5,6 +5,9 @@ reviews, triage and design comments in other projects' communities. This file
 is updated every round by the identity agent (②) so the work is visible in one
 place instead of being scattered across other people's repos.
 
+## 2026-08-27
+- [mikefarah/yq#2840](https://github.com/mikefarah/yq/pull/2840) — docs 死链修复 PR（首次向该仓库贡献）：README 中 strict-confinement 说明指向的 `docs.snapcraft.io/snap-confinement/6233` 已 404（Snapcraft 文档迁移至 `snapcraft.io/docs`），改指现存活的 `snapcraft.io/docs/snap-confinement`（curl 跟随重定向 200 验证）；全仓外链清扫仅此一处真实失效（linux.die.net / StackOverflow 的 403 为反爬拦截，浏览器访问正常）。+1/-1，无 CLA/DCO 门槛，MERGEABLE
+
 ## 2026-08-26
 - [dask/dask#12560](https://github.com/dask/dask/pull/12560#issuecomment-5425786759) — exact-head 验证型审查（base `ba5045e0` / head `fc78876c` 双 worktree 实测，py3.12 + pandas 3.0.5）：确认 `str.split(expand=True)` dtype 保持修复有效——base 上"pandas 结果 vs dask `_meta` vs dask 计算"三方矩阵在三种输入 dtype × 两种 convert-string 配置下错位（meta 报 `'str'`、实际产出 `'string'`），head 五探针全部自洽且 `string` dtype 与 pandas 精确一致；dask_expr 全套 **4329 passed** 零失败（`test_string_accessor.py` 53→54 恰为新增回归测试），两个 split 测试跨 `PYTHONHASHSEED` 0–15 全稳定。CI 归因：nightly 红全部是 scipy sparse 弃用连锁（`csr_matrix is being replaced by csr_array` 等）与无关事件循环错误，零字符串测试受累。附带发现（main 既有、非本 PR 引入，已附最小复现）：convert-off 下先构建 object 列 split 表达式再新建显式 `string` 列集合时，后者的输入元数据乃至计算输出可被翻转为 `'str'`（hash 种子依赖约 30% 概率，seed=7 确定性复现，pristine base 行为一致）
 - [zarr-developers/zarr-python#4290](https://github.com/zarr-developers/zarr-python/pull/4290) — P1 修复 PR（fixes #4272，维护者在 issue 里明确背书方向 1）：嵌套序列 `chunks`（显式 rectilinear 请求）的边值恰好均匀+短尾（如 `[[10,10,4]]`）时，自 3.3.0 起被按"边值推断"静默折叠成 regular grid——两种 grid 创建时等价但 resize 行为分叉（regular 延伸均匀模式、rectilinear 追加边），追加式写入拿到与请求不同的（重写 chunk 的）布局。修复：`create_chunk_grid_metadata` 新增 keyword-only `requested_rectilinear`，两个 v3 创建调用点从原始用户输入推导（含 rectilinear shards 使外层 grid 变 rectilinear 的交互），flat/auto 规格保持按值推断，恢复 3.2.x 语义。回归测试 main 红/补丁绿；unified_chunk_grid+metadata+chunk_grids 612 passed、test_array.py 1307 passed 全绿（本地复现 issue 输出逐字节对齐）
@@ -54,6 +57,6 @@ shows it merged.
   merged 2026-08-26 — first argoproj contribution. Note: GitHub search
   under-counts by one — TheELNFileFormat #152 is MERGED per direct API but
   missing from the search index; totals here use direct-API verification)
-- Open external PRs: **65** across **33** upstream organisations
-  (newest: [zerolog#795](https://github.com/rs/zerolog/pull/795))
+- Open external PRs: **65** across **34** upstream organisations
+  (newest: [yq#2840](https://github.com/mikefarah/yq/pull/2840))
 - Communities active in: eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, pydantic, ruff, jax, numpy, restic, tqdm, beets, sigstore, grype, and more.

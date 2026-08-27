@@ -106,6 +106,7 @@ Ordered roughly newest-first within each section.
 
 ## Open pull requests (proposals awaiting maintainer decision)
 
+- **[mikefarah/yq #2840](https://github.com/mikefarah/yq/pull/2840)** — docs dead-link fix: README's strict-confinement note pointed at the dead `docs.snapcraft.io/snap-confinement/6233` URL (404 after the Snapcraft docs moved to `snapcraft.io/docs`); replaced with the live `snapcraft.io/docs/snap-confinement` page (HTTP 200 verified). First PR to mikefarah/yq; no CLA/DCO gate; MERGEABLE.
 - **[xarray #11544](https://github.com/pydata/xarray/pull/11544)** — fixes
   GH#7527: `idxmax`/`idxmin` (DataArray and Dataset) silently promoted the
   integer coordinate label dtype to float64 on floating-point data even for

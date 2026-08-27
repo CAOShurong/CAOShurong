@@ -73,7 +73,11 @@ is what the row says. Refreshed 2026-08-26.
 | **[ResearchBench](https://github.com/CAOShurong/researchbench)** | v0.1.0 · 2026-08-21 | Landscape research batch 2: PaperQA2, SciCode-Verified and MLAgentBench compared, with a synthesis note (2026-08-22). |
 
 Upstream contributions (fixes, reviews and triage in other projects) are
-tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 67 open across 34 upstream organisations (live GitHub counts). Latest:
+tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 65 open across 34 upstream organisations (live GitHub counts). Latest:
+[yq#2840](https://github.com/mikefarah/yq/pull/2840), a docs fix that replaces a dead
+Snapcraft confinement link in the README (the old `docs.snapcraft.io/snap-confinement/6233`
+URL now 404s; it now points at the live `snapcraft.io/docs/snap-confinement` page —
+first contribution to mikefarah/yq);
 [dask#12560](https://github.com/dask/dask/pull/12560#issuecomment-5425786759),
 an exact-head verification review of the fix for `str.split(expand=True)`
 silently reporting `object`/`str` metadata while computing `string` columns:

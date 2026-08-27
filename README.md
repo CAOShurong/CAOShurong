@@ -56,7 +56,7 @@ above are the small set I currently use to represent my maintenance work.
 What actually landed in each repository lately — the newest release or
 substantive commit per project, newest first, drawn from each repository's
 own git log. Where only dependency or CI upkeep moved since a release, that
-is what the row says. Refreshed 2026-08-27.
+is what the row says. Refreshed 2026-08-28.
 
 | Project | Latest | What landed |
 | --- | --- | --- |
@@ -74,7 +74,7 @@ is what the row says. Refreshed 2026-08-27.
 
 Upstream contributions (fixes, reviews and triage in other projects) are
 tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 28 merged across
-15 upstream repositories and 14 upstream owners; 68 open across 39
+15 upstream repositories and 14 upstream owners; 69 open across 40
 repositories and 35 upstream owners (live GitHub counts).
 The latest accepted merges are
 [apache/magpie#1118](https://github.com/apache/magpie/pull/1118),
@@ -92,7 +92,10 @@ reconciled),
 and VitePress build passing), and
 [libusb#1954](https://github.com/libusb/libusb/pull/1954) (exact head
 `24258d9c`, correcting the `libusb_open()` event-source narrative; AppVeyor
-pending); before that,
+pending), and [scorecard#5202](https://github.com/ossf/scorecard/pull/5202)
+(exact head `e7efdc2e`, adding static Packaging detection for `gh release` and
+the Nextcloud App Store API; PR Verifier, DCO, Kusari and focused Go checks
+passing; awaiting maintainer review); before that,
 [gitleaks#2249](https://github.com/gitleaks/gitleaks/pull/2249#pullrequestreview-5039796619), a verification review of an external author's fix for the file-read sibling of our own #2252 — a partial scan (an unreadable file) was silently reported as `no leaks found` exit 0. Reviewed from exact head `509fce15`: `go build`/`go vet`/`go test ./sources/` all clean, and the root cause (goroutine errors via `s.Sema.Go` are never read because no `.Wait()` is ever called) was independently confirmed by grep; recommended a sibling fix for the same defect class; before that,
 [gitleaks#2252](https://github.com/gitleaks/gitleaks/pull/2252), a fix for a
 CI-safety bug where a failing git scan is silently reported as a clean pass

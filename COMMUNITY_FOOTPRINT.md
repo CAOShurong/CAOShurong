@@ -30,6 +30,13 @@ place instead of being scattered across other people's repos.
   description to match the current event-source notification path after the
   events-lock removal. Exact head `24258d9c`; source cross-check and diff
   checks pass, with AppVeyor pending. Open and awaiting maintainer review.
+- [ossf/scorecard#5202](https://github.com/ossf/scorecard/pull/5202) — extends
+  the Packaging detector to recognize `gh release create/upload/edit` and the
+  official Nextcloud App Store release API, while keeping `gh release view` as
+  a non-match. Exact head `e7efdc2e`; focused Go tests, `go vet`, and diff
+  checks pass locally, and PR Verifier, DCO and Kusari Inspector are green.
+  OPEN/MERGEABLE and awaiting maintainer review; the static change does not
+  claim a Packaging score without a successful workflow run.
 
 ## 2026-08-27
 - [github/github-mcp-server#3146](https://github.com/github/github-mcp-server/pull/3146) — the follow-up revision preserves the feature query through OAuth protected-resource metadata discovery and makes query/header precedence presence-based, addressing the review's two requested changes. Exact head `81d42309`; all **13/13** check-runs are successful. The PR is OPEN with `mergeable=true` but currently behind `main`, awaiting maintainer re-review; not merged yet.
@@ -91,7 +98,8 @@ only once GitHub shows it merged.
   [rclone#9818](https://github.com/rclone/rclone/pull/9818), and
   [tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042), all merged
   2026-08-27 by upstream maintainers.
-- Open external PRs: **68** across **39** repositories and **35** upstream
-  owners (newest: [libusb#1954](https://github.com/libusb/libusb/pull/1954) and
+- Open external PRs: **69** across **40** repositories and **35** upstream
+  owners (newest: [scorecard#5202](https://github.com/ossf/scorecard/pull/5202),
+  [libusb#1954](https://github.com/libusb/libusb/pull/1954) and
   [asdf#2317](https://github.com/asdf-vm/asdf/pull/2317)).
 - Communities active in: eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, pydantic, ruff, jax, restic, tqdm, beets, sigstore, grype, and more.

@@ -6,6 +6,7 @@ is updated every round by the identity agent (②) so the work is visible in one
 place instead of being scattered across other people's repos.
 
 ## 2026-08-27
+- [gitleaks/gitleaks#1464](https://github.com/gitleaks/gitleaks/issues/1464#issuecomment-5437397130) — P4 讨论/根因评论（首次向该仓库做社区贡献）：CI 安全隐患——已失败的 git 扫描会被静默判绿。在 `master`（`718896a`）源码构建后实测复现：非法 `--log-opts` 区间导致 git 扫描失败（`ERR [git] … stderr is not empty` + `0 commits scanned`），进程仍以 **0** 退出并打印 `no leaks found`，CI 门控会漏报。根因定位精确：`cmd/detect.go` 的 git 历史分支把 `DetectSource` 返回的 `err` 仅 `logging.Error` 后丢弃（不传播），`findingSummaryAndExit`（`cmd/root.go:493`）的 `if err != nil { os.Exit(1) }` 因 `err` 已被重置为 `nil` 而永不触发，退出码落到 `len(findings)==0 → 0`；文件系统来源路径已用 `logging.Fatal` 正确退出（故 #1461 只修了 diff/`DetectGit` 一侧，默认 `detect` 仍残留）。并给出设计意见：改用 `logging.Fatal` 是错误修法（会丢弃已采集到的所有 finding、违背 partial-scan 初衷），正确做法是「传播而非 Fatal」，让既有 `os.Exit(1)` 生效；附带最小修复 + 回归测试的可执行提议
 - [mikefarah/yq#2840](https://github.com/mikefarah/yq/pull/2840) — docs 死链修复 PR（首次向该仓库贡献）：README 中 strict-confinement 说明指向的 `docs.snapcraft.io/snap-confinement/6233` 已 404（Snapcraft 文档迁移至 `snapcraft.io/docs`），改指现存活的 `snapcraft.io/docs/snap-confinement`（curl 跟随重定向 200 验证）；全仓外链清扫仅此一处真实失效（linux.die.net / StackOverflow 的 403 为反爬拦截，浏览器访问正常）。+1/-1，无 CLA/DCO 门槛，MERGEABLE
 
 ## 2026-08-26

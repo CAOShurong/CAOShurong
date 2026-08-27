@@ -249,6 +249,16 @@ Each review ran the project's real test suite on the exact head under review.
   `open_groups`/`open_dataset` were identical at every point with both engines,
   so the bug was fixed as a side effect of the DataTree/netCDF IO rework
   (most likely #10623). Recommended closing as already-fixed.
+- **gitleaks #1464** — root-cause + design comment on a CI-safety bug: a failed
+  git scan is reported as a clean pass. Reproduced on a `master` source build
+  (`718896a`): an invalid `--log-opts` range makes git scan fail (`0 commits
+  scanned`) yet the process exits `0` with "no leaks found". Root cause:
+  `cmd/detect.go` logs and discards the `DetectSource` error instead of
+  propagating it, so `findingSummaryAndExit` (`cmd/root.go:493`) never hits its
+  `os.Exit(1)`; the earlier #1461 fix only covered the `DetectGit`/diff path.
+  Advised against `logging.Fatal` (would drop collected findings, breaking
+  partial scans) in favour of propagating the error; offered a minimal fix +
+  regression test.
 
 ## Closed / superseded
 

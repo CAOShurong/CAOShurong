@@ -74,6 +74,10 @@ is what the row says. Refreshed 2026-08-26.
 
 Upstream contributions (fixes, reviews and triage in other projects) are
 tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 22 merged, 65 open across 34 upstream organisations (live GitHub counts). Latest:
+[gitleaks#1464](https://github.com/gitleaks/gitleaks/issues/1464#issuecomment-5437397130), a root-cause
+discussion on a CI-safety bug — a failing git scan is silently reported as a clean
+pass (built `master`, reproduced a `0 commits scanned` run that still exits `0` with "no
+leaks found"; root cause is the swallowed error in `cmd/detect.go`); before that,
 [yq#2840](https://github.com/mikefarah/yq/pull/2840), a docs fix that replaces a dead
 Snapcraft confinement link in the README (the old `docs.snapcraft.io/snap-confinement/6233`
 URL now 404s; it now points at the live `snapcraft.io/docs/snap-confinement` page —

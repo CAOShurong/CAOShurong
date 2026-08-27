@@ -4,7 +4,17 @@ The README keeps the summary; this file keeps the receipts. Every entry here
 is a public GitHub artifact (merged PR, open PR, review, or analysis thread).
 Ordered roughly newest-first within each section.
 
-## Merged (22 across 13 upstream repositories)
+## Merged (24 across 14 upstream repositories)
+
+- **[oss-review-toolkit/ort #12352](https://github.com/oss-review-toolkit/ort/pull/12352)** —
+  repairs the user-facing license-handling guide after the declared-license
+  mapping resource moved into the `spdx-expression` module. The one-line link
+  fix passed DCO and was merged by `sschuberth` from exact head `7802e473` as
+  `64a34a8a` on 2026-08-26.
+- **[rclone #9823](https://github.com/rclone/rclone/pull/9823)** — treats a
+  successful S3 `UploadPart` response without an ETag as a retryable error
+  instead of dereferencing a nil pointer in a debug log and crashing the
+  transfer. `ncw` merged exact head `3c0e7b28` as `660144d3` on 2026-08-26.
 
 - **[argoproj/argo-workflows #16818](https://github.com/argoproj/argo-workflows/pull/16818)** —
   docs: fixes two dead RBAC manifest links in `docs/security.md`. The

@@ -111,29 +111,43 @@ def render(data: dict[str, Any], digest: str) -> str:
 
 
 def verify_live(data: dict[str, Any]) -> None:
-    completed = subprocess.run(
-        [
-            "gh",
-            "search",
-            "prs",
-            "--author",
-            "CAOShurong",
-            "--merged",
-            "--limit",
-            "1000",
-            "--json",
-            "repository,number",
-        ],
-        check=True,
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-    )
-    live = {
-        (item["repository"]["nameWithOwner"], int(item["number"]))
-        for item in json.loads(completed.stdout)
-        if not item["repository"]["nameWithOwner"].casefold().startswith("caoshurong/")
+    query = """
+    query($cursor: String) {
+      user(login: "CAOShurong") {
+        pullRequests(
+          first: 100
+          after: $cursor
+          states: MERGED
+          orderBy: {field: UPDATED_AT, direction: DESC}
+        ) {
+          nodes { number repository { nameWithOwner owner { login } } }
+          pageInfo { hasNextPage endCursor }
+        }
+      }
     }
+    """
+    live: set[tuple[str, int]] = set()
+    cursor: str | None = None
+    while True:
+        command = ["gh", "api", "graphql", "-f", f"query={query}"]
+        if cursor is not None:
+            command.extend(["-F", f"cursor={cursor}"])
+        completed = subprocess.run(
+            command,
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+        )
+        connection = json.loads(completed.stdout)["data"]["user"]["pullRequests"]
+        for item in connection["nodes"]:
+            repository = item["repository"]
+            if repository["owner"]["login"].casefold() != "caoshurong":
+                live.add((repository["nameWithOwner"], int(item["number"])))
+        page_info = connection["pageInfo"]
+        if not page_info["hasNextPage"]:
+            break
+        cursor = page_info["endCursor"]
     manifest = {(item[0], int(item[1])) for item in data["contributions"]}
     if live != manifest:
         missing = sorted(live - manifest)

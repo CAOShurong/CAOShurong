@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
- "observed_at": "2026-08-26",
- "source_command": "gh search prs --author CAOShurong --merged --limit 1000 --json repository,number,title,url,closedAt",
+ "observed_at": "2026-08-27T19:05:00+08:00",
+ "source_command": "gh api graphql: paginated user.pullRequests(states:MERGED); external base repositories only",
  "contributions": [
   [
    "CycloneDX/cyclonedx-javascript-library",
@@ -84,6 +84,11 @@
    "systems"
   ],
   [
+   "oss-review-toolkit/ort",
+   12352,
+   "supply_chain"
+  ],
+  [
    "plotly/plotly.js",
    7959,
    "systems"
@@ -91,6 +96,11 @@
   [
    "rclone/rclone",
    9766,
+   "systems"
+  ],
+  [
+   "rclone/rclone",
+   9823,
    "systems"
   ],
   [

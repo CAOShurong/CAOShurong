@@ -49,16 +49,17 @@ place instead of being scattered across other people's repos.
 
 ## Totals (rolling)
 
-Counts re-verified against the GitHub API on 2026-08-26 (evening; search:
-`is:pr author:CAOShurong is:merged` / `is:open`, own org excluded from
-merged; open items are all external). A PR counts here only once GitHub
-shows it merged.
+Counts were re-verified against the direct GitHub GraphQL/REST API on
+2026-08-27. The merged set comes from the user's paginated `pullRequests`
+connection, with TheELNFileFormat #152 directly rechecked because GitHub search
+still omits it. Open items are external base repositories. A PR counts here
+only once GitHub shows it merged.
 
-- External merged PRs: **22 / 100** across 12 upstream projects
-  (latest merge: [argo-workflows#16818](https://github.com/argo-workflows/pull/16818),
-  merged 2026-08-26 — first argoproj contribution. Note: GitHub search
-  under-counts by one — TheELNFileFormat #152 is MERGED per direct API but
-  missing from the search index; totals here use direct-API verification)
-- Open external PRs: **65** across **34** upstream organisations
-  (newest: [yq#2840](https://github.com/mikefarah/yq/pull/2840))
+- External merged PRs: **24 / 100** across **14** upstream repositories and
+  **13** upstream owners. The latest merges are
+  [rclone#9823](https://github.com/rclone/rclone/pull/9823) and
+  [ORT#12352](https://github.com/oss-review-toolkit/ort/pull/12352), both merged
+  2026-08-26 by upstream maintainers.
+- Open external PRs: **66** across **37** repositories and **34** upstream
+  owners (newest: [gitleaks#2252](https://github.com/gitleaks/gitleaks/pull/2252)).
 - Communities active in: eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, pydantic, ruff, jax, numpy, restic, tqdm, beets, sigstore, grype, and more.

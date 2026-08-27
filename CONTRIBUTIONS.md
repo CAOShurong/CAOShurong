@@ -131,6 +131,15 @@ Ordered roughly newest-first within each section.
 
 ## Open pull requests (proposals awaiting maintainer decision)
 
+- **[asdf-vm/asdf #2317](https://github.com/asdf-vm/asdf/pull/2317)** — docs-only
+  fix for #2299: explains dash-to-underscore conversion in
+  `ASDF_<TOOL>_VERSION` names, with `aws-sam-cli` as the concrete example.
+  Exact head `d1410b31`; focused resolver tests, VitePress build and diff checks
+  pass. Open and awaiting review.
+- **[libusb/libusb #1954](https://github.com/libusb/libusb/pull/1954)** —
+  docs-only fix for #1938: corrects the `libusb_open()` event-source narrative
+  after the events-lock removal. Exact head `24258d9c`; source cross-check and
+  diff checks pass, while AppVeyor is pending. Open and awaiting review.
 - **[pypa/cibuildwheel #2977](https://github.com/pypa/cibuildwheel/pull/2977)** — docs-only refresh for three dead external links and one legacy redirect: CircleCI's moved open-source guide and canonical configuration reference, plus CPython's relocated Android and iOS testbed READMEs. Replacement URLs and destination headings were checked live; exact head `f8f58971`; the PR is OPEN/MERGEABLE with no reviewer requested, five successful contexts, one neutral check, and no pending or failing checks at the 2026-08-27 audit. Not accepted until merged.
 - **[gitleaks/gitleaks #2252](https://github.com/gitleaks/gitleaks/pull/2252)** — fixes a CI-safety bug (gitleaks#1464): a failed git scan was silently reported as a clean pass. Root cause: the git-stderr error is routed through `DetectSource`'s per-fragment callback, which logged and returned `nil`, so the error never reached `findingSummaryAndExit` and the process exited `0` ("no leaks found") despite `0 commits scanned`. Fix: `DetectSource` propagates the error so the existing `os.Exit(1)` path fires; benign git warnings are not routed through this channel, so partial scans keep their behavior. Includes regression test `TestDetectGitFailedScanPropagatesError` (RED on pristine `master`, GREEN with the patch). First PR to gitleaks; MERGEABLE.
 - **[mikefarah/yq #2840](https://github.com/mikefarah/yq/pull/2840)** — docs dead-link fix: README's strict-confinement note pointed at the dead `docs.snapcraft.io/snap-confinement/6233` URL (404 after the Snapcraft docs moved to `snapcraft.io/docs`); replaced with the live `snapcraft.io/docs/snap-confinement` page (HTTP 200 verified). First PR to mikefarah/yq; no CLA/DCO gate; MERGEABLE.

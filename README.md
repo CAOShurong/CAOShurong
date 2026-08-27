@@ -74,7 +74,8 @@ is what the row says. Refreshed 2026-08-27.
 
 Upstream contributions (fixes, reviews and triage in other projects) are
 tracked in [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md) — 28 merged across
-14 upstream owners; 66 open across 34 upstream owners (live GitHub counts).
+15 upstream repositories and 14 upstream owners; 68 open across 39
+repositories and 35 upstream owners (live GitHub counts).
 The latest accepted merges are
 [apache/magpie#1118](https://github.com/apache/magpie/pull/1118),
 [plotly.js#7981](https://github.com/plotly/plotly.js/pull/7981),
@@ -85,7 +86,13 @@ upstream maintainers on 2026-08-27. Current open work includes
 (exact head `d4711bfc`, focused tests and `go vet` passing) and
 [zarr-python#4289](https://github.com/zarr-developers/zarr-python/pull/4289)
 (exact head `b7c0821e`, docs gates passing; one matrix failure is being
-reconciled); before that,
+reconciled),
+[asdf#2317](https://github.com/asdf-vm/asdf/pull/2317) (exact head
+`d1410b31`, documenting dashed-tool environment variable names; focused tests
+and VitePress build passing), and
+[libusb#1954](https://github.com/libusb/libusb/pull/1954) (exact head
+`24258d9c`, correcting the `libusb_open()` event-source narrative; AppVeyor
+pending); before that,
 [gitleaks#2249](https://github.com/gitleaks/gitleaks/pull/2249#pullrequestreview-5039796619), a verification review of an external author's fix for the file-read sibling of our own #2252 — a partial scan (an unreadable file) was silently reported as `no leaks found` exit 0. Reviewed from exact head `509fce15`: `go build`/`go vet`/`go test ./sources/` all clean, and the root cause (goroutine errors via `s.Sema.Go` are never read because no `.Wait()` is ever called) was independently confirmed by grep; recommended a sibling fix for the same defect class; before that,
 [gitleaks#2252](https://github.com/gitleaks/gitleaks/pull/2252), a fix for a
 CI-safety bug where a failing git scan is silently reported as a clean pass

@@ -136,6 +136,21 @@ Ordered roughly newest-first within each section.
 
 ## Open pull requests (proposals awaiting maintainer decision)
 
+- **[tqdm/tqdm #1807](https://github.com/tqdm/tqdm/pull/1807)** — fixes a
+  CI-safety/behavior bug (tqdm/tqdm#1501): `logging_redirect_tqdm` added a
+  `_TqdmLoggingHandler` to any target logger even when it had **no** console
+  handler, so a logger that previously produced no console output began
+  emitting to the console. Root cause: the handler-replacement ran
+  unconditionally; fix moves it under the `if orig_handler is not None:` guard.
+  New regression test fails on pristine `master` and passes with the patch;
+  full `tests/tests_contrib_logging.py` (20) + `tests/tests_contrib.py` pass;
+  `git diff --check` clean. OPEN/MERGEABLE, review required. First PR to tqdm.
+- **[fsnotify/fsnotify #773](https://github.com/fsnotify/fsnotify/pull/773)** —
+  fixes the Windows deadlock between `Close()` and `Add()`/`Remove()` reported
+  in #704: adds a `closeCh` channel closed by `Close()` under `mu`; `AddWith`
+  and `Remove` `select` on it and return `ErrClosed` instead of blocking. New
+  regression test `TestWindowsCloseAddRace` runs the race 200× and passes on
+  Windows; `go build ./...` and `go vet ./...` clean. OPEN/MERGEABLE.
 - **[libusb/libusb #1954](https://github.com/libusb/libusb/pull/1954)** —
   docs-only fix for #1938: corrects the `libusb_open()` event-source narrative
   after the events-lock removal. Exact head `24258d9c`; source cross-check and

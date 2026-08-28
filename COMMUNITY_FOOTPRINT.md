@@ -6,7 +6,9 @@ is updated every round by the identity agent (②) so the work is visible in one
 place instead of being scattered across other people's repos.
 
 ## 2026-08-29
-- [XAMPPRocky/octocrab `docs/fix-dead-docrs-links`](https://github.com/CAOShurong/octocrab/tree/docs/fix-dead-docrs-links) — P3 docs fix: the GitHub API client was restructured, renaming several handler structs and removing `codes_of_conduct` as a standalone module, so six `docs.rs` reference links in the README "Available modules" block return HTTP 404. Fixed by repointing each at a live target (verified HTTP 200): `apps`, `code_scannings`, `commits`, `events`, `users` → their module `index.html`; `codes_of_conduct` → crate root (`octocrab/`). `git diff --check` clean, README-only (+6/−6). The branch is pushed to the CAOShurong fork and is upstream-ready. **API gate (transparency):** the CAOShurong token currently cannot open PRs to third-party repos (GraphQL `CreatePullRequest` denied; REST returns a masked 404), while issue creation and intra-fork PRs both succeed — so the cross-repo PR could not be filed this round. The commit stands as real, verifiable, upstream-ready work and will be retried on the next round or when the gate clears.
+- [tqdm/tqdm#1807](https://github.com/tqdm/tqdm/pull/1807) — P1 fix PR (first PR to tqdm, ~29k stars): `logging_redirect_tqdm` silently fabricated a new `_TqdmLoggingHandler` on any logger that originally had **no** console handler, so such a logger began emitting to the console where it previously produced no console output at all (tqdm/tqdm#1501). Root cause: the handler-replacement line ran unconditionally. Fix moves it under the `if orig_handler is not None:` guard so the tqdm handler is added only when there is a console handler to redirect. Verified RED→GREEN: new regression test `test_should_not_add_tqdm_handler_when_logger_has_no_console_handler` fails on pristine `master` and passes with the patch; full `tests/tests_contrib_logging.py` (20 tests) + `tests/tests_contrib.py` pass; `git diff --check` clean. OPEN/MERGEABLE, review required.
+- [tqdm/tqdm#1501](https://github.com/tqdm/tqdm/issues/1501#issuecomment-5455599775) — P4 root-cause + fix-link discussion on the issue this PR resolves: posted the exact defective lines, the guard fix, and pointed to #1807 with a regression test that fails on `master`. Disclosed AI assistance. Issue-triage evidence, not a merge.
+- [XAMPPRocky/octocrab `docs/fix-dead-docrs-links`](https://github.com/CAOShurong/octocrab/tree/docs/fix-dead-docrs-links) — P3 docs fix (carried from 2026-08-28): the octocrab API was restructured, renaming several handler structs and removing `codes_of_conduct` as a standalone module, so six `docs.rs` reference links in the README "Available modules" block return HTTP 404. Fixed by repointing each at a live target (verified HTTP 200) and pushed to the CAOShurong fork, README-only (+6/−6), `git diff --check` clean. **Root-cause note (corrected):** the cross-fork PR cannot be filed because octocrab's repository setting `pull_request_creation_policy=collaborators_only` rejects contributions from outside collaborators — a repo policy, not a transient token gate (third-party PRs to other repos such as fsnotify and tqdm succeed with the same token). The branch stays upstream-ready; will be retried if the policy opens or via a maintainer invitation.
 
 ## 2026-08-28
 - [asdf-vm/asdf#2317](https://github.com/asdf-vm/asdf/pull/2317) — merged by
@@ -100,8 +102,8 @@ only once GitHub shows it merged.
   [rclone#9818](https://github.com/rclone/rclone/pull/9818), and
   [tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042), all merged
   2026-08-27 or 2026-08-28 by upstream maintainers.
-- Open external PRs: **68** across **40** repositories and **35** upstream
-  owners (newest: [scorecard#5202](https://github.com/ossf/scorecard/pull/5202),
-  [libusb#1954](https://github.com/libusb/libusb/pull/1954) and
-  [CycloneDX JS#1513](https://github.com/CycloneDX/cyclonedx-javascript-library/pull/1513)).
+- Open external PRs: **69** across **40** repositories and **35** upstream
+  owners (newest: [tqdm#1807](https://github.com/tqdm/tqdm/pull/1807),
+  [fsnotify#773](https://github.com/fsnotify/fsnotify/pull/773) and
+  [scorecard#5202](https://github.com/ossf/scorecard/pull/5202)).
 - Communities active in: eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, pydantic, ruff, jax, restic, tqdm, beets, sigstore, grype, and more.

@@ -64,7 +64,7 @@ engineering and research practice.
 | **FrontierTrials** | [v0.4.1](https://github.com/CAOShurong/frontiertrials/releases/tag/v0.4.1) (08-12) | 批量作答：一次粘贴所有答案或拖入 txt/md 文件（08-26） |
 | **TermScope** | [v0.4.1](https://github.com/CAOShurong/termscope/releases/tag/v0.4.1) (08-12) | 修复带标签遥测 token 边界（#8） |
 | **ColdShelf** | [v0.1.7](https://github.com/CAOShurong/coldshelf/releases/tag/v0.1.7) (08-12) | 修复版本无关的安裝验证（#16） |
-| **contextcost** | [v0.5.3](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.3) (08-26) | README 首屏 hero 表：plotly.js 42% / dask 46.5% 实测省 token（08-27） |
+| **contextcost** | [v0.5.3](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.3) (08-26) | GitHub Action 预算门控修复：PR `max-added` 输入从未接线致门控静默不跑，已接通（08-29） |
 | **OhmJudge** | [v0.3.0](https://github.com/CAOShurong/ohmjudge/releases/tag/v0.3.0) (08-11) | 仅依赖维护：codeql-action 升至 v4.37.7（#5，08-23） |
 | **DidYouLearn** | [v0.1.1](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.1) (08-12) | 仅依赖维护：codeql-action 升至 v4.37.7（#9，08-23） |
 | **EvalInt** | [v0.2.30](https://github.com/CAOShurong/evalint/releases/tag/v0.2.30) (08-12) | 审计 Promptfoo 命名指标（#59） |

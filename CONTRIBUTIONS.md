@@ -145,6 +145,17 @@ Ordered roughly newest-first within each section.
   New regression test fails on pristine `master` and passes with the patch;
   full `tests/tests_contrib_logging.py` (20) + `tests/tests_contrib.py` pass;
   `git diff --check` clean. OPEN/MERGEABLE, review required. First PR to tqdm.
+- **[pallets/click #3803](https://github.com/pallets/click/pull/3803)** — fixes a
+  crash (pallets/click#3802): a second `KeyboardInterrupt` (Ctrl-C) arriving
+  while click prints its "Aborted!" message during exception handling escaped
+  `main()` and crashed the process. Root cause: `isatty()` only guarded
+  `except Exception`, but `KeyboardInterrupt` is a `BaseException`, so the stream
+  probe's `KeyboardInterrupt` escaped. Fix widens the guard to
+  `(Exception, KeyboardInterrupt)` returning `False`. Two regression tests
+  (`test_isatty_swallows_keyboard_interrupt`,
+  `test_abort_echo_absorbs_keyboard_interrupt_in_isatty`) fail on pristine
+  `main` and pass with the patch; full compat/termui/basic/options/arguments
+  suites pass (1298 passed, 18 skipped). OPEN/MERGEABLE. First PR to click.
 - **[fsnotify/fsnotify #773](https://github.com/fsnotify/fsnotify/pull/773)** —
   fixes the Windows deadlock between `Close()` and `Add()`/`Remove()` reported
   in #704: adds a `closeCh` channel closed by `Close()` under `mu`; `AddWith`

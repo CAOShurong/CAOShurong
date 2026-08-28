@@ -99,5 +99,11 @@ presented as independent adoption. The portfolio is intentionally small:
 useful artifacts, runnable entry points, explicit limits, and reproducible
 public evidence matter more than repository volume.
 
+Detailed per-PR receipts, reviews, triage, and dated updates remain in
+[CONTRIBUTIONS.md](CONTRIBUTIONS.md) and
+[COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md); the compact evidence card is
+generated from the [manifest](data/contributor-evidence.json) by the
+[validator](scripts/generate_contributor_evidence.py).
+
 [All repositories](https://github.com/CAOShurong?tab=repositories) ·
 [Published Python packages](https://pypi.org/user/CAOShurong/)

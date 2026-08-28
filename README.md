@@ -52,6 +52,26 @@ engineering and research practice.
 - **[ResearchBench](https://github.com/CAOShurong/researchbench)** — a running
   comparison of AI systems on real research tasks.
 
+## 各项目最近动态
+
+从本机 11 个仓库的 git log 抽取的最新一次发版 / 提交（截至 2026-08-29；仅依赖更新会如实标注）。
+
+| 项目 | 最近发版 | 最近动态 |
+| --- | --- | --- |
+| **BenchLineage** | [v0.3.8](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.8) (08-26) | README 新增「零安装试用」：`uvx benchlineage demo …` + `verify` 端到端验证 |
+| **VulnFuse** | [v0.4.24](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.24) (08-12) | 文档 prettier 表格对齐修复（08-26 仍有提交保持 main 可验证） |
+| **WillItBreak** | [v0.1.3](https://github.com/CAOShurong/willitbreak/releases/tag/v0.1.3) (08-12) | `--ascii` 转义 Unicode 报告内容（#5） |
+| **FrontierTrials** | [v0.4.1](https://github.com/CAOShurong/frontiertrials/releases/tag/v0.4.1) (08-12) | 批量作答：一次粘贴所有答案或拖入 txt/md 文件（08-26） |
+| **TermScope** | [v0.4.1](https://github.com/CAOShurong/termscope/releases/tag/v0.4.1) (08-12) | 修复带标签遥测 token 边界（#8） |
+| **ColdShelf** | [v0.1.7](https://github.com/CAOShurong/coldshelf/releases/tag/v0.1.7) (08-12) | 修复版本无关的安裝验证（#16） |
+| **contextcost** | [v0.5.3](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.3) (08-26) | README 首屏 hero 表：plotly.js 42% / dask 46.5% 实测省 token（08-27） |
+| **OhmJudge** | [v0.3.0](https://github.com/CAOShurong/ohmjudge/releases/tag/v0.3.0) (08-11) | 仅依赖维护：codeql-action 升至 v4.37.7（#5，08-23） |
+| **DidYouLearn** | [v0.1.1](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.1) (08-12) | 仅依赖维护：codeql-action 升至 v4.37.7（#9，08-23） |
+| **EvalInt** | [v0.2.30](https://github.com/CAOShurong/evalint/releases/tag/v0.2.30) (08-12) | 审计 Promptfoo 命名指标（#59） |
+| **ResearchBench** | [v0.1.0](https://github.com/CAOShurong/researchbench/releases/tag/v0.1.0) (08-21) | 文档刷新 handoff workspace 指纹（08-23） |
+
+每条动态都对应一个真实 commit，未做美化；维护型提交如实写「仅依赖维护」。
+
 ## Open-source record
 
 The live public snapshot below separates accepted upstream work from proposals

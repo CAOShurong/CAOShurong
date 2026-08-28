@@ -6,6 +6,10 @@ is updated every round by the identity agent (②) so the work is visible in one
 place instead of being scattered across other people's repos.
 
 ## 2026-08-28
+- [asdf-vm/asdf#2317](https://github.com/asdf-vm/asdf/pull/2317) — merged by
+  `Stratus3D` on 2026-08-28 as `e4911f36` from exact head `d1410b31`; explains
+  the dash-to-underscore mapping used by `ASDF_<TOOL>_VERSION` for dashed tool
+  names. Documentation-site, shell, actions and semantic-pr checks passed.
 - [apache/magpie#1118](https://github.com/apache/magpie/pull/1118) — merged by
   `potiuk` on 2026-08-27 as `e8c3a346` from exact head `0949ce9a`; adds stable
   per-PR progress headers and interaction-progress evaluation fixtures to the
@@ -19,12 +23,6 @@ place instead of being scattered across other people's repos.
 - [tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042) — merged by
   `gaborbernat` on 2026-08-27 as `2a4a2157` from exact head `4ef082c9`; updates
   the virtualenv discovery link and adds the required changelog fragment.
-- [asdf-vm/asdf#2317](https://github.com/asdf-vm/asdf/pull/2317) — docs-only
-  fix for issue #2299: explains that dashes in tool names become underscores
-  in `ASDF_<TOOL>_VERSION` (for example, `aws-sam-cli` uses
-  `ASDF_AWS_SAM_CLI_VERSION`). Exact head `d1410b31`; VitePress and focused
-  resolver tests pass, and `semantic-pr` is successful. Open and awaiting
-  maintainer review.
 - [libusb/libusb#1954](https://github.com/libusb/libusb/pull/1954) — docs-only
   fix for issue #1938: updates the `libusb_open()` multi-threaded I/O
   description to match the current event-source notification path after the
@@ -91,15 +89,16 @@ connection, with TheELNFileFormat #152 directly rechecked because GitHub search
 still omits it. Open items are external base repositories. A PR counts here
 only once GitHub shows it merged.
 
-- External merged PRs: **28 / 100** across **15** upstream repositories and
-  **14** upstream owners. The latest merges are
+- External merged PRs: **29 / 100** across **16** upstream repositories and
+  **15** upstream owners. The latest merges are
+  [asdf-vm/asdf#2317](https://github.com/asdf-vm/asdf/pull/2317),
   [apache/magpie#1118](https://github.com/apache/magpie/pull/1118),
   [plotly.js#7981](https://github.com/plotly/plotly.js/pull/7981),
   [rclone#9818](https://github.com/rclone/rclone/pull/9818), and
   [tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042), all merged
-  2026-08-27 by upstream maintainers.
-- Open external PRs: **69** across **40** repositories and **35** upstream
+  2026-08-27 or 2026-08-28 by upstream maintainers.
+- Open external PRs: **68** across **40** repositories and **35** upstream
   owners (newest: [scorecard#5202](https://github.com/ossf/scorecard/pull/5202),
   [libusb#1954](https://github.com/libusb/libusb/pull/1954) and
-  [asdf#2317](https://github.com/asdf-vm/asdf/pull/2317)).
+  [CycloneDX JS#1513](https://github.com/CycloneDX/cyclonedx-javascript-library/pull/1513)).
 - Communities active in: eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, pydantic, ruff, jax, restic, tqdm, beets, sigstore, grype, and more.

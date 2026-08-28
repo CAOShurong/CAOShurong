@@ -4,8 +4,13 @@ The README keeps the summary; this file keeps the receipts. Every entry here
 is a public GitHub artifact (merged PR, open PR, review, or analysis thread).
 Ordered roughly newest-first within each section.
 
-## Merged (28 across 15 upstream repositories)
+## Merged (29 across 16 upstream repositories)
 
+- **[asdf-vm/asdf #2317](https://github.com/asdf-vm/asdf/pull/2317)** — explains
+  the dash-to-underscore mapping used by `ASDF_<TOOL>_VERSION` for dashed tool
+  names such as `aws-sam-cli`. `Stratus3D` merged exact head `d1410b31` as
+  `e4911f36` on 2026-08-28 after the documentation-site, shell, actions and
+  semantic-pr checks passed.
 - **[Apache Magpie #1118](https://github.com/apache/magpie/pull/1118)** — adds
   stable per-PR progress headers to the `pr-management-triage` interaction
   loop and four acceptance fixtures. Maintainer `potiuk` merged exact head
@@ -131,11 +136,6 @@ Ordered roughly newest-first within each section.
 
 ## Open pull requests (proposals awaiting maintainer decision)
 
-- **[asdf-vm/asdf #2317](https://github.com/asdf-vm/asdf/pull/2317)** — docs-only
-  fix for #2299: explains dash-to-underscore conversion in
-  `ASDF_<TOOL>_VERSION` names, with `aws-sam-cli` as the concrete example.
-  Exact head `d1410b31`; focused resolver tests, VitePress build and diff checks
-  pass. Open and awaiting review.
 - **[libusb/libusb #1954](https://github.com/libusb/libusb/pull/1954)** —
   docs-only fix for #1938: corrects the `libusb_open()` event-source narrative
   after the events-lock removal. Exact head `24258d9c`; source cross-check and

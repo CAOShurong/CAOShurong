@@ -102,7 +102,7 @@ only once GitHub shows it merged.
   [rclone#9818](https://github.com/rclone/rclone/pull/9818), and
   [tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042), all merged
   2026-08-27 or 2026-08-28 by upstream maintainers.
-- Open external PRs: **69** across **40** repositories and **35** upstream
+- Open external PRs: **70** across **40** repositories and **35** upstream
   owners (newest: [tqdm#1807](https://github.com/tqdm/tqdm/pull/1807),
   [fsnotify#773](https://github.com/fsnotify/fsnotify/pull/773) and
   [scorecard#5202](https://github.com/ossf/scorecard/pull/5202)).

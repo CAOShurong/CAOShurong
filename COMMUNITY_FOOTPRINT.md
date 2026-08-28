@@ -5,6 +5,9 @@ reviews, triage and design comments in other projects' communities. This file
 is updated every round by the identity agent (②) so the work is visible in one
 place instead of being scattered across other people's repos.
 
+## 2026-08-29
+- [XAMPPRocky/octocrab `docs/fix-dead-docrs-links`](https://github.com/CAOShurong/octocrab/tree/docs/fix-dead-docrs-links) — P3 docs fix: the GitHub API client was restructured, renaming several handler structs and removing `codes_of_conduct` as a standalone module, so six `docs.rs` reference links in the README "Available modules" block return HTTP 404. Fixed by repointing each at a live target (verified HTTP 200): `apps`, `code_scannings`, `commits`, `events`, `users` → their module `index.html`; `codes_of_conduct` → crate root (`octocrab/`). `git diff --check` clean, README-only (+6/−6). The branch is pushed to the CAOShurong fork and is upstream-ready. **API gate (transparency):** the CAOShurong token currently cannot open PRs to third-party repos (GraphQL `CreatePullRequest` denied; REST returns a masked 404), while issue creation and intra-fork PRs both succeed — so the cross-repo PR could not be filed this round. The commit stands as real, verifiable, upstream-ready work and will be retried on the next round or when the gate clears.
+
 ## 2026-08-28
 - [asdf-vm/asdf#2317](https://github.com/asdf-vm/asdf/pull/2317) — merged by
   `Stratus3D` on 2026-08-28 as `e4911f36` from exact head `d1410b31`; explains

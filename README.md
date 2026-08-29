@@ -79,10 +79,10 @@ that are still awaiting a maintainer decision.
 
 | Signal | Snapshot |
 | --- | ---: |
-| Accepted external changes | **29 / 100** |
-| Upstream repositories | **16** |
-| Upstream owners | **15** |
-| Open external proposals | **70** across **40** repositories and **35** owners |
+| Accepted external changes | **30 / 100** |
+| Upstream repositories | **17** |
+| Upstream owners | **16** |
+| Open external proposals | **73** across **45** repositories and **41** owners |
 
 Only PRs that GitHub reports as merged are included in the accepted count.
 Detailed per-PR receipts, reviews, triage, and dated updates remain in

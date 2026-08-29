@@ -59,7 +59,7 @@ engineering and research practice.
 | 项目 | 最近发版 | 最近动态 |
 | --- | --- | --- |
 | **BenchLineage** | [v0.3.8](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.8) (08-26) | README 新增「零安装试用」：`uvx benchlineage demo …` + `verify` 端到端验证 |
-| **VulnFuse** | [v0.4.24](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.24) (08-12) | 文档 prettier 表格对齐修复（08-26 仍有提交保持 main 可验证） |
+| **VulnFuse** | [v0.4.24](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.24) (08-12) | 首屏新增「30 秒看它工作」用户故事钩子：打开在线 workbench 点 Load safe demo，5 条告警→4 个可解释聚类（08-29） |
 | **WillItBreak** | [v0.1.3](https://github.com/CAOShurong/willitbreak/releases/tag/v0.1.3) (08-12) | `--ascii` 转义 Unicode 报告内容（#5） |
 | **FrontierTrials** | [v0.4.1](https://github.com/CAOShurong/frontiertrials/releases/tag/v0.4.1) (08-12) | 批量作答：一次粘贴所有答案或拖入 txt/md 文件（08-26） |
 | **TermScope** | [v0.4.1](https://github.com/CAOShurong/termscope/releases/tag/v0.4.1) (08-12) | 修复带标签遥测 token 边界（#8） |

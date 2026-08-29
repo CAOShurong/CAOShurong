@@ -39,7 +39,7 @@ engineering and research practice.
 | **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Reproducible capability trials for frontier models behind one configuration. | [try it](https://caoshurong.github.io/frontiertrials/try/) · [study report](https://caoshurong.github.io/frontiertrials/demo/trial-report.html) |
 | **[TermScope](https://github.com/CAOShurong/termscope)** | Terminal telemetry for Arduino, ESP32, and STM32 over serial, pipes, or SSH. | [PyPI](https://pypi.org/project/termscope/) · [v0.4.1](https://github.com/CAOShurong/termscope/releases/tag/v0.4.1) |
 | **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | A private, searchable catalogue for unplugged drives and their evidence. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [scope and limits](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
-| **[contextcost](https://github.com/CAOShurong/contextcost)** | Measures repository context cost and verifies whether proposed cuts save real tokens. | [PyPI](https://pypi.org/project/contextcost/) · [v0.5.3](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.3) · [GitHub Action](https://github.com/CAOShurong/contextcost/blob/main/action.yml) |
+| **[contextcost](https://github.com/CAOShurong/contextcost)** | Measures repository context cost and verifies whether proposed cuts save real tokens. | [PyPI](https://pypi.org/project/contextcost/) · [v0.5.4](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.4) · [GitHub Action](https://github.com/CAOShurong/contextcost/blob/main/action.yml) |
 
 ## Research prototypes
 
@@ -64,7 +64,7 @@ engineering and research practice.
 | **FrontierTrials** | [v0.4.1](https://github.com/CAOShurong/frontiertrials/releases/tag/v0.4.1) (08-12) | 批量作答：一次粘贴所有答案或拖入 txt/md 文件（08-26） |
 | **TermScope** | [v0.4.1](https://github.com/CAOShurong/termscope/releases/tag/v0.4.1) (08-12) | 修复带标签遥测 token 边界（#8） |
 | **ColdShelf** | [v0.1.7](https://github.com/CAOShurong/coldshelf/releases/tag/v0.1.7) (08-12) | 修复版本无关的安裝验证（#16） |
-| **contextcost** | [v0.5.3](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.3) (08-26) | GitHub Action 预算门控修复：PR `max-added` 输入从未接线致门控静默不跑，已接通（08-29） |
+| **contextcost** | [v0.5.4](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.4) (08-29) | 首屏 3 秒 hero 表（plotly.js 42% / dask 46.5% 真实数字 + `uvx contextcost` 一键试用）+ GitHub Action 预算门控真正接通；自测刷新 113k→104k（7.6%）（08-29） |
 | **OhmJudge** | [v0.3.0](https://github.com/CAOShurong/ohmjudge/releases/tag/v0.3.0) (08-11) | 仅依赖维护：codeql-action 升至 v4.37.7（#5，08-23） |
 | **DidYouLearn** | [v0.1.1](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.1) (08-12) | 仅依赖维护：codeql-action 升至 v4.37.7（#9，08-23） |
 | **EvalInt** | [v0.2.30](https://github.com/CAOShurong/evalint/releases/tag/v0.2.30) (08-12) | 审计 Promptfoo 命名指标（#59） |

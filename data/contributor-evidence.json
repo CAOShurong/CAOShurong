@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "observed_at": "2026-08-30T00:55:00+08:00",
+ "observed_at": "2026-08-30T05:03:00+08:00",
  "source_command": "gh api graphql: paginated user.pullRequests(states:MERGED); external base repositories only",
  "contributions": [
   [
@@ -136,6 +136,16 @@
   [
    "rclone/rclone",
    9818,
+   "systems"
+  ],
+  [
+   "restic/restic",
+   22028,
+   "systems"
+  ],
+  [
+   "restic/restic",
+   22029,
    "systems"
   ],
   [

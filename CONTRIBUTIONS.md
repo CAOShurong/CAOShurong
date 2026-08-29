@@ -4,7 +4,16 @@ The README keeps the summary; this file keeps the receipts. Every entry here
 is a public GitHub artifact (merged PR, open PR, review, or analysis thread).
 Ordered roughly newest-first within each section.
 
-## Merged (29 across 16 upstream repositories)
+## Merged (32 across 18 upstream repositories)
+
+- **[restic #22029](https://github.com/restic/restic/pull/22029)** — removes the
+  contradictory `data/` plaintext exception from the encryption documentation,
+  matching the actual design and closing issue #22013. `MichaelEischer` merged
+  exact head `4fee16ac` as `fb5e9df3` on 2026-08-29.
+- **[restic #22028](https://github.com/restic/restic/pull/22028)** — repairs the
+  broken PGP-key and MinIO documentation links, removing the obsolete MinIO
+  Server section after its replacement redirected to a non-free product.
+  `MichaelEischer` merged exact head `cf70c210` as `46ea3656` on 2026-08-29.
 
 - **[asdf-vm/asdf #2317](https://github.com/asdf-vm/asdf/pull/2317)** — explains
   the dash-to-underscore mapping used by `ASDF_<TOOL>_VERSION` for dashed tool

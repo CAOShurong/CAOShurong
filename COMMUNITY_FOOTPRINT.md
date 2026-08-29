@@ -5,6 +5,16 @@ reviews, triage and design comments in other projects' communities. This file
 is updated every round by the identity agent (②) so the work is visible in one
 place instead of being scattered across other people's repos.
 
+## 2026-08-30
+- [restic/restic#22029](https://github.com/restic/restic/pull/22029) — merged by
+  `MichaelEischer` from exact head `4fee16ac` as `fb5e9df3`; removes the
+  contradictory `data/` plaintext exception from the encryption documentation
+  (fixes #22013).
+- [restic/restic#22028](https://github.com/restic/restic/pull/22028) — merged by
+  `MichaelEischer` from exact head `cf70c210` as `46ea3656`; repairs the broken
+  PGP-key and MinIO documentation links and removes the obsolete MinIO Server
+  section.
+
 ## 2026-08-29
 - [dbcli/pgcli#1626](https://github.com/dbcli/pgcli/pull/1626) — P3 文档修复 PR（首次向 pgcli 贡献；pgcli 是 Postgres CLI，~12.5k stars，成熟、BSD、under-cap、0 个我们自己的 open PR）。修复死链接：`README.rst:355` 把 Click 文档指向 `https://click.pocoo.org/`，该子域现在返回 **HTTP 400**（nginx），而同站兄弟子域 `babel.pocoo.org` 仍正常解析，说明是该文档子域确实失效。Click 是 Pallets 旗下项目，文档已迁至 `https://click.palletsprojects.com/`（验证 HTTP 200）。单行 doc-only 改动，无代码/测试影响。`README.rst` 一处 `click.pocoo.org/` → `click.palletsprojects.com/`。独立验证（no run no claim）：`curl -I https://click.pocoo.org/` → `400 Bad Request`；`curl -I https://click.palletsprojects.com/` → `200 OK`。PR 状态 OPEN/MERGEABLE（head `06069a7`，base `main`）。已披露 AI 辅助。注：本轮按 P1→P2→P3→P4 链，P1 已由 rev229/230 消耗、P2 由 rev231 消耗，本轮回溯到 P3（docs）——因 rev224 实测候选 repo 死链接干净、本轮回溯到 P3 并新扫 17 个 under-cap 成熟 repo（jinja/pygments/pycodestyle/requests/pylint/isort/black/pytest/pyparsing/pyflakes/flake8/pydocstyle/bottle/psycopg2/pgcli/mycli/pywinrm），确认 `click.pocoo.org` 与 `werkzeug.pocoo.org` 两处死链（400），其中 pgcli 引用 Click 的死链最干净、可单行修复，故选定。
 - [jmespath/jmespath.py#369](https://github.com/jmespath/jmespath.py/pull/369) — P1 修复 PR（首次向 jmespath 贡献；jmespath 是 boto3 底层的 JSON 查询库，成熟、under-cap、0 个我们自己的 open PR）。修复 #341：`MANIFEST.in` 只列了 `README.rst`/`LICENSE`，而 `setup.py` 用 `find_packages(exclude=['tests'])` 把 `tests` 排除出 packages，于是 setuptools 不把包标记 `tests/__init__.py` 打进 sdist，却仍把松散的 `tests/test_*.py` 模块打进去——下游 `from tests import OrderedDict`（`test_compliance.py`）报 `ImportError: cannot import name 'OrderedDict' from 'tests'`。补 `recursive-include tests *.py` 让 sdist 带上 `__init__.py` 包标记。独立验证（no run no claim）：本地用仓库自己的 `setup.py sdist`（setuptools 83.0.0 / Python 3.13）在改动前后各打一次——**改前** sdist 含 7 个 `tests/test_*.py` 但**无** `tests/__init__.py`；**改后** 同时含 `tests/__init__.py` 与全部 7 个 test 模块。纯 packaging 改动，不影响已装 wheel。已披露 AI 辅助。OPEN/MERGEABLE。注：#341 另有 2 个较早的外部作者 PR（#366/#367），本 PR 是独立、单行、可区分的单点修复，不构成重复提交。
@@ -95,21 +105,21 @@ place instead of being scattered across other people's repos.
 ## Totals (rolling)
 
 Counts were re-verified against the direct GitHub GraphQL/REST API on
-2026-08-28. The merged set comes from the user's paginated `pullRequests`
+2026-08-30. The merged set comes from the user's paginated `pullRequests`
 connection, with TheELNFileFormat #152 directly rechecked because GitHub search
 still omits it. Open items are external base repositories. A PR counts here
 only once GitHub shows it merged.
 
-- External merged PRs: **29 / 100** across **16** upstream repositories and
-  **15** upstream owners. The latest merges are
+- External merged PRs: **32 / 100** across **18** upstream repositories and
+  **17** upstream owners. The latest merges are
+  [restic#22029](https://github.com/restic/restic/pull/22029),
+  [restic#22028](https://github.com/restic/restic/pull/22028),
   [asdf-vm/asdf#2317](https://github.com/asdf-vm/asdf/pull/2317),
-  [apache/magpie#1118](https://github.com/apache/magpie/pull/1118),
-  [plotly.js#7981](https://github.com/plotly/plotly.js/pull/7981),
-  [rclone#9818](https://github.com/rclone/rclone/pull/9818), and
-  [tox-dev/tox#4042](https://github.com/tox-dev/tox/pull/4042), all merged
-  2026-08-27 or 2026-08-28 by upstream maintainers.
-- Open external PRs: **70** across **40** repositories and **35** upstream
-  owners (newest: [tqdm#1807](https://github.com/tqdm/tqdm/pull/1807),
-  [fsnotify#773](https://github.com/fsnotify/fsnotify/pull/773) and
-  [scorecard#5202](https://github.com/ossf/scorecard/pull/5202)).
+  [apache/magpie#1118](https://github.com/apache/magpie/pull/1118), and
+  [plotly.js#7981](https://github.com/plotly/plotly.js/pull/7981), merged by
+  upstream maintainers on 2026-08-27 through 2026-08-29.
+- Open external PRs: **73** across **46** repositories and **41** upstream
+  owners (newest: [ruff#28051](https://github.com/astral-sh/ruff/pull/28051),
+  [cibuildwheel#2977](https://github.com/pypa/cibuildwheel/pull/2977) and
+  [webdriverio#15544](https://github.com/webdriverio/webdriverio/pull/15544)).
 - Communities active in: eLabFTW, TheELNFileFormat, SampleDB, Astropy, CycloneDX, Keycloak, Plotly.js, rclone, Syft, tox, regl-line2d, pydantic, ruff, jax, restic, tqdm, beets, sigstore, grype, and more.

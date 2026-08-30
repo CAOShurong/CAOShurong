@@ -1,54 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="460" viewBox="0 0 1600 460" role="img" aria-labelledby="title desc">
-  <title id="title">CAOShurong academic profile</title>
-  <desc id="desc">An academic profile banner for Shurong Cao, a PhD researcher in Electronic Engineering at The Chinese University of Hong Kong.</desc>
+  <title id="title">Shurong Cao academic profile</title>
+  <desc id="desc">A warm, light academic banner for Shurong Cao, a PhD researcher in Electronic Engineering at The Chinese University of Hong Kong, with abstract measurement contours and observation points.</desc>
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#07111f"/>
-      <stop offset="0.56" stop-color="#0b1930"/>
-      <stop offset="1" stop-color="#111b33"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf8f2"/>
+      <stop offset="0.58" stop-color="#f7f3ec"/>
+      <stop offset="1" stop-color="#f1ebe2"/>
     </linearGradient>
-    <radialGradient id="field" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#7dd3fc" stop-opacity="0.22"/>
-      <stop offset="0.55" stop-color="#818cf8" stop-opacity="0.09"/>
-      <stop offset="1" stop-color="#818cf8" stop-opacity="0"/>
+    <radialGradient id="wash" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#d7a186" stop-opacity="0.24"/>
+      <stop offset="0.62" stop-color="#d7a186" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#d7a186" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
-      <path d="M44 0H0V44" fill="none" stroke="#dbeafe" stroke-opacity="0.045"/>
+    <pattern id="paper-grid" width="52" height="52" patternUnits="userSpaceOnUse">
+      <path d="M52 0H0V52" fill="none" stroke="#9f968a" stroke-opacity="0.075"/>
     </pattern>
   </defs>
 
-  <rect width="1600" height="460" rx="24" fill="url(#background)"/>
-  <rect width="1600" height="460" rx="24" fill="url(#grid)"/>
-  <rect x="880" y="-190" width="820" height="820" fill="url(#field)"/>
+  <rect x="1" y="1" width="1598" height="458" rx="24" fill="url(#paper)" stroke="#ddd5ca" stroke-width="2"/>
+  <rect x="1" y="1" width="1598" height="458" rx="24" fill="url(#paper-grid)"/>
+  <ellipse cx="1290" cy="222" rx="420" ry="330" fill="url(#wash)"/>
 
-  <!-- An open interference field: related observations without a prescribed route. -->
-  <g transform="translate(1215 225)" fill="none" stroke="#93c5fd">
-    <circle r="174" stroke-opacity="0.08"/>
-    <circle r="126" stroke-opacity="0.11"/>
-    <circle r="78" stroke-opacity="0.16"/>
-    <circle r="31" stroke-opacity="0.22"/>
+  <!-- Open measurement contours: observations without a prescribed path. -->
+  <g fill="none" stroke-linecap="round">
+    <ellipse cx="1254" cy="222" rx="282" ry="148" transform="rotate(-10 1254 222)" stroke="#9a5d2f" stroke-opacity="0.16" stroke-width="2"/>
+    <ellipse cx="1254" cy="222" rx="218" ry="105" transform="rotate(12 1254 222)" stroke="#66756a" stroke-opacity="0.19" stroke-width="2"/>
+    <ellipse cx="1254" cy="222" rx="142" ry="66" transform="rotate(-17 1254 222)" stroke="#9a5d2f" stroke-opacity="0.23" stroke-width="2"/>
+    <path d="M1010 133c96-78 241-111 374-68 84 27 151 79 190 144" stroke="#7e756b" stroke-opacity="0.13" stroke-width="2"/>
+    <path d="M1018 332c126 65 300 72 430 4 54-28 96-67 126-116" stroke="#7e756b" stroke-opacity="0.13" stroke-width="2"/>
   </g>
-  <g transform="translate(1375 135)" fill="none" stroke="#c4b5fd">
-    <circle r="118" stroke-opacity="0.08"/>
-    <circle r="72" stroke-opacity="0.12"/>
-    <circle r="26" stroke-opacity="0.2"/>
-  </g>
-  <g fill="#dbeafe">
-    <circle cx="1025" cy="105" r="3" fill-opacity="0.7"/>
-    <circle cx="1114" cy="327" r="4" fill-opacity="0.45"/>
-    <circle cx="1215" cy="225" r="5" fill-opacity="0.9"/>
-    <circle cx="1317" cy="348" r="3" fill-opacity="0.55"/>
-    <circle cx="1375" cy="135" r="4" fill-opacity="0.75"/>
-    <circle cx="1494" cy="274" r="3" fill-opacity="0.4"/>
+  <g>
+    <circle cx="1036" cy="151" r="4" fill="#66756a" fill-opacity="0.58"/>
+    <circle cx="1124" cy="298" r="5" fill="#9a5d2f" fill-opacity="0.52"/>
+    <circle cx="1254" cy="222" r="6" fill="#9a5d2f" fill-opacity="0.76"/>
+    <circle cx="1378" cy="132" r="4" fill="#66756a" fill-opacity="0.62"/>
+    <circle cx="1452" cy="294" r="4" fill="#9a5d2f" fill-opacity="0.48"/>
+    <circle cx="1512" cy="182" r="3" fill="#66756a" fill-opacity="0.48"/>
   </g>
 
   <g font-family="Georgia, 'Times New Roman', serif">
-    <text x="104" y="94" font-size="17" letter-spacing="4.5" fill="#7dd3fc">CAOSHURONG</text>
-    <text x="102" y="177" font-size="66" fill="#f8fafc">Shurong Cao</text>
-    <text x="104" y="231" font-size="25" fill="#d5deec" font-style="italic">PhD Researcher in Electronic Engineering</text>
-    <text x="104" y="272" font-size="22" fill="#aebed5">The Chinese University of Hong Kong</text>
+    <text x="104" y="91" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="650" letter-spacing="4.2" fill="#9a5d2f">CAO SHURONG</text>
+    <text x="101" y="176" font-size="66" fill="#292722">Shurong Cao</text>
+    <text x="104" y="231" font-size="25" fill="#4f4b45" font-style="italic">PhD Researcher in Electronic Engineering</text>
+    <text x="104" y="273" font-size="22" fill="#625d55">The Chinese University of Hong Kong</text>
   </g>
-  <line x1="104" y1="315" x2="696" y2="315" stroke="#4b6388" stroke-opacity="0.75"/>
-  <text x="104" y="362" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="650" letter-spacing="2.8" fill="#93a9c8">OPEN QUESTIONS · RIGOROUS WORK · PUBLIC EVIDENCE</text>
-  <text x="104" y="407" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#7185a5" font-style="italic">A living record of what I am exploring, building, and learning.</text>
+  <line x1="104" y1="316" x2="696" y2="316" stroke="#c9bfb3" stroke-width="1.5"/>
+  <text x="104" y="363" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="650" letter-spacing="2.6" fill="#66756a">RESEARCH · ENGINEERING · OPEN COLLABORATION</text>
 </svg>

@@ -16,11 +16,11 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.13"
-      - name: Verify deterministic profile asset
-        run: python scripts/generate_contributor_evidence.py --check
+      - name: Validate versioned contribution record
+        run: python scripts/verify_contributor_evidence.py
       - name: Compare snapshot with live public GitHub state
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python scripts/generate_contributor_evidence.py --check --verify-live
-      - name: Test profile content, evidence schema and claim boundaries
+        run: python scripts/verify_contributor_evidence.py --verify-live
+      - name: Test profile content and evidence schema
         run: python -m unittest discover -s tests -v

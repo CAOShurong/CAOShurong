@@ -3,12 +3,11 @@ from __future__ import annotations
 import importlib.util
 import tempfile
 import unittest
-import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "scripts" / "generate_contributor_evidence.py"
+SCRIPT = ROOT / "scripts" / "verify_contributor_evidence.py"
 SPEC = importlib.util.spec_from_file_location("contributor_evidence", SCRIPT)
 assert SPEC and SPEC.loader
 MODULE = importlib.util.module_from_spec(SPEC)
@@ -20,25 +19,7 @@ class ContributorEvidenceTests(unittest.TestCase):
         self.data, self.digest = MODULE.load_manifest()
 
     def test_snapshot_matches_verified_public_shape(self) -> None:
-        contributions = self.data["contributions"]
-        repositories = {item[0] for item in contributions}
-        organizations = {repo.split("/", 1)[0] for repo in repositories}
-        self.assertEqual(32, len(contributions))
-        self.assertEqual(18, len(repositories))
-        self.assertEqual(17, len(organizations))
-
-    def test_svg_is_well_formed_safe_and_deterministic(self) -> None:
-        first = MODULE.render(self.data, self.digest)
-        second = MODULE.render(self.data, self.digest)
-        self.assertEqual(first.encode(), second.encode())
-        ET.fromstring(first)
-        self.assertIn("Different codebases. Different questions.", first)
-        self.assertIn("REPRESENTATIVE UPSTREAMS", first)
-        self.assertNotIn("THE VERIFICATION PATH", first)
-        self.assertIn(self.digest[:16], first)
-        self.assertNotIn("<script", first.casefold())
-        self.assertNotIn("foreignobject", first.casefold())
-        self.assertNotIn("<image", first.casefold())
+        self.assertEqual((32, 18, 17), MODULE.summarize(self.data))
 
     def test_manifest_digest_is_line_ending_independent(self) -> None:
         source = MODULE.MANIFEST.read_bytes().replace(b"\r\n", b"\n")
@@ -52,10 +33,8 @@ class ContributorEvidenceTests(unittest.TestCase):
             _, crlf_digest = MODULE.load_manifest(crlf)
         self.assertEqual(lf_digest, crlf_digest)
 
-    def test_checked_in_asset_is_current(self) -> None:
-        expected = MODULE.render(self.data, self.digest)
-        actual = MODULE.OUTPUT.read_text(encoding="utf-8")
-        self.assertEqual(expected, actual)
+    def test_removed_profile_card_is_not_regenerated(self) -> None:
+        self.assertFalse((ROOT / "assets" / "contributor-evidence.svg").exists())
 
     def test_claim_boundaries_are_explicit(self) -> None:
         boundaries = " ".join(self.data["boundaries"]).casefold()

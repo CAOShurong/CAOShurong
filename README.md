@@ -12,15 +12,15 @@ I am **Shurong Cao**, a PhD researcher in Electronic Engineering at
 **The Chinese University of Hong Kong**, following my bachelor's education at
 **Nanjing University**.
 
-I am drawn to difficult questions that do not stay neatly inside one field.
-My work is an evolving mix of research, engineering, experimentation, and open
-collaboration. Frontier AI is one space I am actively exploring: how advanced
-systems reason and fail, how we should evaluate them, and how they can become
-useful in real scientific and engineering work.
+I am drawn to difficult questions across disciplines. My work brings together
+research, engineering, experimentation, and open collaboration. I am currently
+exploring frontier AI: how advanced systems reason and fail, how we should
+evaluate them, and how they can become useful in scientific and engineering
+work.
 
-I care about turning promising ideas into things other people can inspect:
-runnable software, explicit tests, reproducible evidence, public releases, and
-honest records of what remains uncertain.
+I like turning promising ideas into things other people can inspect: runnable
+software, explicit tests, reproducible evidence, public releases, and clear
+records of results and open questions.
 
 ## Academic context
 
@@ -28,11 +28,9 @@ honest records of what remains uncertain.
   Engineering.
 - **Nanjing University** — bachelor's degree.
 
-This is the foundation of my work, not its boundary.
-
 ## Questions I am exploring
 
-These are current questions rather than permanent labels:
+A few questions currently keep me thinking:
 
 - How can frontier AI systems support scientific and engineering reasoning
   without hiding uncertainty, limitations, or failure?
@@ -86,19 +84,14 @@ documentation.
   tests, packaging, CI, release, documentation, and a usable entry point.
 - **Work across unfamiliar systems** — learning an existing codebase, locating
   the actual failure boundary, and making a scoped change that fits its rules.
-- **Evidence-aware communication** — separating a proposal from an accepted
-  result, a passing test from a general claim, and public evidence from
-  owner-controlled metrics.
+- **Evidence-aware communication** — making assumptions, results, and unresolved
+  questions visible so collaborators can inspect and challenge them.
 
 ## Open-source contributions
 
-I also contribute to projects outside my own repositories. The card below
-counts only changes that independent upstream repositories report as merged.
-
-![32 merged external contributions across 18 repositories and 17 upstream owners](assets/contributor-evidence.svg)
-
-The current public record contains **32 merged upstream pull requests** across
-**18 repositories** and **17 upstream owners**. Representative examples include:
+I also contribute to projects outside my own repositories. As of 2026-08-30,
+the public record contains **32 merged upstream pull requests** across **18
+repositories** and **17 upstream owners**. Representative examples include:
 
 - [TheELNFileFormat #157](https://github.com/TheELNConsortium/TheELNFileFormat/pull/157) — a reusable web `.eln` checker backed by the project's test suite.
 - [CycloneDX Python #1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028) — encoded-path handling for XML schema loading, with regression coverage.
@@ -108,20 +101,17 @@ The current public record contains **32 merged upstream pull requests** across
 - [Apache Magpie #1118](https://github.com/apache/magpie/pull/1118) — more stable per-PR progress for PR-management triage and its evaluation fixtures.
 
 <details>
-<summary><strong>Evidence, active proposals, and claim boundaries</strong></summary>
+<summary><strong>Contribution record and current activity</strong></summary>
 
-As of 2026-08-30, there are also **75 open external proposals** across **48
-repositories** and **43 upstream owners**. They are ongoing proposals, not
-accepted contributions, and are deliberately excluded from the merged count.
+The same snapshot includes **75 open external proposals** across **48
+repositories** and **43 upstream owners**. The merged total above records work
+already accepted by upstream repositories.
 
 The accepted set is generated from a
 [versioned manifest](data/contributor-evidence.json) and checked against live
 GitHub state. Detailed PR receipts, reviews, and dated updates are recorded in
 [CONTRIBUTIONS.md](CONTRIBUTIONS.md) and
 [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md).
-
-A merged contribution demonstrates upstream acceptance; it does not imply
-maintainership or independent adoption of my own projects.
 
 </details>
 
@@ -143,7 +133,7 @@ outside Hong Kong may be difficult at present.
 <details>
 <summary><strong>中文简介与合作方式</strong></summary>
 
-我是曹书荣（CAOShurong），现为香港中文大学电子工程博士研究生，本科毕业于南京大学。我的工作横跨研究、工程实践、实验验证与开放协作；前沿人工智能是我正在深入探索的重要领域之一，但不是对未来方向的限制。
+我是曹书荣（CAOShurong），现为香港中文大学电子工程博士研究生，本科毕业于南京大学。我的工作横跨研究、工程实践、实验验证与开放协作，目前尤其关注前沿人工智能系统如何理解问题、如何被可靠评估，以及如何服务于真实的科学与工程工作。
 
 我欢迎研究合作、实习以及有挑战性的技术项目。目前常驻香港，香港和深圳适合线下合作；与北美、欧洲及其他地区的团队通常更适合远程合作，现阶段长期离开香港可能较为困难。
 

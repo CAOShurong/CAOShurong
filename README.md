@@ -1,109 +1,150 @@
 # CAOShurong
 
-![Shurong Cao — Electrical Engineering PhD researcher](assets/banner.svg)
+![CAOShurong — PhD researcher in Electronic Engineering at CUHK](assets/banner.svg)
 
 <p align="center">
-  <sub>Electrical Engineering PhD researcher at CUHK · scientific computing · reproducible systems · open-source maintenance</sub>
+  <a href="#selected-work">Selected work</a> ·
+  <a href="#open-source-contributions">Open source</a> ·
+  <a href="#collaboration">Collaboration</a>
 </p>
 
-I build trustworthy computational tools for scientific and engineering
-workflows. My work sits at the intersection of experiment provenance,
-software reliability, security evidence, and evaluation methodology.
+I am **Shurong Cao**, a PhD researcher in Electronic Engineering at
+**The Chinese University of Hong Kong**, following my bachelor's education at
+**Nanjing University**.
 
-My working style is evidence-first: define the failure mode, reproduce it,
-test the boundary, and publish the smallest useful artifact. Claims are tied
-to code, releases, or public upstream records; ownership, acceptance, and
-independent use are kept distinct.
+I am drawn to difficult questions that do not stay neatly inside one field.
+My work is an evolving mix of research, engineering, experimentation, and open
+collaboration. Frontier AI is one space I am actively exploring: how advanced
+systems reason and fail, how we should evaluate them, and how they can become
+useful in real scientific and engineering work.
 
-## Research interests
+I care about turning promising ideas into things other people can inspect:
+runnable software, explicit tests, reproducible evidence, public releases, and
+honest records of what remains uncertain.
 
-- **Reproducible engineering** — provenance, calibration, uncertainty, and
-  portable evidence bundles for experiments.
-- **Scientific data interoperability** — ELN formats, validation, and
-  loss-aware exchange between research tools.
-- **Software and supply-chain reliability** — package behavior, API changes,
-  SBOM semantics, release checks, and failure boundaries.
-- **Evaluation methodology** — answer-free model trials, outcome-based
-  tutoring studies, and inspectable research workflows.
+## Academic context
 
-## Selected public tools
+- **The Chinese University of Hong Kong** — PhD researcher in Electronic
+  Engineering.
+- **Nanjing University** — bachelor's degree.
 
-The following projects are the compact set I use to represent my current
-engineering and research practice.
+This is the foundation of my work, not its boundary.
 
-| Project | Research or engineering focus | Public entry points |
+## Questions I am exploring
+
+These are current questions rather than permanent labels:
+
+- How can frontier AI systems support scientific and engineering reasoning
+  without hiding uncertainty, limitations, or failure?
+- What makes an experiment, benchmark, or software result genuinely
+  reproducible as tools, data, and models change?
+- How can ambiguous technical failures be turned into evidence that other
+  researchers and maintainers can inspect and act on?
+- What new questions become possible when research, software, and intelligent
+  systems are designed together?
+
+## Selected work
+
+| Project | What you can inspect | Public entry points |
 | --- | --- | --- |
-| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Experiment provenance, calibration, uncertainty, evidence bundles, and ELN import/export. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.8](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.8) |
-| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Explainable correlation of SARIF, SBOM, and multi-scanner security findings. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [v0.4.24](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.24) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
-| **[WillItBreak](https://github.com/CAOShurong/willitbreak)** | Call-site-aware API compatibility analysis with file and line-level reports. | [project README](https://github.com/CAOShurong/willitbreak#readme) |
-| **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Reproducible capability trials for frontier models behind one configuration. | [try it](https://caoshurong.github.io/frontiertrials/try/) · [study report](https://caoshurong.github.io/frontiertrials/demo/trial-report.html) |
-| **[TermScope](https://github.com/CAOShurong/termscope)** | Terminal telemetry for Arduino, ESP32, and STM32 over serial, pipes, or SSH. | [PyPI](https://pypi.org/project/termscope/) · [v0.4.1](https://github.com/CAOShurong/termscope/releases/tag/v0.4.1) |
-| **[ColdShelf](https://github.com/CAOShurong/coldshelf)** | A private, searchable catalogue for unplugged drives and their evidence. | [latest release](https://github.com/CAOShurong/coldshelf/releases/latest) · [scope and limits](https://github.com/CAOShurong/coldshelf#scope-and-limitations) |
-| **[contextcost](https://github.com/CAOShurong/contextcost)** | Measures repository context cost and verifies whether proposed cuts save real tokens. | [PyPI](https://pypi.org/project/contextcost/) · [v0.5.4](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.4) · [GitHub Action](https://github.com/CAOShurong/contextcost/blob/main/action.yml) |
+| **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Experiment provenance, instrument identity, calibration, uncertainty budgets, evidence bundles, and ELN exchange. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.8](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.8) |
+| **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Local, reproducible capability trials for frontier AI systems, including blinded comparison and a structured study mode. | [try it](https://caoshurong.github.io/frontiertrials/try/) · [study report](https://caoshurong.github.io/frontiertrials/demo/trial-report.html) |
+| **[ReproWeave](https://github.com/CAOShurong/reproweave)** | Evidence maps, rebuildability assessment, and replication triage for research papers, with clearly marked synthetic demo data. | [project](https://github.com/CAOShurong/reproweave#readme) · [v0.4.2](https://github.com/CAOShurong/reproweave/releases/tag/v0.4.2) |
+| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Explainable correlation across SARIF, SBOM, and security-scanner findings. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
+| **[STM32 multifunction robot car](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32)** | A physical embedded system integrating tracking, obstacle avoidance, ultrasonic sensing, Bluetooth control, a servo, and an OLED. | [source and documentation](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32#readme) · [v0.1.1](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32/releases/tag/v0.1.1) |
+| **[contextcost](https://github.com/CAOShurong/contextcost)** | Measurement of repository context cost, with a CLI and GitHub Action that verify whether proposed cuts save real tokens. | [PyPI](https://pypi.org/project/contextcost/) · [GitHub Action](https://github.com/CAOShurong/contextcost/blob/main/action.yml) |
 
-## Research prototypes
+Together, these projects exercise research design, data validation, Python and
+web tooling, embedded systems, packaging, CI, release engineering, and public
+documentation.
 
-- **[OhmJudge](https://github.com/CAOShurong/ohmjudge)** — answer-free,
-  auditable electrical-engineering model evaluations.
+<details>
+<summary><strong>More projects and research prototypes</strong></summary>
+
+- **[TermScope](https://github.com/CAOShurong/termscope)** — terminal telemetry
+  for Arduino, ESP32, and STM32 over serial, pipes, or SSH.
 - **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** — outcome-based
   evaluation for AI tutors.
+- **[OhmJudge](https://github.com/CAOShurong/ohmjudge)** — answer-free,
+  auditable electrical-engineering model evaluations.
 - **[EvalInt](https://github.com/CAOShurong/evalint)** — integrity checks for
   reference-scored LLM evaluation sets.
 - **[ResearchBench](https://github.com/CAOShurong/researchbench)** — a running
   comparison of AI systems on real research tasks.
+- **[WillItBreak](https://github.com/CAOShurong/willitbreak)** — call-site-aware
+  API compatibility analysis with file- and line-level reports.
+- **[ColdShelf](https://github.com/CAOShurong/coldshelf)** — a private,
+  searchable catalogue for offline drives and their evidence.
 
-## 各项目最近动态
+</details>
 
-从本机 11 个仓库的 git log 抽取的最新一次发版 / 提交（截至 2026-08-29；仅依赖更新会如实标注）。
+## What I bring to a collaboration
 
-| 项目 | 最近发版 | 最近动态 |
-| --- | --- | --- |
-| **BenchLineage** | [v0.3.8](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.8) (08-26) | README 新增「零安装试用」：`uvx benchlineage demo …` + `verify` 端到端验证 |
-| **VulnFuse** | [v0.4.24](https://github.com/CAOShurong/vulnfuse/releases/tag/v0.4.24) (08-12) | 首屏新增「30 秒看它工作」用户故事钩子：打开在线 workbench 点 Load safe demo，5 条告警→4 个可解释聚类（08-29） |
-| **WillItBreak** | [v0.1.3](https://github.com/CAOShurong/willitbreak/releases/tag/v0.1.3) (08-12) | `--ascii` 转义 Unicode 报告内容（#5） |
-| **FrontierTrials** | [v0.4.1](https://github.com/CAOShurong/frontiertrials/releases/tag/v0.4.1) (08-12) | 批量作答：一次粘贴所有答案或拖入 txt/md 文件（08-26） |
-| **TermScope** | [v0.4.1](https://github.com/CAOShurong/termscope/releases/tag/v0.4.1) (08-12) | 修复带标签遥测 token 边界（#8） |
-| **ColdShelf** | [v0.1.7](https://github.com/CAOShurong/coldshelf/releases/tag/v0.1.7) (08-12) | 修复版本无关的安裝验证（#16） |
-| **contextcost** | [v0.5.4](https://github.com/CAOShurong/contextcost/releases/tag/v0.5.4) (08-29) | 首屏 3 秒 hero 表（plotly.js 42% / dask 46.5% 真实数字 + `uvx contextcost` 一键试用）+ GitHub Action 预算门控真正接通；自测刷新 113k→104k（7.6%）（08-29） |
-| **OhmJudge** | [v0.3.0](https://github.com/CAOShurong/ohmjudge/releases/tag/v0.3.0) (08-11) | 仅依赖维护：codeql-action 升至 v4.37.7（#5，08-23） |
-| **DidYouLearn** | [v0.1.1](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.1) (08-12) | 仅依赖维护：codeql-action 升至 v4.37.7（#9，08-23） |
-| **EvalInt** | [v0.2.30](https://github.com/CAOShurong/evalint/releases/tag/v0.2.30) (08-12) | 审计 Promptfoo 命名指标（#59） |
-| **ResearchBench** | [v0.1.0](https://github.com/CAOShurong/researchbench/releases/tag/v0.1.0) (08-21) | 文档刷新 handoff workspace 指纹（08-23） |
+- **Research framing** — turning a broad question into a testable protocol,
+  explicit criteria, and a result that can be challenged.
+- **End-to-end building** — moving from reproduction and implementation through
+  tests, packaging, CI, release, documentation, and a usable entry point.
+- **Work across unfamiliar systems** — learning an existing codebase, locating
+  the actual failure boundary, and making a scoped change that fits its rules.
+- **Evidence-aware communication** — separating a proposal from an accepted
+  result, a passing test from a general claim, and public evidence from
+  owner-controlled metrics.
 
-每条动态都对应一个真实 commit，未做美化；维护型提交如实写「仅依赖维护」。
+## Open-source contributions
 
-## Open-source record
+I also contribute to projects outside my own repositories. The card below
+counts only changes that independent upstream repositories report as merged.
 
-The live public snapshot below separates accepted upstream work from proposals
-that are still awaiting a maintainer decision.
+![32 merged external contributions across 18 repositories and 17 upstream owners](assets/contributor-evidence.svg)
 
-| Signal | Snapshot |
-| --- | ---: |
-| Accepted external changes | **32 / 100** |
-| Upstream repositories | **18** |
-| Upstream owners | **17** |
-| Open external proposals | **75** across **48** repositories and **43** owners |
+The current public record contains **32 merged upstream pull requests** across
+**18 repositories** and **17 upstream owners**. Representative examples include:
 
-Only PRs that GitHub reports as merged are included in the accepted count.
-Detailed per-PR receipts, reviews, triage, and dated updates remain in
+- [TheELNFileFormat #157](https://github.com/TheELNConsortium/TheELNFileFormat/pull/157) — a reusable web `.eln` checker backed by the project's test suite.
+- [CycloneDX Python #1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028) — encoded-path handling for XML schema loading, with regression coverage.
+- [Astropy #20256](https://github.com/astropy/astropy/pull/20256) — degraded-accuracy handling for expired IERS predictive values, including tests and documentation.
+- [Plotly.js #7959](https://github.com/plotly/plotly.js/pull/7959) — numeric color sorting in the parcats bundle, with implementation and tests.
+- [rclone #9823](https://github.com/rclone/rclone/pull/9823) — retryable handling when a successful S3 `UploadPart` response omits an ETag.
+- [Apache Magpie #1118](https://github.com/apache/magpie/pull/1118) — more stable per-PR progress for PR-management triage and its evaluation fixtures.
+
+<details>
+<summary><strong>Evidence, active proposals, and claim boundaries</strong></summary>
+
+As of 2026-08-30, there are also **75 open external proposals** across **48
+repositories** and **43 upstream owners**. They are ongoing proposals, not
+accepted contributions, and are deliberately excluded from the merged count.
+
+The accepted set is generated from a
+[versioned manifest](data/contributor-evidence.json) and checked against live
+GitHub state. Detailed PR receipts, reviews, and dated updates are recorded in
 [CONTRIBUTIONS.md](CONTRIBUTIONS.md) and
-[COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md); the compact evidence card is
-generated from the [manifest](data/contributor-evidence.json) by the
-[validator](scripts/generate_contributor_evidence.py).
+[COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md).
 
-## Evidence boundary
+A merged contribution demonstrates upstream acceptance; it does not imply
+maintainership or independent adoption of my own projects.
 
-A merged upstream change demonstrates acceptance, not external maintainership.
-Owner-controlled counters, downloads, and self-authored listings are not
-presented as independent adoption. The portfolio is intentionally small:
-useful artifacts, runnable entry points, explicit limits, and reproducible
-public evidence matter more than repository volume.
+</details>
 
-Detailed per-PR receipts, reviews, triage, and dated updates remain in
-[CONTRIBUTIONS.md](CONTRIBUTIONS.md) and
-[COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md); the compact evidence card is
-generated from the [manifest](data/contributor-evidence.json) by the
-[validator](scripts/generate_contributor_evidence.py).
+## Collaboration
 
-[All repositories](https://github.com/CAOShurong?tab=repositories) ·
+I welcome conversations about **research collaborations, internships, and
+technically ambitious engineering projects**, especially where rigorous
+investigation and practical building belong together.
+
+I am based in **Hong Kong**. In-person work in **Hong Kong or Shenzhen** is
+practical. For teams in **North America, Europe, and other regions**, remote
+collaboration is generally the most workable arrangement; long-term relocation
+outside Hong Kong may be difficult at present.
+
+[Email me](mailto:shurongcao0819@gmail.com) ·
+[Explore all repositories](https://github.com/CAOShurong?tab=repositories) ·
 [Published Python packages](https://pypi.org/user/CAOShurong/)
+
+<details>
+<summary><strong>中文简介与合作方式</strong></summary>
+
+我是曹书荣（CAOShurong），现为香港中文大学电子工程博士研究生，本科毕业于南京大学。我的工作横跨研究、工程实践、实验验证与开放协作；前沿人工智能是我正在深入探索的重要领域之一，但不是对未来方向的限制。
+
+我欢迎研究合作、实习以及有挑战性的技术项目。目前常驻香港，香港和深圳适合线下合作；与北美、欧洲及其他地区的团队通常更适合远程合作，现阶段长期离开香港可能较为困难。
+
+</details>

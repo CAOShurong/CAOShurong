@@ -6,6 +6,11 @@ Ordered roughly newest-first within each section.
 
 ## Merged (32 across 18 upstream repositories)
 
+- **[pgcli #1626](https://github.com/dbcli/pgcli/pull/1626)** — repairs the
+  README's dead Click documentation URL by replacing the retired
+  `click.pocoo.org` address with the current Pallets documentation location.
+  This one-line documentation change was merged from exact head `06069a7b` as
+  `8c1005e3` on 2026-08-29.
 - **[restic #22029](https://github.com/restic/restic/pull/22029)** — removes the
   contradictory `data/` plaintext exception from the encryption documentation,
   matching the actual design and closing issue #22013. `MichaelEischer` merged
@@ -143,7 +148,7 @@ Ordered roughly newest-first within each section.
   at the approved head and a post-merge lint step also failed; the maintainer
   merged regardless, and I do not claim either job as passing.)
 
-## Open pull requests (proposals awaiting maintainer decision)
+## Selected open pull requests (proposals awaiting maintainer decision)
 
 - **[tqdm/tqdm #1807](https://github.com/tqdm/tqdm/pull/1807)** — fixes a
   CI-safety/behavior bug (tqdm/tqdm#1501): `logging_redirect_tqdm` added a
@@ -154,17 +159,6 @@ Ordered roughly newest-first within each section.
   New regression test fails on pristine `master` and passes with the patch;
   full `tests/tests_contrib_logging.py` (20) + `tests/tests_contrib.py` pass;
   `git diff --check` clean. OPEN/MERGEABLE, review required. First PR to tqdm.
-- **[pallets/click #3803](https://github.com/pallets/click/pull/3803)** — fixes a
-  crash (pallets/click#3802): a second `KeyboardInterrupt` (Ctrl-C) arriving
-  while click prints its "Aborted!" message during exception handling escaped
-  `main()` and crashed the process. Root cause: `isatty()` only guarded
-  `except Exception`, but `KeyboardInterrupt` is a `BaseException`, so the stream
-  probe's `KeyboardInterrupt` escaped. Fix widens the guard to
-  `(Exception, KeyboardInterrupt)` returning `False`. Two regression tests
-  (`test_isatty_swallows_keyboard_interrupt`,
-  `test_abort_echo_absorbs_keyboard_interrupt_in_isatty`) fail on pristine
-  `main` and pass with the patch; full compat/termui/basic/options/arguments
-  suites pass (1298 passed, 18 skipped). OPEN/MERGEABLE. First PR to click.
 - **[fsnotify/fsnotify #773](https://github.com/fsnotify/fsnotify/pull/773)** —
   fixes the Windows deadlock between `Close()` and `Add()`/`Remove()` reported
   in #704: adds a `closeCh` channel closed by `Close()` under `mu`; `AddWith`
@@ -340,6 +334,10 @@ Each review ran the project's real test suite on the exact head under review.
 
 ## Closed / superseded
 
+- **[pallets/click #3803](https://github.com/pallets/click/pull/3803)** — proposed
+  a guard for a second `KeyboardInterrupt` arriving while Click reports an
+  abort. The scoped regression tests passed locally, but upstream closed the PR
+  without merging it on 2026-08-28. It is not counted as accepted work.
 - **[BuildKit #7038](https://github.com/moby/buildkit/pull/7038)** —
   `history.maxEntries=0` explicitly disabling build-history persistence.
   Integration test passed across nine worker variants; `tonistiigi` closed it

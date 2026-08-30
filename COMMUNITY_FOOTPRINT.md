@@ -16,7 +16,7 @@ place instead of being scattered across other people's repos.
   section.
 
 ## 2026-08-29
-- [dbcli/pgcli#1626](https://github.com/dbcli/pgcli/pull/1626) — P3 文档修复 PR（首次向 pgcli 贡献；pgcli 是 Postgres CLI，~12.5k stars，成熟、BSD、under-cap、0 个我们自己的 open PR）。修复死链接：`README.rst:355` 把 Click 文档指向 `https://click.pocoo.org/`，该子域现在返回 **HTTP 400**（nginx），而同站兄弟子域 `babel.pocoo.org` 仍正常解析，说明是该文档子域确实失效。Click 是 Pallets 旗下项目，文档已迁至 `https://click.palletsprojects.com/`（验证 HTTP 200）。单行 doc-only 改动，无代码/测试影响。`README.rst` 一处 `click.pocoo.org/` → `click.palletsprojects.com/`。独立验证（no run no claim）：`curl -I https://click.pocoo.org/` → `400 Bad Request`；`curl -I https://click.palletsprojects.com/` → `200 OK`。PR 状态 OPEN/MERGEABLE（head `06069a7`，base `main`）。已披露 AI 辅助。注：本轮按 P1→P2→P3→P4 链，P1 已由 rev229/230 消耗、P2 由 rev231 消耗，本轮回溯到 P3（docs）——因 rev224 实测候选 repo 死链接干净、本轮回溯到 P3 并新扫 17 个 under-cap 成熟 repo（jinja/pygments/pycodestyle/requests/pylint/isort/black/pytest/pyparsing/pyflakes/flake8/pydocstyle/bottle/psycopg2/pgcli/mycli/pywinrm），确认 `click.pocoo.org` 与 `werkzeug.pocoo.org` 两处死链（400），其中 pgcli 引用 Click 的死链最干净、可单行修复，故选定。
+- [dbcli/pgcli#1626](https://github.com/dbcli/pgcli/pull/1626) — P3 文档修复 PR（首次向 pgcli 贡献；pgcli 是 Postgres CLI，~12.5k stars，成熟、BSD、under-cap、0 个我们自己的 open PR）。修复死链接：`README.rst:355` 把 Click 文档指向 `https://click.pocoo.org/`，该子域现在返回 **HTTP 400**（nginx），而同站兄弟子域 `babel.pocoo.org` 仍正常解析，说明是该文档子域确实失效。Click 是 Pallets 旗下项目，文档已迁至 `https://click.palletsprojects.com/`（验证 HTTP 200）。单行 doc-only 改动，无代码/测试影响。`README.rst` 一处 `click.pocoo.org/` → `click.palletsprojects.com/`。独立验证（no run no claim）：`curl -I https://click.pocoo.org/` → `400 Bad Request`；`curl -I https://click.palletsprojects.com/` → `200 OK`。该 PR 从 exact head `06069a7` 合并为 `8c1005e3`（2026-08-29T06:53:33Z），现计入 accepted external work。已披露 AI 辅助。注：本轮按 P1→P2→P3→P4 链，P1 已由 rev229/230 消耗、P2 由 rev231 消耗，本轮回溯到 P3（docs）——因 rev224 实测候选 repo 死链接干净、本轮回溯到 P3 并新扫 17 个 under-cap 成熟 repo（jinja/pygments/pycodestyle/requests/pylint/isort/black/pytest/pyparsing/pyflakes/flake8/pydocstyle/bottle/psycopg2/pgcli/mycli/pywinrm），确认 `click.pocoo.org` 与 `werkzeug.pocoo.org` 两处死链（400），其中 pgcli 引用 Click 的死链最干净、可单行修复，故选定。
 - [jmespath/jmespath.py#369](https://github.com/jmespath/jmespath.py/pull/369) — P1 修复 PR（首次向 jmespath 贡献；jmespath 是 boto3 底层的 JSON 查询库，成熟、under-cap、0 个我们自己的 open PR）。修复 #341：`MANIFEST.in` 只列了 `README.rst`/`LICENSE`，而 `setup.py` 用 `find_packages(exclude=['tests'])` 把 `tests` 排除出 packages，于是 setuptools 不把包标记 `tests/__init__.py` 打进 sdist，却仍把松散的 `tests/test_*.py` 模块打进去——下游 `from tests import OrderedDict`（`test_compliance.py`）报 `ImportError: cannot import name 'OrderedDict' from 'tests'`。补 `recursive-include tests *.py` 让 sdist 带上 `__init__.py` 包标记。独立验证（no run no claim）：本地用仓库自己的 `setup.py sdist`（setuptools 83.0.0 / Python 3.13）在改动前后各打一次——**改前** sdist 含 7 个 `tests/test_*.py` 但**无** `tests/__init__.py`；**改后** 同时含 `tests/__init__.py` 与全部 7 个 test 模块。纯 packaging 改动，不影响已装 wheel。已披露 AI 辅助。OPEN/MERGEABLE。注：#341 另有 2 个较早的外部作者 PR（#366/#367），本 PR 是独立、单行、可区分的单点修复，不构成重复提交。
 - [gitleaks/gitleaks#2241](https://github.com/gitleaks/gitleaks/pull/2241#pullrequestreview-5053722113) — P2 验证型 review（针对 `harriiinnii` 的第三方修复，解决 gitleaks#1846：用户配置里写错的正则 `rule.regex` / `allowlist.paths` 会让 `config.Translate`/`parseAllowlist` 调 `regexp.MustCompile` 直接 **panic 崩溃整个进程**；修复给两个 regexp 后端加 `Compile` 包装，改为返回清晰 error）。独立验证（no run no claim）：在干净 worktree `E:/Codex/Workspaces/Dated/2026-08-29/gitleaks-review-2241` 分别基于 base `b58d3f1`（=当前 master）与 PR head `e7948f48` 编译二进制复现——配置 `regex = "([a-z"` 在 master 上 **panic (exit 2)**、在 head 上返回 `FTL Failed to load config error="bad-regex-rule: invalid rule regex: ..."` (exit 1)；`allowlist.paths = ["*.test.js"]` 在 master 上 **panic**、在 head 上返回 `invalid allowlist path regex "*.test.js": missing argument to repetition operator`。两处崩溃均确认已修复。`go build ./...` / `go vet ./config/... ./regexp/...` / 全量 `go test ./...` 全绿，`git diff --check` 干净。评审中如实说明：#1846 在 master 上至今未修（复现仍 panic），#2082/#2228 是同 fix 的重复开 PR，本 PR 最小最干净；并建议（非阻塞）补 `config/config_test.go` 回归测试。REVIEW 状态 APPROVED，是诚实的 review 证据，不是接受/维护权/合并权
 - [gitleaks/gitleaks#1051](https://github.com/gitleaks/gitleaks/issues/1051#issuecomment-5455734608) — P4 证据型 triage 讨论（针对 2022 年 v8.5.12 的「`.gitleaksignore` 在 pre-commit 下被忽略」问题，0 评论、长期未关闭）。本地基于 master `b58d3f1`（go1.26.7）实测并隔离根因：`.gitleaksignore` 的两种 fingerprint 形式（global `file:rule-id:line` 与 commit `commit:file:rule-id:line`）在 git-history 扫描里**都能正常匹配并被跳过**；真正的「失效」来自 commit-form fingerprint 是 SHA 钉死的——`git commit --amend` / rebase / cherry-pick 改写历史后 SHA 旋转，旧的 ignore 条目不再匹配，被「忽略」的发现重新出现，正好对应 pre-commit 流程（提交后被忽略 → 评审中 amend → SHA 变 → 发现重现），于是表现为「`.gitleaksignore` 被忽略」而文件本身正确。建议：有意留在源码的密钥用内联 `gitleaks:allow`（基于文件内容，改写历史也不失效）；必须用 `.gitleaksignore` 时优先 global 形式（无 SHA，amend/rebase 免疫）；并建议在 `.gitleaksignore` 里查不到的 commit SHA 给出 stale 警告。复现证据（含 commit 前/后 SHA 旋转的 finding 计数）见 `E:/Codex/Workspaces/Dated/2026-08-29/p4-gitleaks-1051/outputs/repro-log.md`。讨论是诚实的 triage 证据，不是接受/维护权/合并权
@@ -94,7 +94,7 @@ place instead of being scattered across other people's repos.
 
 ## 2026-08-25
 
-- [rclone/rclone#9817](https://github.com/rclone/rclone/pull/9817) — fix PR: dropbox ChangeNotify case-insensitive root trim (9 tests green)
+- [rclone/rclone#9817](https://github.com/rclone/rclone/pull/9817) — proposed Dropbox ChangeNotify case-insensitive root trimming (9 local tests green); closed unmerged by upstream on 2026-08-29, so it is not accepted work
 - [pydantic/pydantic#13704](https://github.com/pydantic/pydantic/issues/13704) — triage: repro + root cause + fix-attempt
 - [astral-sh/ruff#28051](https://github.com/astral-sh/ruff/pull/28051) — opened: exec-builtin non-call reference detection (preview)
 - [jax-ml/jax#40151](https://github.com/jax-ml/jax/pull/40151) — exact-head verification review
@@ -110,15 +110,16 @@ connection, with TheELNFileFormat #152 directly rechecked because GitHub search
 still omits it. Open items are external base repositories. A PR counts here
 only once GitHub shows it merged.
 
-- External merged PRs: **32 / 100** across **18** upstream repositories and
+- External merged PRs: **32** across **18** upstream repositories and
   **17** upstream owners. The latest merges are
   [restic#22029](https://github.com/restic/restic/pull/22029),
   [restic#22028](https://github.com/restic/restic/pull/22028),
+  [pgcli#1626](https://github.com/dbcli/pgcli/pull/1626),
   [asdf-vm/asdf#2317](https://github.com/asdf-vm/asdf/pull/2317),
   [apache/magpie#1118](https://github.com/apache/magpie/pull/1118), and
   [plotly.js#7981](https://github.com/plotly/plotly.js/pull/7981), merged by
   upstream maintainers on 2026-08-27 through 2026-08-29.
-- Open external PRs: **73** across **46** repositories and **41** upstream
+- Open external PRs: **75** across **48** repositories and **43** upstream
   owners (newest: [ruff#28051](https://github.com/astral-sh/ruff/pull/28051),
   [cibuildwheel#2977](https://github.com/pypa/cibuildwheel/pull/2977) and
   [webdriverio#15544](https://github.com/webdriverio/webdriverio/pull/15544)).

@@ -50,7 +50,7 @@ def render(data: dict[str, Any], digest: str) -> str:
     contributions = data["contributions"]
     repositories = {item[0] for item in contributions}
     organizations = {repo.split("/", 1)[0] for repo in repositories}
-    counts = Counter(item[2] for item in contributions)
+    repository_counts = Counter(item[0] for item in contributions)
     metrics = (
         (len(contributions), "MERGED EXTERNAL", "accepted changes"),
         (len(organizations), "UPSTREAM ORGS", "external owners"),
@@ -68,44 +68,31 @@ def render(data: dict[str, Any], digest: str) -> str:
             f'<text x="124" y="91" class="muted">{note}</text></g>'
         )
 
-    stages = ("PUBLIC SIGNAL", "REPRODUCER", "EXACT HEAD", "TEST MATRIX", "MERGE / RELEASE")
-    chain_markup = []
-    for index, stage in enumerate(stages):
-        x = 82 + index * 300
-        if index:
-            chain_markup.append(
-                f'<path d="M{x - 118} 508h76" stroke="#22d3ee" stroke-width="2" '
-                'stroke-dasharray="7 8"/>'
-            )
-        chain_markup.append(
-            f'<g transform="translate({x} 472)"><circle cx="0" cy="36" r="31" '
-            f'fill="#0e1b2e" stroke="#22d3ee" stroke-width="2"/>'
-            f'<text x="0" y="42" text-anchor="middle" class="node-number">0{index + 1}</text>'
-            f'<text x="0" y="91" text-anchor="middle" class="node-label">{stage}</text></g>'
-        )
-
-    track_markup = []
-    for index, track_id in enumerate(TRACK_ORDER):
-        label, summary, accent = data["tracks"][track_id]
-        x = 72 + index * 492
-        track_markup.append(
-            f'<g transform="translate({x} 642)"><rect width="452" height="155" rx="18" '
-            f'fill="#09111f" stroke="#22314a"/><rect width="7" height="155" rx="3.5" '
-            f'fill="{accent}"/><text x="30" y="46" class="track-label" fill="{accent}">{label}</text>'
-            f'<text x="30" y="84" class="track-count">{counts[track_id]:02d}</text>'
-            f'<text x="92" y="82" class="muted">merged changes</text>'
-            f'<text x="30" y="123" class="track-summary">{summary}</text></g>'
+    selected_repositories = sorted(
+        repositories,
+        key=lambda repository: (-repository_counts[repository], repository.casefold()),
+    )[:8]
+    repository_markup = []
+    for index, repository in enumerate(selected_repositories):
+        column = index % 4
+        row = index // 4
+        x = 72 + column * 369
+        y = 486 + row * 72
+        repository_markup.append(
+            f'<g transform="translate({x} {y})"><rect width="345" height="52" rx="12" '
+            f'fill="#0a1425" stroke="#243750"/><circle cx="24" cy="26" r="4" '
+            f'fill="#67e8f9"/><text x="42" y="32" class="repository">{repository}</text></g>'
         )
 
     observed = data["observed_at"].replace("T", " ").replace("Z", " UTC")
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
 <title id="title">CAOShurong contributor evidence graph</title>
 <desc id="desc">A deterministic profile card showing {len(contributions)} merged external contributions across {len(organizations)} organizations and {len(repositories)} repositories.</desc>
 <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050914"/><stop offset=".55" stop-color="#071321"/><stop offset="1" stop-color="#0a1020"/></linearGradient><radialGradient id="glow" cx=".82" cy=".08" r=".75"><stop offset="0" stop-color="#0e7490" stop-opacity=".28"/><stop offset="1" stop-color="#0e7490" stop-opacity="0"/></radialGradient><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#24324a" stroke-opacity=".24"/></pattern><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000814" flood-opacity=".6"/></filter></defs>
-<style>text{{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;fill:#e6edf7}}.kicker{{font-size:18px;font-weight:700;letter-spacing:3.5px;fill:#67e8f9}}.title{{font-size:54px;font-weight:750;letter-spacing:-1.4px}}.subtitle{{font-size:21px;fill:#9baac0}}.motto{{font-size:19px;font-weight:700;fill:#34d399;letter-spacing:.8px}}.metric{{font-size:62px;font-weight:800;fill:#f8fafc}}.metric-label{{font-size:18px;font-weight:800;letter-spacing:1.4px;fill:#dbeafe}}.muted{{font-size:17px;fill:#8292aa}}.section{{font-size:16px;font-weight:800;letter-spacing:3px;fill:#7dd3fc}}.node-number{{font-size:17px;font-weight:800;fill:#67e8f9}}.node-label{{font-size:14px;font-weight:700;letter-spacing:1px;fill:#cbd5e1}}.track-label{{font-size:15px;font-weight:800;letter-spacing:1.2px}}.track-count{{font-size:38px;font-weight:800;fill:#f8fafc}}.track-summary{{font-size:17px;fill:#aebbd0}}.footer{{font-family:"Cascadia Mono","SFMono-Regular",Consolas,monospace;font-size:13px;fill:#64748b}}</style>
-<rect x="1" y="1" width="1598" height="898" rx="26" fill="url(#bg)" stroke="#25334a" stroke-width="2"/><rect x="1" y="1" width="1598" height="898" rx="26" fill="url(#glow)"/><rect x="1" y="1" width="1598" height="898" rx="26" fill="url(#grid)"/>
-<g filter="url(#shadow)"><path d="M72 63h90" stroke="#22d3ee" stroke-width="4"/><text x="72" y="105" class="kicker">CAOSHURONG // CONTRIBUTOR EVIDENCE</text><text x="72" y="169" class="title">EVIDENCE-FIRST ENGINEER</text><text x="72" y="210" class="subtitle">EE PhD researcher at CUHK · reproducible systems · open-source verification</text><text x="1330" y="105" text-anchor="end" class="motto">NO RUN → NO CLAIM</text>{''.join(metric_markup)}<text x="72" y="452" class="section">THE VERIFICATION PATH</text>{''.join(chain_markup)}{''.join(track_markup)}</g>
-<text x="72" y="854" class="footer">PUBLIC SNAPSHOT {observed} · MANIFEST SHA256 {digest[:16]} · DETERMINISTIC SVG</text><text x="1528" y="854" text-anchor="end" class="footer">MERGE ≠ MAINTAINERSHIP · COUNTER ≠ ADOPTION</text>
+<style>text{{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;fill:#e6edf7}}.kicker{{font-size:18px;font-weight:700;letter-spacing:3.5px;fill:#67e8f9}}.title{{font-family:Georgia,"Times New Roman",serif;font-size:48px;font-weight:700;letter-spacing:-.6px}}.subtitle{{font-size:20px;fill:#9baac0}}.motto{{font-size:17px;font-weight:700;fill:#34d399;letter-spacing:1px}}.metric{{font-size:62px;font-weight:800;fill:#f8fafc}}.metric-label{{font-size:18px;font-weight:800;letter-spacing:1.4px;fill:#dbeafe}}.muted{{font-size:17px;fill:#8292aa}}.section{{font-size:16px;font-weight:800;letter-spacing:3px;fill:#7dd3fc}}.repository{{font-size:16px;font-weight:650;fill:#d8e4f4}}.statement{{font-family:Georgia,"Times New Roman",serif;font-size:27px;font-style:italic;fill:#cbd5e1}}.footer{{font-family:"Cascadia Mono","SFMono-Regular",Consolas,monospace;font-size:13px;fill:#64748b}}</style>
+<rect x="1" y="1" width="1598" height="758" rx="26" fill="url(#bg)" stroke="#25334a" stroke-width="2"/><rect x="1" y="1" width="1598" height="758" rx="26" fill="url(#glow)"/><rect x="1" y="1" width="1598" height="758" rx="26" fill="url(#grid)"/>
+<g filter="url(#shadow)"><path d="M72 63h90" stroke="#22d3ee" stroke-width="4"/><text x="72" y="105" class="kicker">CAOSHURONG // PUBLIC CONTRIBUTIONS</text><text x="72" y="165" class="title">Open-source work, verified upstream</text><text x="72" y="204" class="subtitle">Only changes merged by independent repositories are counted here.</text><text x="1528" y="105" text-anchor="end" class="motto">PUBLIC RECORD · DATED SNAPSHOT</text>{''.join(metric_markup)}<text x="72" y="448" class="section">REPRESENTATIVE UPSTREAMS</text>{''.join(repository_markup)}<text x="800" y="662" text-anchor="middle" class="statement">Different codebases. Different questions. One public record.</text></g>
+<text x="72" y="718" class="footer">SNAPSHOT {observed} · MANIFEST SHA256 {digest[:16]} · DETERMINISTIC SVG</text><text x="1528" y="718" text-anchor="end" class="footer">MERGE ≠ MAINTAINERSHIP · COUNTER ≠ ADOPTION</text>
 </svg>
 '''
 

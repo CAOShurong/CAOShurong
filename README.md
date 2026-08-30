@@ -82,7 +82,7 @@ that are still awaiting a maintainer decision.
 | Accepted external changes | **32 / 100** |
 | Upstream repositories | **18** |
 | Upstream owners | **17** |
-| Open external proposals | **73** across **46** repositories and **41** owners |
+| Open external proposals | **75** across **48** repositories and **43** owners |
 
 Only PRs that GitHub reports as merged are included in the accepted count.
 Detailed per-PR receipts, reviews, triage, and dated updates remain in

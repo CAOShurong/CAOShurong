@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "observed_at": "2026-08-30T05:03:00+08:00",
+ "observed_at": "2026-09-03T21:42:50+08:00",
  "source_command": "gh api graphql: paginated user.pullRequests(states:MERGED); external base repositories only",
  "contributions": [
   [
@@ -161,6 +161,21 @@
   [
    "dbcli/pgcli",
    1626,
+   "systems"
+  ],
+  [
+   "beetbox/beets",
+   6950,
+   "systems"
+  ],
+  [
+   "github/github-mcp-server",
+   3146,
+   "systems"
+  ],
+  [
+   "pypa/cibuildwheel",
+   2977,
    "systems"
   ]
  ],

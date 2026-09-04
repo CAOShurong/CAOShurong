@@ -130,12 +130,3 @@ outside Hong Kong may be difficult at present.
 [Email me](mailto:shurongcao0819@gmail.com) ·
 [Explore all repositories](https://github.com/CAOShurong?tab=repositories) ·
 [Published Python packages](https://pypi.org/user/CAOShurong/)
-
-<details>
-<summary><strong>中文简介与合作方式</strong></summary>
-
-我是曹书荣（CAOShurong），现为香港中文大学电子工程博士研究生，本科毕业于南京大学。我的工作横跨研究、工程实践、实验验证与开放协作，目前尤其关注前沿人工智能系统如何理解问题、如何被可靠评估，以及如何服务于真实的科学与工程工作。
-
-我欢迎研究合作、实习以及有挑战性的技术项目。目前常驻香港，香港和深圳适合线下合作；与北美、欧洲及其他地区的团队通常更适合远程合作，现阶段长期离开香港可能较为困难。
-
-</details>

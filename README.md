@@ -89,9 +89,9 @@ documentation.
 
 ## Open-source contributions
 
-I also contribute to projects outside my own repositories. As of 2026-08-30,
-the public record contains **32 merged upstream pull requests** across **18
-repositories** and **17 upstream owners**. Representative examples include:
+I also contribute to projects outside my own repositories. As of 2026-09-03,
+the public record contains **35 merged upstream pull requests** across **21
+repositories** and **20 upstream owners**. Representative examples include:
 
 - [TheELNFileFormat #157](https://github.com/TheELNConsortium/TheELNFileFormat/pull/157) — a reusable web `.eln` checker backed by the project's test suite.
 - [CycloneDX Python #1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028) — encoded-path handling for XML schema loading, with regression coverage.
@@ -99,12 +99,13 @@ repositories** and **17 upstream owners**. Representative examples include:
 - [Plotly.js #7959](https://github.com/plotly/plotly.js/pull/7959) — numeric color sorting in the parcats bundle, with implementation and tests.
 - [rclone #9823](https://github.com/rclone/rclone/pull/9823) — retryable handling when a successful S3 `UploadPart` response omits an ETag.
 - [Apache Magpie #1118](https://github.com/apache/magpie/pull/1118) — more stable per-PR progress for PR-management triage and its evaluation fixtures.
+- [github-mcp-server #3146](https://github.com/github/github-mcp-server/pull/3146) — feature flags via URL query parameter for headerless hosted connections, preserving OAuth raw queries and header precedence.
 
 <details>
 <summary><strong>Contribution record and current activity</strong></summary>
 
-The same snapshot includes **75 open external proposals** across **48
-repositories** and **43 upstream owners**. The merged total above records work
+The same snapshot includes **69 open external proposals** across **46
+repositories** and **41 upstream owners**. The merged total above records work
 already accepted by upstream repositories.
 
 The accepted set is generated from a

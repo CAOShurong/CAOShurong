@@ -4,8 +4,18 @@ The README keeps the summary; this file keeps the receipts. Every entry here
 is a public GitHub artifact (merged PR, open PR, review, or analysis thread).
 Ordered roughly newest-first within each section.
 
-## Merged (32 across 18 upstream repositories)
+## Merged (35 across 21 upstream repositories)
 
+- **[pypa/cibuildwheel #2977](https://github.com/pypa/cibuildwheel/pull/2977)**
+  — refreshes the CircleCI and CPython platform links in the documentation.
+  Merged as `3d9e8c5c` on 2026-09-02.
+- **[github-mcp-server #3146](https://github.com/github/github-mcp-server/pull/3146)**
+  — enables feature flags via URL query parameter for headerless hosted
+  connections, preserving OAuth raw queries and giving present headers
+  precedence over query flags. Merged as `ffa16d00` on 2026-09-01.
+- **[beets #6950](https://github.com/beetbox/beets/pull/6950)** — repairs two
+  dead external links in the documentation. Merged as `e7720ce3` on
+  2026-09-01.
 - **[pgcli #1626](https://github.com/dbcli/pgcli/pull/1626)** — repairs the
   README's dead Click documentation URL by replacing the retired
   `click.pocoo.org` address with the current Pallets documentation location.

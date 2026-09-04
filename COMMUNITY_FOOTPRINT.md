@@ -5,6 +5,20 @@ reviews, triage and design comments in other projects' communities. This file
 is updated every round by the identity agent (②) so the work is visible in one
 place instead of being scattered across other people's repos.
 
+## 2026-09-02
+- [pypa/cibuildwheel#2977](https://github.com/pypa/cibuildwheel/pull/2977) — merged as
+  `3d9e8c5c` on 2026-09-02; refreshes the CircleCI and CPython platform links
+  in the documentation.
+
+## 2026-09-01
+- [github/github-mcp-server#3146](https://github.com/github/github-mcp-server/pull/3146) — merged as
+  `ffa16d00` on 2026-09-01; enables feature flags via URL query parameter for
+  headerless hosted connections, preserving OAuth raw queries and header
+  precedence.
+- [beetbox/beets#6950](https://github.com/beetbox/beets/pull/6950) — merged as
+  `e7720ce3` on 2026-09-01; repairs two dead external links in the
+  documentation.
+
 ## 2026-08-30
 - [restic/restic#22029](https://github.com/restic/restic/pull/22029) — merged by
   `MichaelEischer` from exact head `4fee16ac` as `fb5e9df3`; removes the

@@ -160,6 +160,10 @@ Ordered roughly newest-first within each section.
 
 ## Selected open pull requests (proposals awaiting maintainer decision)
 
+- **[beets #7004](https://github.com/beetbox/beets/pull/7004)** —
+  resolves issue #7002 by skipping archive importer tests (`TestImport7z` and `TestImportRar`)
+  when optional extraction dependencies (`py7zr` or `rarfile`/`unrar`) are not available.
+  OPEN/MERGEABLE.
 - **[CycloneDX Python #1043](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1043)** —
   resolves issue #1030 by documenting the model fixture discovery, naming conventions,
   `_invalid` error fixtures, and snapshot re-creation workflow in `tests/_data/snapshots/README.md`.

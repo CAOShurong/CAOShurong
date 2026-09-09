@@ -19,7 +19,7 @@ class ContributorEvidenceTests(unittest.TestCase):
         self.data, self.digest = MODULE.load_manifest()
 
     def test_snapshot_matches_verified_public_shape(self) -> None:
-        self.assertEqual((35, 21, 20), MODULE.summarize(self.data))
+        self.assertEqual((37, 22, 21), MODULE.summarize(self.data))
 
     def test_manifest_digest_is_line_ending_independent(self) -> None:
         source = MODULE.MANIFEST.read_bytes().replace(b"\r\n", b"\n")

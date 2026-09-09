@@ -32,9 +32,9 @@ class ProfileContentTests(unittest.TestCase):
     def test_public_metrics_are_bounded_and_consistent(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         normalized = " ".join(readme.split())
-        self.assertIn("35 merged upstream pull requests", normalized)
-        self.assertIn("21 repositories", normalized)
-        self.assertIn("20 upstream owners", normalized)
+        self.assertIn("37 merged upstream pull requests", normalized)
+        self.assertIn("22 repositories", normalized)
+        self.assertIn("21 upstream owners", normalized)
         self.assertNotIn("35 / 100", normalized)
         self.assertIn("69 open external proposals", normalized)
         self.assertNotIn("contributor-evidence.svg", normalized)

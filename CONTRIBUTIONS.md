@@ -160,14 +160,17 @@ Ordered roughly newest-first within each section.
 
 ## Selected open pull requests (proposals awaiting maintainer decision)
 
+- **[fastapi/sqlmodel #2090](https://github.com/fastapi/sqlmodel/pull/2090)** —
+  resolves issue/discussion #2047 by fixing a bug in `SQLModelMetaclass.__new__` where configuring a custom SQLAlchemy `registry` assigned `config_table` into `model_config["registry"]` instead of `config_registry`. Gates the custom registry branch to classes that explicitly declare `registry` via kwargs or local `model_config` so concrete table subclasses inherit `_sa_registry` and `metadata` without erroneously being marked `__abstract__ = True`. Includes regression test in `tests/test_main.py`. OPEN/MERGEABLE (CI tests passing).
 - **[beets #7004](https://github.com/beetbox/beets/pull/7004)** —
   resolves issue #7002 by skipping archive importer tests (`TestImport7z` and `TestImportRar`)
   when optional extraction dependencies (`py7zr` or `rarfile`/`unrar`) are not available.
-  OPEN/MERGEABLE.
+  Addressed maintainer `@semohr` review by inlining checks into `test/test_importer.py`.
+  OPEN/MERGEABLE (17/17 CI matrix jobs passing).
 - **[CycloneDX Python #1031](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1031)** —
   resolves issue #1030 by documenting the model fixture discovery, naming conventions,
   schema version filtering, `_invalid` error fixtures, and snapshot re-creation workflow in `tests/_data/snapshots/README.md`.
-  OPEN/MERGEABLE (Maintainer reviewed).
+  OPEN/MERGEABLE (Maintainer reviewed, all CI checks green).
 - **[tqdm/tqdm #1807](https://github.com/tqdm/tqdm/pull/1807)** — fixes a
   CI-safety/behavior bug (tqdm/tqdm#1501): `logging_redirect_tqdm` added a
   `_TqdmLoggingHandler` to any target logger even when it had **no** console

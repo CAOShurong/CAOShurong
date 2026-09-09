@@ -314,6 +314,10 @@ Each review ran the project's real test suite on the exact head under review.
 - **Plotly.js #7967, HolmesGPT #2418** — exact-head verification reviews.
 - **gitleaks #2249** — verification review (rev 204) of external author `vaibhav8a`'s fix for the file-read sibling of our #2252: an unreadable file made `Fragments` return `nil` and `findingSummaryAndExit` print `no leaks found` exit 0. Reviewed from exact head `509fce15` — `go build`/`go vet`/`go test ./sources/` clean; independently confirmed via grep that `s.Sema.Go`/`d.Sema.Go` errors are never read (no `.Wait()` is ever called), so the old `return nil` could never reach the caller; flagged the same defect class in the mid-read `return err` path as an out-of-scope sibling fix.
 
+## Community Authority & Accepted Answers (Galaxy Brain)
+
+- **[beetbox/beets #6981](https://github.com/beetbox/beets/discussions/6981#discussioncomment-18370194)** — **ACCEPTED ANSWER**: Solved automated quiet-mode import for filenames structured as Spotify track IDs (`<id>.ogg`). Detailed two complementary workflows: single-line dynamic loop via `beet import -q -s -S <id>` exploiting beets' internal `Recommendation.strong` threshold, and pre-tagging `musicbrainz_trackid` Vorbis comments using `mutagen` for high-throughput batch imports. Marked as official accepted answer by OP.
+
 ## Analysis threads (root-cause comments on upstream issues)
 
 - **fastapi/fastapi #16337** — root-cause analysis and verified solution for `Annotated[AsyncIterator[T], ...]` return annotations failing route registration: traced the `_STREAM_ORIGINS` rejection of `typing.Annotated` in `get_stream_item_type()`, demonstrated the error cascade through `_populate_api_route_state()` into Pydantic `create_model_field()`, and provided an iterative unwrapping implementation verified against single/nested metadata. Prepared branch `fix-annotated-stream-item` on `CAOShurong/fastapi`.

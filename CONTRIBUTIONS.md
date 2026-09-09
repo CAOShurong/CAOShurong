@@ -166,7 +166,10 @@ Ordered roughly newest-first within each section.
   resolves issue #7002 by skipping archive importer tests (`TestImport7z` and `TestImportRar`)
   when optional extraction dependencies (`py7zr` or `rarfile`/`unrar`) are not available.
   Inlined skip logic into `test/test_importer.py` per maintainer review; officially **APPROVED** by maintainer `@semohr` ("Thanks!").
-  OPEN/APPROVED/MERGEABLE (17/17 CI matrix jobs 100% green, clean merge state).
+  OPEN/APPROVED/MERGEABLE (19/19 CI matrix jobs 100% green, clean merge state).
+- **[beets #7005](https://github.com/beetbox/beets/pull/7005)** —
+  resolves critical regression [#7000](https://github.com/beetbox/beets/issues/7000) where interactive manual search (`e`) and manual ID (`i`) lookups successfully fetched candidates but were dropped without being applied to `task.candidates`. Traced to commit `d143e2cb` which moved `Proposal` to `TYPE_CHECKING` and stripped candidate assignment branches in `TerminalImportSession.choose_match()` and `choose_item()`. Restored runtime `Proposal` handling and added end-to-end regression test in `test/ui/test_ui_importer.py`.
+  OPEN/MERGEABLE.
 - **[CycloneDX Python #1031](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1031)** —
   resolves issue #1030 by documenting the model fixture discovery, naming conventions,
   schema version filtering, `_invalid` error fixtures, and snapshot re-creation workflow in `tests/_data/snapshots/README.md`.

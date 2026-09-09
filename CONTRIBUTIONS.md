@@ -165,8 +165,8 @@ Ordered roughly newest-first within each section.
 - **[beets #7004](https://github.com/beetbox/beets/pull/7004)** —
   resolves issue #7002 by skipping archive importer tests (`TestImport7z` and `TestImportRar`)
   when optional extraction dependencies (`py7zr` or `rarfile`/`unrar`) are not available.
-  Addressed maintainer `@semohr` review by inlining checks into `test/test_importer.py`.
-  OPEN/MERGEABLE (17/17 CI matrix jobs passing).
+  Inlined skip logic into `test/test_importer.py` per maintainer review; officially **APPROVED** by maintainer `@semohr` ("Thanks!").
+  OPEN/APPROVED/MERGEABLE (17/17 CI matrix jobs 100% green, clean merge state).
 - **[CycloneDX Python #1031](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1031)** —
   resolves issue #1030 by documenting the model fixture discovery, naming conventions,
   schema version filtering, `_invalid` error fixtures, and snapshot re-creation workflow in `tests/_data/snapshots/README.md`.
@@ -316,6 +316,10 @@ Each review ran the project's real test suite on the exact head under review.
 
 ## Analysis threads (root-cause comments on upstream issues)
 
+- **beetbox/beets #6960** — architectural proposal for MusicBrainz and external metadata provider connection error handling: analyzed the urllib3 `MaxRetryError`/`NewConnectionError` translation path through `requests.exceptions.ConnectionError`, demonstrated why it bypasses `RequestHandler.handle_http_error`, and proposed introducing `BeetsConnectionError` with clean user-facing warnings in `metadata_plugins.py._search_api` to suppress redundant 50-line stack traces in the interactive importer.
+- **pypa/cibuildwheel #2679** — authoritative packaging architecture for C++/autotools SWIG extensions in `cibuildwheel`: provided dual production patterns (`CIBW_BEFORE_ALL` with `pkg-config` and `auditwheel` vendoring vs. custom `build_ext` delegation to `make`).
+- **sympy/sympy #30398** — scalar evaluation invariant analysis for `ArrayAdd.doit()`: documented why returning `Add` breaks closure within array expressions and cited regression tests `test_simplification.py:48` and `from_matrix_to_array.py`.
+- **fastapi/sqlmodel #2047** — root-cause explanation and fix walkthrough for custom `registry` metaclass configuration, accompanied by upstream fix in PR #2090.
 - **plotly.js #7979** — quiver `arrowref: 'paper'` automargin: `calc.js`
   expands ranges with a data-space reading of the arrow tip while `plot.js`
   renders paper arrows in pixels; off-square layouts are off by

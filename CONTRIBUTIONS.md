@@ -160,6 +160,10 @@ Ordered roughly newest-first within each section.
 
 ## Selected open pull requests (proposals awaiting maintainer decision)
 
+- **[CycloneDX Python #1043](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1043)** —
+  resolves issue #1030 by documenting the model fixture discovery, naming conventions,
+  `_invalid` error fixtures, and snapshot re-creation workflow in `tests/_data/snapshots/README.md`.
+  OPEN/MERGEABLE.
 - **[tqdm/tqdm #1807](https://github.com/tqdm/tqdm/pull/1807)** — fixes a
   CI-safety/behavior bug (tqdm/tqdm#1501): `logging_redirect_tqdm` added a
   `_TqdmLoggingHandler` to any target logger even when it had **no** console

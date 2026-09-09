@@ -13,6 +13,7 @@
   <a href="https://github.com/pulls?q=is%3Apr+author%3ACAOShurong"><img src="https://img.shields.io/badge/Total_PRs_Submitted-160+-blue?style=flat-square&logo=github&logoColor=white" alt="Total PRs"></a>
   <a href="https://github.com/CAOShurong/CAOShurong/blob/main/CONTRIBUTIONS.md"><img src="https://img.shields.io/badge/Upstream_Orgs-20+-purple?style=flat-square&logo=open-source-initiative&logoColor=white" alt="Upstream Orgs"></a>
   <a href="https://pypi.org/user/CAOShurong/"><img src="https://img.shields.io/badge/PyPI-Packages-orange?style=flat-square&logo=pypi&logoColor=white" alt="PyPI"></a>
+  <a href="https://pypi.org/project/frontiertrials/"><img src="https://img.shields.io/pypi/dm/frontiertrials?style=flat-square&logo=pypi&logoColor=white&label=PyPI%20Monthly%20Downloads&color=success" alt="Monthly Downloads"></a>
 </p>
 
 I am **Shurong Cao**, a PhD researcher in Electronic Engineering at

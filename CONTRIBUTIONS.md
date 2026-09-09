@@ -4,8 +4,12 @@ The README keeps the summary; this file keeps the receipts. Every entry here
 is a public GitHub artifact (merged PR, open PR, review, or analysis thread).
 Ordered roughly newest-first within each section.
 
-## Merged (35 across 21 upstream repositories)
+## Merged (37 across 22 upstream repositories)
 
+- **[sigstore/cosign #5072](https://github.com/sigstore/cosign/pull/5072)**
+  — repairs two dead documentation links in README. Merged as `f69dd357` on 2026-09-06.
+- **[pypa/cibuildwheel #2966](https://github.com/pypa/cibuildwheel/pull/2966)**
+  — respects configured NuGet package sources during Windows builds. Merged as `59501f43` on 2026-09-05.
 - **[pypa/cibuildwheel #2977](https://github.com/pypa/cibuildwheel/pull/2977)**
   — refreshes the CircleCI and CPython platform links in the documentation.
   Merged as `3d9e8c5c` on 2026-09-02.

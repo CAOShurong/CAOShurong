@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged"><img src="https://img.shields.io/badge/Merged_Upstream_PRs-35+-success?style=flat-square&logo=git&logoColor=white" alt="Merged PRs"></a>
-  <a href="https://github.com/pulls?q=is%3Apr+author%3ACAOShurong"><img src="https://img.shields.io/badge/Total_PRs_Submitted-160+-blue?style=flat-square&logo=github&logoColor=white" alt="Total PRs"></a>
-  <a href="https://github.com/CAOShurong/CAOShurong/blob/main/CONTRIBUTIONS.md"><img src="https://img.shields.io/badge/Upstream_Orgs-20+-purple?style=flat-square&logo=open-source-initiative&logoColor=white" alt="Upstream Orgs"></a>
+  <a href="https://github.com/search?q=is%3Apr+author%3ACAOShurong+is%3Amerged&type=pullrequests"><img src="https://img.shields.io/badge/Merged_Upstream_PRs-37+-success?style=flat-square&logo=git&logoColor=white" alt="Merged PRs"></a>
+  <a href="https://github.com/search?q=is%3Apr+author%3ACAOShurong&type=pullrequests"><img src="https://img.shields.io/badge/Total_PRs_Submitted-160+-blue?style=flat-square&logo=github&logoColor=white" alt="Total PRs"></a>
+  <a href="https://github.com/CAOShurong/CAOShurong/blob/main/CONTRIBUTIONS.md"><img src="https://img.shields.io/badge/Upstream_Orgs-21+-purple?style=flat-square&logo=open-source-initiative&logoColor=white" alt="Upstream Orgs"></a>
   <a href="https://pypi.org/user/CAOShurong/"><img src="https://img.shields.io/badge/PyPI-Packages-orange?style=flat-square&logo=pypi&logoColor=white" alt="PyPI"></a>
   <a href="https://github.com/beetbox/beets/discussions/6981#discussioncomment-18370194"><img src="https://img.shields.io/badge/GitHub-Galaxy_Brain_Answer-brightgreen?style=flat-square&logo=github&logoColor=white" alt="Galaxy Brain Answer"></a>
   <a href="https://pypi.org/project/frontiertrials/"><img src="https://img.shields.io/pypi/dm/frontiertrials?style=flat-square&logo=pypi&logoColor=white&label=PyPI%20Monthly%20Downloads&color=success" alt="Monthly Downloads"></a>
@@ -98,7 +98,7 @@ documentation.
 
 ## Open-source contributions
 
-I actively contribute to foundational tools, scientific computing, and security frameworks across the open-source ecosystem. As of 2026-09-03, the public record contains **35 merged upstream pull requests** across **21 repositories** and **20 upstream owners**, with over **160 total PR submissions**.
+I actively contribute to foundational tools, scientific computing, and security frameworks across the open-source ecosystem. As of 2026-09-09, the public record contains **37 merged upstream pull requests** across **22 repositories** and **21 upstream owners**, with over **160 total PR submissions**.
 
 <p align="center">
   <a href="https://github.com/apache/magpie/pull/1118"><img src="https://img.shields.io/badge/Apache-D22128?style=flat-square&logo=apache&logoColor=white" alt="Apache"></a>
@@ -115,7 +115,7 @@ I actively contribute to foundational tools, scientific computing, and security 
 
 > [!TIP]
 > **Live Upstream Verification**: All external contributions are public, inspectable, and verifiable directly on GitHub.
-> 🔗 **[Explore All Merged Upstream PRs via GitHub Search →](https://github.com/pulls?q=is%3Apr+author%3ACAOShurong+is%3Amerged)**
+> 🔗 **[Explore All Merged Upstream PRs via GitHub Search →](https://github.com/search?q=is%3Apr+author%3ACAOShurong+is%3Amerged&type=pullrequests)**
 
 ### Representative Merged Contributions
 
@@ -125,7 +125,7 @@ I actively contribute to foundational tools, scientific computing, and security 
 | **GitHub Official** (`github-mcp-server`) | [#3146](https://github.com/github/github-mcp-server/pull/3146) · [`ffa16d00`](https://github.com/github/github-mcp-server/commit/ffa16d00) | Feature flags via URL query parameter for headerless connections | `Merged` |
 | **PyPA** (`pypa/cibuildwheel`) | [#2977](https://github.com/pypa/cibuildwheel/pull/2977) · [`3d9e8c5c`](https://github.com/pypa/cibuildwheel/commit/3d9e8c5c) | Refreshed CPython & CircleCI platform documentation cross-links | `Merged` |
 | **Plotly** (`plotly/plotly.js`) | [#7981](https://github.com/plotly/plotly.js/pull/7981) · [#7959](https://github.com/plotly/plotly.js/pull/7959) | Cartesian hovermode cursor spike behavior & numeric color sorting | `Merged` |
-| **Astropy Core** (`astropy/astropy`) | [#20256](https://github.com/astropy/astropy/pull/20256) · [`e9f80693`](https://github.com/astropy/astropy/commit/e9f80693) | Degraded-accuracy handling for expired IERS predictive values | `Merged` |
+| **Astropy Core** (`astropy/astropy`) | [#20256](https://github.com/astropy/astropy/pull/20256) · [`9f4de8d6`](https://github.com/astropy/astropy/commit/9f4de8d6) | Degraded-accuracy handling for expired IERS predictive values | `Merged` |
 | **CycloneDX** (`cyclonedx-python-lib`) | [#1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028) | Encoded-path handling for XML schema loading with regression tests | `Merged` |
 | **Rclone** (`rclone/rclone`) | [#9823](https://github.com/rclone/rclone/pull/9823) · [#9818](https://github.com/rclone/rclone/pull/9818) | Retryable error handling for S3 `UploadPart` missing ETag response | `Merged` |
 | **Restic** (`restic/restic`) | [#22029](https://github.com/restic/restic/pull/22029) · [#22028](https://github.com/restic/restic/pull/22028) | Removed contradictory plaintext exception; updated crypto docs | `Merged` |

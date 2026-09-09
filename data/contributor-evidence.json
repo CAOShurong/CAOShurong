@@ -177,6 +177,16 @@
    "pypa/cibuildwheel",
    2977,
    "systems"
+  ],
+  [
+   "pypa/cibuildwheel",
+   2966,
+   "systems"
+  ],
+  [
+   "sigstore/cosign",
+   5072,
+   "supply_chain"
   ]
  ],
  "tracks": {

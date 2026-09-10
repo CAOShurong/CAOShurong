@@ -10,11 +10,9 @@
 
 <p align="center">
   <a href="https://github.com/search?q=is%3Apr+author%3ACAOShurong+is%3Amerged&type=pullrequests"><img src="https://img.shields.io/badge/Merged_Upstream_PRs-37+-success?style=flat-square&logo=git&logoColor=white" alt="Merged PRs"></a>
-  <a href="https://github.com/search?q=is%3Apr+author%3ACAOShurong&type=pullrequests"><img src="https://img.shields.io/badge/Total_PRs_Submitted-160+-blue?style=flat-square&logo=github&logoColor=white" alt="Total PRs"></a>
   <a href="https://github.com/CAOShurong/CAOShurong/blob/main/CONTRIBUTIONS.md"><img src="https://img.shields.io/badge/Upstream_Orgs-21+-purple?style=flat-square&logo=open-source-initiative&logoColor=white" alt="Upstream Orgs"></a>
   <a href="https://pypi.org/user/CAOShurong/"><img src="https://img.shields.io/badge/PyPI-Packages-orange?style=flat-square&logo=pypi&logoColor=white" alt="PyPI"></a>
-  <a href="https://github.com/beetbox/beets/discussions/6981#discussioncomment-18370194"><img src="https://img.shields.io/badge/GitHub-Galaxy_Brain_Answer-brightgreen?style=flat-square&logo=github&logoColor=white" alt="Galaxy Brain Answer"></a>
-  <a href="https://pypi.org/project/frontiertrials/"><img src="https://img.shields.io/pypi/dm/frontiertrials?style=flat-square&logo=pypi&logoColor=white&label=PyPI%20Monthly%20Downloads&color=success" alt="Monthly Downloads"></a>
+  <a href="https://github.com/CAOShurong?tab=repositories&q=&type=source&language=&sort="><img src="https://img.shields.io/badge/Focus-inspectable_tools-1f6feb?style=flat-square" alt="Focus"></a>
 </p>
 
 I am **Shurong Cao**, a PhD researcher in Electronic Engineering at
@@ -52,36 +50,30 @@ A few questions currently keep me thinking:
 
 ## Selected work
 
+These are the projects I want people to inspect. Several earlier experiments
+are archived rather than presented as products.
+
 | Project | What you can inspect | Public entry points |
 | --- | --- | --- |
+| **[STM32 multifunction robot car](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32)** | Physical embedded system: line tracking, obstacle avoidance, ultrasonic ranging, Bluetooth control, servo scan, OLED. | [source](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32#readme) · [v0.1.1](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32/releases/tag/v0.1.1) |
 | **[BenchLineage](https://github.com/CAOShurong/benchlineage)** | Experiment provenance, instrument identity, calibration, uncertainty budgets, evidence bundles, and ELN exchange. | [PyPI](https://pypi.org/project/benchlineage/) · [v0.3.8](https://github.com/CAOShurong/benchlineage/releases/tag/v0.3.8) |
-| **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Local, reproducible capability trials for frontier AI systems, including blinded comparison and a structured study mode. | [try it](https://caoshurong.github.io/frontiertrials/try/) · [study report](https://caoshurong.github.io/frontiertrials/demo/trial-report.html) |
-| **[ReproWeave](https://github.com/CAOShurong/reproweave)** | Evidence maps, rebuildability assessment, and replication triage for research papers, with clearly marked synthetic demo data. | [project](https://github.com/CAOShurong/reproweave#readme) · [v0.4.2](https://github.com/CAOShurong/reproweave/releases/tag/v0.4.2) |
-| **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** | Explainable correlation across SARIF, SBOM, and security-scanner findings. | [browser workbench](https://caoshurong.github.io/vulnfuse/) · [security model](https://github.com/CAOShurong/vulnfuse/blob/main/SECURITY.md) |
-| **[STM32 multifunction robot car](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32)** | A physical embedded system integrating tracking, obstacle avoidance, ultrasonic sensing, Bluetooth control, a servo, and an OLED. | [source and documentation](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32#readme) · [v0.1.1](https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32/releases/tag/v0.1.1) |
-| **[contextcost](https://github.com/CAOShurong/contextcost)** | Measurement of repository context cost, with a CLI and GitHub Action that verify whether proposed cuts save real tokens. | [PyPI](https://pypi.org/project/contextcost/) · [GitHub Action](https://github.com/CAOShurong/contextcost/blob/main/action.yml) |
-
-Together, these projects exercise research design, data validation, Python and
-web tooling, embedded systems, packaging, CI, release engineering, and public
-documentation.
+| **[FrontierTrials](https://github.com/CAOShurong/frontiertrials)** | Private blind comparisons of AI products on your own work. No API keys. | [try it](https://caoshurong.github.io/frontiertrials/try/) · [study report](https://caoshurong.github.io/frontiertrials/demo/trial-report.html) |
+| **[OhmJudge](https://github.com/CAOShurong/ohmjudge)** | Fresh EE calculation tasks with executable local grading. Early research tool, not a model ranking. | [collector](https://caoshurong.github.io/ohmjudge/demo/blind-collector.html) · [methodology](https://github.com/CAOShurong/ohmjudge/blob/main/docs/METHODOLOGY.md) |
+| **[ReproWeave](https://github.com/CAOShurong/reproweave)** | Evidence maps and replication triage for papers, with clearly marked synthetic demo data. | [project](https://github.com/CAOShurong/reproweave#readme) · [v0.4.2](https://github.com/CAOShurong/reproweave/releases/tag/v0.4.2) |
+| **[TermScope](https://github.com/CAOShurong/termscope)** | Terminal serial plotter for Arduino, ESP32, and STM32 over UART, pipes, or SSH. | [PyPI](https://pypi.org/project/termscope/) · [readme](https://github.com/CAOShurong/termscope#readme) |
 
 <details>
-<summary><strong>More projects and research prototypes</strong></summary>
+<summary><strong>Other maintained tools</strong></summary>
 
-- **[TermScope](https://github.com/CAOShurong/termscope)** — terminal telemetry
-  for Arduino, ESP32, and STM32 over serial, pipes, or SSH.
-- **[DidYouLearn](https://github.com/CAOShurong/didyoulearn)** — outcome-based
-  evaluation for AI tutors.
-- **[OhmJudge](https://github.com/CAOShurong/ohmjudge)** — answer-free,
-  auditable electrical-engineering model evaluations.
-- **[EvalInt](https://github.com/CAOShurong/evalint)** — integrity checks for
-  reference-scored LLM evaluation sets.
-- **[ResearchBench](https://github.com/CAOShurong/researchbench)** — a running
-  comparison of AI systems on real research tasks.
-- **[WillItBreak](https://github.com/CAOShurong/willitbreak)** — call-site-aware
-  API compatibility analysis with file- and line-level reports.
-- **[ColdShelf](https://github.com/CAOShurong/coldshelf)** — a private,
-  searchable catalogue for offline drives and their evidence.
+- **[ColdShelf](https://github.com/CAOShurong/coldshelf)** — private catalogue for unplugged drives.
+- **[VulnFuse](https://github.com/CAOShurong/vulnfuse)** — explainable correlation across SARIF, SBOM, and scanner findings.
+- **[contextcost](https://github.com/CAOShurong/contextcost)** — measure repository token cost and verify that cuts save tokens.
+- **[EvalInt](https://github.com/CAOShurong/evalint)** — integrity checks for reference-scored LLM eval sets.
+- **[WillItBreak](https://github.com/CAOShurong/willitbreak)** — breaking API changes that actually reach your call sites.
+
+Archived prototypes (not products): ResearchBench, DidYouLearn, and several
+narrow CLI experiments. They remain public for history, but I do not present
+them as ready-to-use benchmarks or tools.
 
 </details>
 
@@ -98,7 +90,10 @@ documentation.
 
 ## Open-source contributions
 
-I actively contribute to foundational tools, scientific computing, and security frameworks across the open-source ecosystem. As of 2026-09-09, the public record contains **37 merged upstream pull requests** across **22 repositories** and **21 upstream owners**, with over **160 total PR submissions**.
+I contribute to foundational tools, scientific computing, and security
+frameworks. As of 2026-09-09, the public record contains **37 merged upstream
+pull requests** across **22 repositories** and **21 upstream owners**. The
+full receipt list is in [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
 
 <p align="center">
   <a href="https://github.com/apache/magpie/pull/1118"><img src="https://img.shields.io/badge/Apache-D22128?style=flat-square&logo=apache&logoColor=white" alt="Apache"></a>

@@ -71,16 +71,6 @@ are archived rather than presented as products.
 | **[ReproWeave](https://github.com/CAOShurong/reproweave)** | Evidence maps and replication triage for papers, with clearly marked synthetic demo data. | [project](https://github.com/CAOShurong/reproweave#readme) · [v0.4.2](https://github.com/CAOShurong/reproweave/releases/tag/v0.4.2) |
 | **[TermScope](https://github.com/CAOShurong/termscope)** | Terminal serial plotter for Arduino, ESP32, and STM32 over UART, pipes, or SSH. | [PyPI](https://pypi.org/project/termscope/) · [readme](https://github.com/CAOShurong/termscope#readme) |
 
-### Flagship research tooling
-
-<p align="center">
-  <a href="https://github.com/CAOShurong/researchbench">
-    <img src="assets/researchbench-card.svg" alt="ResearchBench Flagship Suite: 270/270 tests, 3 domains, v0.4.0 immutable provenance" width="100%">
-  </a>
-</p>
-
-- **[CAOShurong/researchbench](https://github.com/CAOShurong/researchbench)** — Rigorous, standalone evaluation harness for frontier AI scientific reasoning. Features **270 passing unit tests** across paper comprehension, automated peer-review triage, and code reproduction tracking with immutable JSON-LD provenance and ELN export.
-
 <details>
 <summary><strong>Other maintained tools</strong></summary>
 
@@ -89,8 +79,6 @@ are archived rather than presented as products.
 - **[contextcost](https://github.com/CAOShurong/contextcost)** — measure repository token cost and verify that cuts save tokens.
 - **[EvalInt](https://github.com/CAOShurong/evalint)** — integrity checks for reference-scored LLM eval sets.
 - **[WillItBreak](https://github.com/CAOShurong/willitbreak)** — breaking API changes that actually reach your call sites.
-
-Archived prototypes (not active products): DidYouLearn and narrow early CLI experiments. They remain public for history.
 
 </details>
 

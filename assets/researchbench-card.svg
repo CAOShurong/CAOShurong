@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="210" viewBox="0 0 880 210" fill="none">
+  <defs>
+    <linearGradient id="rb-bg" x1="0" y1="0" x2="880" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="green-glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="cyan-glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+  </defs>
+
+  <!-- Card Background -->
+  <rect width="880" height="210" rx="14" fill="url(#rb-bg)" stroke="#1f2937" stroke-width="1.2" />
+
+  <!-- Header -->
+  <g transform="translate(24, 30)">
+    <rect width="115" height="20" rx="10" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1" stroke-opacity="0.4"/>
+    <circle cx="10" cy="10" r="4" fill="#10b981"/>
+    <text x="22" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#34d399">ACTIVE SUITE</text>
+
+    <text x="128" y="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#f3f4f6">CAOShurong / researchbench</text>
+    <text x="0" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#9ca3af">Autonomous benchmark &amp; rigorous evaluation harness for frontier AI reasoning in scientific computing</text>
+  </g>
+
+  <!-- Metrics Row -->
+  <!-- Box 1: 270 Tests -->
+  <g transform="translate(24, 88)">
+    <rect width="254" height="96" rx="10" fill="#131c2e" stroke="#1f2937" stroke-width="1.2" />
+    <text x="18" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="800" fill="#34d399">270 / 270</text>
+    <text x="18" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="650" fill="#e5e7eb">Passing Unit Tests</text>
+    <text x="18" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#9ca3af">100% green pytest regression suite</text>
+    <circle cx="224" cy="30" r="8" fill="#10b981" fill-opacity="0.2"/>
+    <circle cx="224" cy="30" r="4" fill="#10b981"/>
+  </g>
+
+  <!-- Box 2: 3 Scientific Tracks -->
+  <g transform="translate(294, 88)">
+    <rect width="270" height="96" rx="10" fill="#131c2e" stroke="#1f2937" stroke-width="1.2" />
+    <text x="18" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="800" fill="#38bdf8">3 Domains</text>
+    <text x="18" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="650" fill="#e5e7eb">Frontier Evaluation Tracks</text>
+    <text x="18" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#9ca3af">Paper comprehension · Peer review · Repro</text>
+  </g>
+
+  <!-- Box 3: Provenance Protocol -->
+  <g transform="translate(580, 88)">
+    <rect width="276" height="96" rx="10" fill="#131c2e" stroke="#1f2937" stroke-width="1.2" />
+    <text x="18" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="800" fill="#a78bfa">v0.4.0</text>
+    <text x="18" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="650" fill="#e5e7eb">Immutable Provenance</text>
+    <text x="18" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#9ca3af">RunRecord JSON-LD &amp; ELN lineage export</text>
+  </g>
+</svg>

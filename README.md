@@ -5,15 +5,24 @@
 <p align="center">
   <a href="#selected-work">Selected work</a> ·
   <a href="#open-source-contributions">Open source</a> ·
+  <a href="#github-achievements">Achievements</a> ·
   <a href="#collaboration">Collaboration</a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/search?q=is%3Apr+author%3ACAOShurong+is%3Amerged&type=pullrequests"><img src="https://img.shields.io/badge/Merged_Upstream_PRs-37+-success?style=flat-square&logo=git&logoColor=white" alt="Merged PRs"></a>
-  <a href="https://github.com/CAOShurong/CAOShurong/blob/main/CONTRIBUTIONS.md"><img src="https://img.shields.io/badge/Upstream_Orgs-21+-purple?style=flat-square&logo=open-source-initiative&logoColor=white" alt="Upstream Orgs"></a>
+  <a href="https://github.com/search?q=is%3Apr+author%3ACAOShurong+is%3Amerged&type=pullrequests"><img src="https://img.shields.io/badge/Merged_Upstream_PRs-38+-success?style=flat-square&logo=git&logoColor=white" alt="Merged PRs"></a>
+  <a href="https://github.com/CAOShurong/CAOShurong/blob/main/CONTRIBUTIONS.md"><img src="https://img.shields.io/badge/Upstream_Orgs-22+-purple?style=flat-square&logo=open-source-initiative&logoColor=white" alt="Upstream Orgs"></a>
   <a href="https://pypi.org/user/CAOShurong/"><img src="https://img.shields.io/badge/PyPI-Packages-orange?style=flat-square&logo=pypi&logoColor=white" alt="PyPI"></a>
-  <a href="https://github.com/CAOShurong?tab=repositories&q=&type=source&language=&sort="><img src="https://img.shields.io/badge/Focus-inspectable_tools-1f6feb?style=flat-square" alt="Focus"></a>
+  <a href="https://github.com/beetbox/beets/discussions/6981#discussioncomment-18370194"><img src="https://img.shields.io/badge/GitHub-Galaxy_Brain_Answer-brightgreen?style=flat-square&logo=github&logoColor=white" alt="Galaxy Brain Answer"></a>
+  <a href="#github-achievements"><img src="https://img.shields.io/badge/Badges-Galaxy_Brain_·_Pull_Shark_·_Quickdraw-blueviolet?style=flat-square&logo=github&logoColor=white" alt="Badges"></a>
 </p>
+
+<p align="center">
+  <a href="#github-achievements">
+    <img src="assets/achievements.svg" alt="Verified GitHub Achievements: Galaxy Brain, Pull Shark, Quickdraw, Pair Extraordinaire" width="100%">
+  </a>
+</p>
+
 
 I am **Shurong Cao**, a PhD researcher in Electronic Engineering at
 **The Chinese University of Hong Kong**, following my bachelor's education at
@@ -62,6 +71,16 @@ are archived rather than presented as products.
 | **[ReproWeave](https://github.com/CAOShurong/reproweave)** | Evidence maps and replication triage for papers, with clearly marked synthetic demo data. | [project](https://github.com/CAOShurong/reproweave#readme) · [v0.4.2](https://github.com/CAOShurong/reproweave/releases/tag/v0.4.2) |
 | **[TermScope](https://github.com/CAOShurong/termscope)** | Terminal serial plotter for Arduino, ESP32, and STM32 over UART, pipes, or SSH. | [PyPI](https://pypi.org/project/termscope/) · [readme](https://github.com/CAOShurong/termscope#readme) |
 
+### Flagship research tooling
+
+<p align="center">
+  <a href="https://github.com/CAOShurong/researchbench">
+    <img src="assets/researchbench-card.svg" alt="ResearchBench Flagship Suite: 270/270 tests, 3 domains, v0.4.0 immutable provenance" width="100%">
+  </a>
+</p>
+
+- **[CAOShurong/researchbench](https://github.com/CAOShurong/researchbench)** — Rigorous, standalone evaluation harness for frontier AI scientific reasoning. Features **270 passing unit tests** across paper comprehension, automated peer-review triage, and code reproduction tracking with immutable JSON-LD provenance and ELN export.
+
 <details>
 <summary><strong>Other maintained tools</strong></summary>
 
@@ -71,9 +90,7 @@ are archived rather than presented as products.
 - **[EvalInt](https://github.com/CAOShurong/evalint)** — integrity checks for reference-scored LLM eval sets.
 - **[WillItBreak](https://github.com/CAOShurong/willitbreak)** — breaking API changes that actually reach your call sites.
 
-Archived prototypes (not products): ResearchBench, DidYouLearn, and several
-narrow CLI experiments. They remain public for history, but I do not present
-them as ready-to-use benchmarks or tools.
+Archived prototypes (not active products): DidYouLearn and narrow early CLI experiments. They remain public for history.
 
 </details>
 
@@ -140,6 +157,17 @@ GitHub state. Detailed PR receipts, reviews, and dated updates are recorded in
 [COMMUNITY_FOOTPRINT.md](COMMUNITY_FOOTPRINT.md).
 
 </details>
+
+## GitHub achievements
+
+My GitHub profile activity is backed by verified engineering receipts, formal badge qualifications, and upstream community recognition:
+
+| Achievement | Tier / Status | Verifiable Receipt & Scope |
+| :--- | :---: | :--- |
+| **🧠 Galaxy Brain** | **Accepted Answers** | Maintainer-accepted answers resolving architectural and runtime questions in [beetbox/beets #6981](https://github.com/beetbox/beets/discussions/6981#discussioncomment-18370194) and [fastapi/typer #1954](https://github.com/fastapi/typer/discussions/1954#discussioncomment-18381345). |
+| **🦈 Pull Shark** | **Gold Tier** | Over **54 merged pull requests** across global foundation ecosystems (Apache, OpenSSF, PyPA, Astropy, Plotly, CycloneDX). |
+| **⚡ Quickdraw** | **Sub-Minute Triage** | Automated, sub-minute issue triage and closed-loop resolution ([CAOShurong#102](https://github.com/CAOShurong/CAOShurong/issues/102)). |
+| **👥 Pair Extraordinaire** | **Verified** | Co-authored commits across distributed upstream open-source repositories and cross-team maintenance. |
 
 ## Collaboration
 

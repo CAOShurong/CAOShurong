@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="200" viewBox="0 0 880 200" fill="none">
+  <defs>
+    <linearGradient id="card-bg" x1="0" y1="0" x2="880" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+    <linearGradient id="badge-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="badge-purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+    <linearGradient id="badge-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="badge-green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Container -->
+  <rect width="880" height="200" rx="14" fill="url(#card-bg)" stroke="#30363d" stroke-width="1.2" />
+
+  <!-- Title Header -->
+  <g transform="translate(24, 32)">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="650" fill="#58a6ff" letter-spacing="1.5">VERIFIED GITHUB ACHIEVEMENTS &amp; RECOGNITION</text>
+    <text y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e">Ecosystem maintainer acceptances, upstream code merges, and high-velocity triage receipts</text>
+  </g>
+
+  <!-- Badges Row -->
+  <!-- Badge 1: Galaxy Brain -->
+  <g transform="translate(24, 74)">
+    <rect width="194" height="98" rx="10" fill="#1c2128" stroke="#8b5cf6" stroke-width="1.2" stroke-opacity="0.5"/>
+    <circle cx="34" cy="34" r="16" fill="url(#badge-purple)" fill-opacity="0.2" />
+    <text x="34" y="40" font-size="18" text-anchor="middle">🧠</text>
+    <text x="60" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#c9d1d9">Galaxy Brain</text>
+    <rect x="60" y="36" width="70" height="17" rx="8.5" fill="#8b5cf6" fill-opacity="0.25"/>
+    <text x="95" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#d2a8ff" text-anchor="middle">Accepted x2</text>
+    <text x="14" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e">Maintainer-accepted</text>
+    <text x="14" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e">answers in Beets &amp; Typer</text>
+  </g>
+
+  <!-- Badge 2: Pull Shark -->
+  <g transform="translate(236, 74)">
+    <rect width="194" height="98" rx="10" fill="#1c2128" stroke="#3b82f6" stroke-width="1.2" stroke-opacity="0.5"/>
+    <circle cx="34" cy="34" r="16" fill="url(#badge-blue)" fill-opacity="0.2" />
+    <text x="34" y="40" font-size="18" text-anchor="middle">🦈</text>
+    <text x="60" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#c9d1d9">Pull Shark</text>
+    <rect x="60" y="36" width="65" height="17" rx="8.5" fill="#3b82f6" fill-opacity="0.25"/>
+    <text x="92" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#79c0ff" text-anchor="middle">Gold Tier</text>
+    <text x="14" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e">54+ upstream PRs merged</text>
+    <text x="14" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e">across 22 global orgs</text>
+  </g>
+
+  <!-- Badge 3: Quickdraw -->
+  <g transform="translate(448, 74)">
+    <rect width="194" height="98" rx="10" fill="#1c2128" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.5"/>
+    <circle cx="34" cy="34" r="16" fill="url(#badge-gold)" fill-opacity="0.2" />
+    <text x="34" y="40" font-size="18" text-anchor="middle">⚡</text>
+    <text x="60" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#c9d1d9">Quickdraw</text>
+    <rect x="60" y="36" width="75" height="17" rx="8.5" fill="#f59e0b" fill-opacity="0.25"/>
+    <text x="97" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#f9cb5d" text-anchor="middle">Sub-Minute</text>
+    <text x="14" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e">High-velocity incident &amp;</text>
+    <text x="14" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e">regression resolution</text>
+  </g>
+
+  <!-- Badge 4: Pair Extraordinaire -->
+  <g transform="translate(660, 74)">
+    <rect width="194" height="98" rx="10" fill="#1c2128" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.5"/>
+    <circle cx="34" cy="34" r="16" fill="url(#badge-green)" fill-opacity="0.2" />
+    <text x="34" y="40" font-size="18" text-anchor="middle">👥</text>
+    <text x="60" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" font-weight="700" fill="#c9d1d9">Pair Extraordinaire</text>
+    <rect x="60" y="36" width="65" height="17" rx="8.5" fill="#10b981" fill-opacity="0.25"/>
+    <text x="92" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#7ee787" text-anchor="middle">Verified</text>
+    <text x="14" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e">Cross-ecosystem</text>
+    <text x="14" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e">co-authored commits</text>
+  </g>
+</svg>

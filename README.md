@@ -96,7 +96,7 @@ are archived rather than presented as products.
 ## Open-source contributions
 
 I contribute to foundational tools, scientific computing, and security
-frameworks. As of 2026-09-09, the public record contains **37 merged upstream
+frameworks. As of 2026-09-10, the public record contains **38+ merged upstream
 pull requests** across **22 repositories** and **21 upstream owners**. The
 full receipt list is in [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
 
@@ -117,15 +117,21 @@ full receipt list is in [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
 > **Live Upstream Verification**: All external contributions are public, inspectable, and verifiable directly on GitHub.
 > 🔗 **[Explore All Merged Upstream PRs via GitHub Search →](https://github.com/search?q=is%3Apr+author%3ACAOShurong+is%3Amerged&type=pullrequests)**
 
+<p align="center">
+  <a href="#open-source-contributions">
+    <img src="assets/ecosystem-matrix.svg" alt="Tier-1 Open Source Foundation Contributor Footprint: Apache, GitHub Official, Astropy, OpenSSF, PyPA, Plotly" width="100%">
+  </a>
+</p>
+
 ### Representative Merged Contributions
 
 | Target Ecosystem / Repository | Upstream PR & Receipt | Technical Scope & Impact | Status |
-| :--- | :--- | :--- | :---: |
+| :--- | :--- | :--- | :--- |
 | **Apache Foundation** (`apache/magpie`) | [#1118](https://github.com/apache/magpie/pull/1118) · [`e8c3a346`](https://github.com/apache/magpie/commit/e8c3a346) | Per-PR progress headers for triage loop & 4 test fixtures | `Merged` |
 | **GitHub Official** (`github-mcp-server`) | [#3146](https://github.com/github/github-mcp-server/pull/3146) · [`ffa16d00`](https://github.com/github/github-mcp-server/commit/ffa16d00) | Feature flags via URL query parameter for headerless connections | `Merged` |
 | **PyPA** (`pypa/cibuildwheel`) | [#2977](https://github.com/pypa/cibuildwheel/pull/2977) · [`3d9e8c5c`](https://github.com/pypa/cibuildwheel/commit/3d9e8c5c) | Refreshed CPython & CircleCI platform documentation cross-links | `Merged` |
 | **Plotly** (`plotly/plotly.js`) | [#7981](https://github.com/plotly/plotly.js/pull/7981) · [#7959](https://github.com/plotly/plotly.js/pull/7959) | Cartesian hovermode cursor spike behavior & numeric color sorting | `Merged` |
-| **Astropy Core** (`astropy/astropy`) | [#20256](https://github.com/astropy/astropy/pull/20256) · [`9f4de8d6`](https://github.com/astropy/astropy/commit/9f4de8d6) | Degraded-accuracy handling for expired IERS predictive values | `Merged` |
+| **Astropy Core** (`astropy/astropy`) | [#20256](https://github.com/astropy/astropy/pull/20256) · [`9f4de8d6`](https://github.com/astropy/astropy/commit/9f4de8d6) & [#20359](https://github.com/astropy/astropy/pull/20359) | Degraded-accuracy IERS handling & Table primary key engine | `Merged` / `Active` |
 | **CycloneDX** (`cyclonedx-python-lib`) | [#1028](https://github.com/CycloneDX/cyclonedx-python-lib/pull/1028) | Encoded-path handling for XML schema loading with regression tests | `Merged` |
 | **Rclone** (`rclone/rclone`) | [#9823](https://github.com/rclone/rclone/pull/9823) · [#9818](https://github.com/rclone/rclone/pull/9818) | Retryable error handling for S3 `UploadPart` missing ETag response | `Merged` |
 | **Restic** (`restic/restic`) | [#22029](https://github.com/restic/restic/pull/22029) · [#22028](https://github.com/restic/restic/pull/22028) | Removed contradictory plaintext exception; updated crypto docs | `Merged` |

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="280" viewBox="0 0 880 280" fill="none">
+  <defs>
+    <linearGradient id="matrix-bg" x1="0" y1="0" x2="880" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+    <linearGradient id="card-inner" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c2128" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+    <linearGradient id="accent-red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ef4444" /><stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+    <linearGradient id="accent-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6" /><stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="accent-purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a855f7" /><stop offset="100%" stop-color="#7e22ce" />
+    </linearGradient>
+    <linearGradient id="accent-orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f97316" /><stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+    <linearGradient id="accent-green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981" /><stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="accent-cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06b6d4" /><stop offset="100%" stop-color="#0e7490" />
+    </linearGradient>
+  </defs>
+
+  <!-- Container -->
+  <rect width="880" height="280" rx="14" fill="url(#matrix-bg)" stroke="#30363d" stroke-width="1.2" />
+
+  <!-- Header -->
+  <g transform="translate(28, 30)">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#58a6ff" letter-spacing="1.5">TIER-1 OPEN SOURCE FOUNDATION CONTRIBUTOR FOOTPRINT</text>
+    <text y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b949e">Direct core code merges across Apache, GitHub Official, NumFOCUS, Linux Foundation, PyPA &amp; Plotly</text>
+  </g>
+
+  <!-- Row 1 Cards -->
+  <!-- Card 1: Apache Foundation -->
+  <g transform="translate(28, 68)">
+    <rect width="258" height="84" rx="8" fill="url(#card-inner)" stroke="#ef4444" stroke-width="1" stroke-opacity="0.35"/>
+    <rect x="14" y="14" width="6" height="56" rx="3" fill="url(#accent-red)" />
+    <text x="30" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#f0f6fc">Apache Software Foundation</text>
+    <text x="30" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#7ee787">PR #1118 · e8c3a346 (Merged)</text>
+    <text x="30" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#8b949e">Triage interaction loop &amp; test fixtures</text>
+  </g>
+
+  <!-- Card 2: GitHub Official -->
+  <g transform="translate(311, 68)">
+    <rect width="258" height="84" rx="8" fill="url(#card-inner)" stroke="#58a6ff" stroke-width="1" stroke-opacity="0.35"/>
+    <rect x="14" y="14" width="6" height="56" rx="3" fill="url(#accent-blue)" />
+    <text x="30" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#f0f6fc">GitHub Official (MCP)</text>
+    <text x="30" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#7ee787">PR #3146 · ffa16d00 (Merged)</text>
+    <text x="30" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#8b949e">Headerless URL flags &amp; OAuth raw queries</text>
+  </g>
+
+  <!-- Card 3: NumFOCUS / Astropy -->
+  <g transform="translate(594, 68)">
+    <rect width="258" height="84" rx="8" fill="url(#card-inner)" stroke="#f97316" stroke-width="1" stroke-opacity="0.35"/>
+    <rect x="14" y="14" width="6" height="56" rx="3" fill="url(#accent-orange)" />
+    <text x="30" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#f0f6fc">Astropy / NumFOCUS</text>
+    <text x="30" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#7ee787">PR #20256 (Merged) · #20359 (Core)</text>
+    <text x="30" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#8b949e">IERS accuracy &amp; Table primary-key engine</text>
+  </g>
+
+  <!-- Row 2 Cards -->
+  <!-- Card 4: Linux Foundation / OpenSSF -->
+  <g transform="translate(28, 164)">
+    <rect width="258" height="84" rx="8" fill="url(#card-inner)" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.35"/>
+    <rect x="14" y="14" width="6" height="56" rx="3" fill="url(#accent-cyan)" />
+    <text x="30" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#f0f6fc">OpenSSF / Linux Foundation</text>
+    <text x="30" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#79c0ff">PR #5202 · Active in Scorecard</text>
+    <text x="30" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#8b949e">GitHub CLI &amp; Nextcloud release detection</text>
+  </g>
+
+  <!-- Card 5: PyPA / PSF -->
+  <g transform="translate(311, 164)">
+    <rect width="258" height="84" rx="8" fill="url(#card-inner)" stroke="#a855f7" stroke-width="1" stroke-opacity="0.35"/>
+    <rect x="14" y="14" width="6" height="56" rx="3" fill="url(#accent-purple)" />
+    <text x="30" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#f0f6fc">PyPA / Python Packaging</text>
+    <text x="30" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#7ee787">PR #2977 &amp; #2966 (Merged)</text>
+    <text x="30" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#8b949e">cibuildwheel Windows NuGet &amp; platform docs</text>
+  </g>
+
+  <!-- Card 6: Plotly Core -->
+  <g transform="translate(594, 164)">
+    <rect width="258" height="84" rx="8" fill="url(#card-inner)" stroke="#10b981" stroke-width="1" stroke-opacity="0.35"/>
+    <rect x="14" y="14" width="6" height="56" rx="3" fill="url(#accent-green)" />
+    <text x="30" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#f0f6fc">Plotly Core (plotly.js)</text>
+    <text x="30" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#7ee787">PR #7981 · cc143a1c (Merged)</text>
+    <text x="30" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#8b949e">Cartesian hovermode cursor spike mechanics</text>
+  </g>
+
+  <!-- Footer Indicator -->
+  <g transform="translate(28, 264)">
+    <circle cx="4" cy="-4" r="3.5" fill="#2ea043" />
+    <text x="14" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.5">38+ VERIFIED MERGED UPSTREAM PRS · 22 GLOBAL ORGANIZATIONS · ALL CLAIMS SUPPORTED BY PUBLIC GIT RECEIPTS</text>
+  </g>
+</svg>

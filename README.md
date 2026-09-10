@@ -96,7 +96,7 @@ are archived rather than presented as products.
 ## Open-source contributions
 
 I contribute to foundational tools, scientific computing, and security
-frameworks. As of 2026-09-10, the public record contains **38+ merged upstream
+frameworks. As of 2026-09-10, the public record contains **37 merged upstream
 pull requests** across **22 repositories** and **21 upstream owners**. The
 full receipt list is in [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
 

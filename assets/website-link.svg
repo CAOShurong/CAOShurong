@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" role="img" aria-label="Visit Shurong Cao's academic website at caoshurong.github.io">
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#f5effa"/><stop offset="1" stop-color="#e7d9f1"/></linearGradient></defs>
+  <rect x="1" y="1" width="1198" height="148" rx="18" fill="url(#paper)" stroke="#d2bddf" stroke-width="2"/>
+  <path d="M47 42v66" stroke="#8c63a8" stroke-width="3" stroke-linecap="round"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <text x="72" y="43" fill="#77568d" font-size="13" font-weight="600" letter-spacing="2.6">ACADEMIC WEBSITE</text>
+    <text x="71" y="84" fill="#4c2e63" font-size="31" font-weight="600">caoshurong.github.io</text>
+    <text x="73" y="115" fill="#735a83" font-size="16">Research · Publications · Engineering · About me</text>
+    <rect x="895" y="48" width="260" height="56" rx="28" fill="#674382"/>
+    <text x="923" y="83" fill="#fff" font-size="20" font-weight="600">Visit my homepage</text>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1118 82l14-14m-14 0h14v14"/></g>
+</svg>

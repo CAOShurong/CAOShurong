@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://caoshurong.github.io/">
+    <img src="assets/website-link.svg" alt="Visit my academic homepage — caoshurong.github.io" width="100%">
+  </a>
+</p>
+
 # CAOShurong
 
 ![CAOShurong — PhD researcher in Electronic Engineering at CUHK](assets/banner.svg)

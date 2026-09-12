@@ -1,14 +1,8 @@
 <p align="center">
   <a href="https://caoshurong.github.io/">
-    <img src="assets/website-link.svg" alt="Visit my academic homepage — caoshurong.github.io" width="100%">
+    <img src="assets/banner.svg" alt="ShurongCAO — PhD researcher at CUHK. View my homepage" width="100%">
   </a>
 </p>
-
-# Shurong Cao · 曹书嵘
-
-[**Academic homepage / 个人学术主页 → caoshurong.github.io**](https://caoshurong.github.io/)
-
-![CAOShurong — PhD researcher in Electronic Engineering at CUHK](assets/banner.svg)
 
 <p align="center">
   <a href="#selected-work">Selected work</a> ·
@@ -32,7 +26,7 @@
 </p>
 
 
-I am **Shurong Cao**, a PhD researcher in Electronic Engineering at
+I am **ShurongCAO**, a PhD researcher in Electronic Engineering at
 **The Chinese University of Hong Kong**, following my bachelor's education at
 **Nanjing University**.
 

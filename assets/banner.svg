@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="460" viewBox="0 0 1600 460" role="img" aria-labelledby="title desc">
-  <title id="title">Shurong Cao academic profile</title>
-  <desc id="desc">A warm, light academic banner for Shurong Cao, a PhD researcher in Electronic Engineering at The Chinese University of Hong Kong, with abstract measurement contours and observation points.</desc>
+  <title id="title">ShurongCAO academic profile</title>
+  <desc id="desc">A warm, light academic banner for ShurongCAO, a PhD researcher in Electronic Engineering at The Chinese University of Hong Kong, with abstract measurement contours and observation points.</desc>
   <defs>
     <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#fbf8f2"/>
@@ -39,11 +39,16 @@
   </g>
 
   <g font-family="Georgia, 'Times New Roman', serif">
-    <text x="104" y="91" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="650" letter-spacing="4.2" fill="#9a5d2f">CAO SHURONG</text>
-    <text x="101" y="176" font-size="66" fill="#292722">Shurong Cao</text>
+    <text x="104" y="91" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="650" letter-spacing="4.2" fill="#9a5d2f">ACADEMIC PROFILE</text>
+    <text x="101" y="176" font-size="66" fill="#292722">ShurongCAO</text>
     <text x="104" y="231" font-size="25" fill="#4f4b45" font-style="italic">PhD Researcher in Electronic Engineering</text>
     <text x="104" y="273" font-size="22" fill="#625d55">The Chinese University of Hong Kong</text>
   </g>
   <line x1="104" y1="316" x2="696" y2="316" stroke="#c9bfb3" stroke-width="1.5"/>
   <text x="104" y="363" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="650" letter-spacing="2.6" fill="#66756a">RESEARCH · ENGINEERING · OPEN COLLABORATION</text>
+  <g transform="translate(1110 342)">
+    <rect width="378" height="64" rx="32" fill="#ffffff" fill-opacity="0.8" stroke="#c4b5a6" stroke-width="1.5"/>
+    <text x="30" y="40" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="25" font-weight="600" fill="#554439">View my homepage</text>
+    <path d="M326 42l20-20m-20 0h20v20" fill="none" stroke="#79634f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 </svg>

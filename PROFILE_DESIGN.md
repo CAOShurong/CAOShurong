@@ -9,3 +9,5 @@ Owner direction, 13 September 2026. Preserve these choices during future content
 - Keep substantive contribution updates separate from styling. Do not overwrite these SVGs with older generated copies when refreshing metrics.
 
 Files: README.md, assets/banner.svg, assets/achievements.svg, assets/ecosystem-matrix.svg. The unused assets/website-link.svg remains available in history/source but is not displayed.
+
+GitHub caches SVGs aggressively. README artwork URLs are pinned to the artwork commit. After changing these SVGs, commit them first and update README image URLs to that new commit so visitors receive the intended images.

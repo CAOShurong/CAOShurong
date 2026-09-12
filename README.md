@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://caoshurong.github.io/">
-    <img src="assets/banner.svg?v=20260913-light" alt="ShurongCAO — PhD researcher at CUHK. View my homepage" width="100%">
+    <img src="https://raw.githubusercontent.com/CAOShurong/CAOShurong/57eee44075005963b73fe200ee93f847f836fc9a/assets/banner.svg" alt="ShurongCAO — PhD researcher at CUHK. View my homepage" width="100%">
   </a>
 </p>
 
@@ -21,7 +21,7 @@
 
 <p align="center">
   <a href="#github-achievements">
-    <img src="assets/achievements.svg?v=20260913-light" alt="Verified GitHub Achievements: Galaxy Brain, Pull Shark, Quickdraw, Pair Extraordinaire" width="100%">
+    <img src="https://raw.githubusercontent.com/CAOShurong/CAOShurong/57eee44075005963b73fe200ee93f847f836fc9a/assets/achievements.svg" alt="Verified GitHub Achievements: Galaxy Brain, Pull Shark, Quickdraw, Pair Extraordinaire" width="100%">
   </a>
 </p>
 
@@ -121,7 +121,7 @@ full receipt list is in [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
 
 <p align="center">
   <a href="#open-source-contributions">
-    <img src="assets/ecosystem-matrix.svg?v=20260913-light" alt="Tier-1 Open Source Foundation Contributor Footprint: Apache, GitHub Official, Astropy, OpenSSF, PyPA, Plotly" width="100%">
+    <img src="https://raw.githubusercontent.com/CAOShurong/CAOShurong/57eee44075005963b73fe200ee93f847f836fc9a/assets/ecosystem-matrix.svg" alt="Tier-1 Open Source Foundation Contributor Footprint: Apache, GitHub Official, Astropy, OpenSSF, PyPA, Plotly" width="100%">
   </a>
 </p>
 

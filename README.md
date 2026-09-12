@@ -4,7 +4,9 @@
   </a>
 </p>
 
-# CAOShurong
+# Shurong Cao · 曹书嵘
+
+[**Academic homepage / 个人学术主页 → caoshurong.github.io**](https://caoshurong.github.io/)
 
 ![CAOShurong — PhD researcher in Electronic Engineering at CUHK](assets/banner.svg)
 

@@ -1,7 +1,10 @@
 # Contribution log — full detail
 
-The README keeps the summary; this file keeps the receipts. Every entry here
-is a public GitHub artifact (merged PR, open PR, review, or analysis thread).
+This is a historical contribution archive through 2026-09-10. Counts and
+proposal statuses below are a dated snapshot, not current totals. See
+[current merged contributions](https://github.com/search?q=author%3ACAOShurong+is%3Apr+is%3Amerged+-user%3ACAOShurong&type=pullrequests&s=updated&o=desc)
+and [current open pull requests](https://github.com/search?q=author%3ACAOShurong+is%3Apr+is%3Aopen+-user%3ACAOShurong&type=pullrequests&s=updated&o=desc).
+Every entry here is a public GitHub artifact (merged PR, open PR, review, or analysis thread).
 Ordered roughly newest-first within each section.
 
 ## Merged (37 across 22 upstream repositories)

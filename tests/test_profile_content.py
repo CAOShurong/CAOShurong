@@ -3,6 +3,8 @@ from __future__ import annotations
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from urllib.parse import parse_qs, urlsplit
+import re
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,10 +20,12 @@ class ProfileContentTests(unittest.TestCase):
         self.assertIn("Hong Kong or Shenzhen", readme)
         self.assertIn("North America, Europe", readme)
 
-    def test_profile_uses_open_questions_instead_of_a_fixed_route(self) -> None:
+    def test_profile_keeps_research_exploratory_and_secondary(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         banner = (ROOT / "assets" / "banner.svg").read_text(encoding="utf-8")
-        self.assertIn("Questions I am exploring", readme)
+        self.assertIn("I am exploring", readme)
+        self.assertLess(readme.index("## Selected work"), readme.index("## Research background"))
+        self.assertLess(readme.index("## Open-source contributions"), readme.index("## Research background"))
         self.assertNotIn("## Research interests", readme)
         self.assertNotIn("not its boundary", readme.casefold())
         self.assertNotIn("rather than permanent labels", readme.casefold())
@@ -32,11 +36,17 @@ class ProfileContentTests(unittest.TestCase):
     def test_public_metrics_are_bounded_and_consistent(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         normalized = " ".join(readme.split())
-        self.assertIn("37 merged upstream pull requests", normalized)
-        self.assertIn("22 repositories", normalized)
-        self.assertIn("21 upstream owners", normalized)
+        searches = re.findall(r"https://github.com/search\?[^)\s]+", readme)
+        queries = [parse_qs(urlsplit(url).query)["q"][0].split() for url in searches]
+        self.assertEqual(len(queries), 2)
+        for query in queries:
+            self.assertIn("author:CAOShurong", query)
+            self.assertIn("-user:CAOShurong", query)
+            self.assertIn("is:pr", query)
+        self.assertEqual(sum("is:merged" in q for q in queries), 1)
+        self.assertEqual(sum("is:open" in q for q in queries), 1)
         self.assertNotIn("35 / 100", normalized)
-        self.assertIn("69 open external proposals", normalized)
+        self.assertNotRegex(normalized, r"\d+\+? merged upstream")
         self.assertNotIn("contributor-evidence.svg", normalized)
 
     def test_banner_is_well_formed_and_self_contained(self) -> None:

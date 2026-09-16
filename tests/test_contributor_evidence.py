@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,6 +23,30 @@ class ContributorEvidenceTests(unittest.TestCase):
 
     def test_snapshot_matches_verified_public_shape(self) -> None:
         self.assertEqual((37, 22, 21), MODULE.summarize(self.data))
+
+    def test_live_verification_allows_growth_but_rejects_missing_receipts(self) -> None:
+        nodes = [
+            {"number": number, "repository": {
+                "nameWithOwner": repo, "owner": {"login": repo.split("/")[0]}
+            }}
+            for repo, number, _ in self.data["contributions"]
+        ]
+        nodes.append({"number": 99999, "repository": {
+            "nameWithOwner": "example/new-project", "owner": {"login": "example"}
+        }})
+
+        def response(items):
+            return SimpleNamespace(stdout=json.dumps({"data": {"user": {
+                "pullRequests": {"nodes": items, "pageInfo": {
+                    "hasNextPage": False, "endCursor": None
+                }}
+            }}}))
+
+        with patch.object(MODULE.subprocess, "run", return_value=response(nodes)):
+            MODULE.verify_live(self.data)
+        with patch.object(MODULE.subprocess, "run", return_value=response(nodes[1:])):
+            with self.assertRaisesRegex(ValueError, "no_longer_live"):
+                MODULE.verify_live(self.data)
 
     def test_manifest_digest_is_line_ending_independent(self) -> None:
         source = MODULE.MANIFEST.read_bytes().replace(b"\r\n", b"\n")

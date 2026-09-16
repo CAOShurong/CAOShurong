@@ -89,12 +89,12 @@ def verify_live(data: dict[str, Any]) -> None:
         cursor = page_info["endCursor"]
 
     manifest = {(item[0], int(item[1])) for item in data["contributions"]}
-    if live != manifest:
-        missing = sorted(live - manifest)
+    # A dated archive must remain verifiable as new contributions are merged.
+    if not manifest.issubset(live):
         stale = sorted(manifest - live)
         raise ValueError(
-            "public snapshot differs from manifest; "
-            f"missing_from_manifest={missing}, no_longer_live={stale}"
+            "archived contributions are missing from live merged state; "
+            f"no_longer_live={stale}"
         )
 
 
@@ -112,7 +112,7 @@ def main() -> int:
     )
     if args.verify_live:
         verify_live(data)
-        print(f"live public contribution set matches manifest: {contributions}")
+        print(f"all {contributions} archived contributions remain merged; newer merges allowed")
     return 0
 
 

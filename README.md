@@ -39,33 +39,29 @@ I am actively investigating issues and submitting new work. **[Merged contributi
 <table>
 <tr>
 <td width="50%" valign="top">
-<sub>EXPERIMENT PROVENANCE</sub>
+<sub>RESEARCH PROVENANCE</sub>
 <h3><a href="https://github.com/CAOShurong/benchlineage">BenchLineage</a></h3>
-<p>Keep the path from instrument and calibration to raw measurement, uncertainty, and published result inspectable.</p>
-<p>A contributed exchange example is included in <a href="https://github.com/TheELNConsortium/TheELNFileFormat/tree/master/examples/BenchLineage">The ELN Consortium's format repository</a>.</p>
-<p><a href="https://pypi.org/project/benchlineage/">Package</a> · <a href="https://caoshurong.github.io/benchlineage/">Demo</a></p>
+<p>Trace experiments from instruments and calibration to results. Export verifiable evidence bundles and ELN archives.</p>
+<p><a href="https://pypi.org/project/benchlineage/">Package</a> · <a href="https://github.com/TheELNConsortium/TheELNFileFormat/tree/master/examples/BenchLineage">Accepted ELN example</a></p>
 </td>
 <td width="50%" valign="top">
-<sub>AI REASONING IN ENGINEERING</sub>
+<sub>AI REASONING · EE</sub>
 <h3><a href="https://github.com/CAOShurong/ohmjudge">OhmJudge</a></h3>
-<p>Evaluate AI on fresh electrical-engineering calculations, with seeded task generation and executable local grading.</p>
-<p>Explicit checks for numerical answers, units, and tolerances. An early research tool.</p>
+<p>Fresh EE problems with executable checks for answers, units, and tolerances. An early tool for studying AI reasoning.</p>
 <p><a href="https://github.com/CAOShurong/ohmjudge/blob/main/docs/METHODOLOGY.md">Methodology</a> · <a href="https://caoshurong.github.io/ohmjudge/demo/blind-collector.html">Try it</a></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<sub>HUMAN EVALUATION OF AI</sub>
+<sub>HUMAN EVALUATION · AI</sub>
 <h3><a href="https://github.com/CAOShurong/frontiertrials">FrontierTrials</a></h3>
-<p>Compare AI products on your own tasks through blind comparisons, saved protocols, and inspectable reports.</p>
-<p>A private browser lab, with a separate CLI workflow for structured studies.</p>
+<p>Blind comparisons of AI products on your own tasks. A private browser lab and a CLI for structured studies.</p>
 <p><a href="https://caoshurong.github.io/frontiertrials/try/">Try the lab</a> · <a href="https://caoshurong.github.io/frontiertrials/demo/trial-report.html">Example report</a></p>
 </td>
 <td width="50%" valign="top">
 <sub>EMBEDDED SYSTEMS</sub>
 <h3><a href="https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32">STM32 robot car</a></h3>
-<p>Bring sensing, control, and a physical interface together: line tracking, obstacle avoidance, ultrasonic ranging, Bluetooth, and OLED.</p>
-<p>Hardware integration alongside the research software.</p>
+<p>Integrated sensing and control: line tracking, obstacle avoidance, ultrasonic ranging, Bluetooth, and an OLED interface.</p>
 <p><a href="https://github.com/CAOShurong/Multi-function-tracking-car-based-on-STM32#readme">Source &amp; hardware</a></p>
 </td>
 </tr>

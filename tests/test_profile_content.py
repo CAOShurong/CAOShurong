@@ -45,17 +45,19 @@ class ProfileContentTests(unittest.TestCase):
             self.assertIn("is:pr", query)
         self.assertEqual(sum("is:merged" in q for q in queries), 1)
         self.assertEqual(sum("is:open" in q for q in queries), 1)
+        self.assertEqual(readme.count("<!-- upstream-stats:start -->"), 1)
+        self.assertEqual(readme.count("<!-- upstream-stats:end -->"), 1)
         self.assertNotIn("35 / 100", normalized)
         self.assertNotRegex(normalized, r"\d+\+? merged upstream")
         self.assertNotIn("contributor-evidence.svg", normalized)
 
     def test_banner_is_well_formed_and_self_contained(self) -> None:
-        path = ROOT / "assets" / "banner.svg"
-        text = path.read_text(encoding="utf-8")
-        ET.fromstring(text)
-        self.assertNotIn("<script", text.casefold())
-        self.assertNotIn("foreignobject", text.casefold())
-        self.assertNotIn("<image", text.casefold())
+        for name in ("banner.svg", "banner-dark.svg"):
+            text = (ROOT / "assets" / name).read_text(encoding="utf-8")
+            ET.fromstring(text)
+            self.assertNotIn("<script", text.casefold())
+            self.assertNotIn("foreignobject", text.casefold())
+            self.assertNotIn("<image", text.casefold())
         self.assertFalse((ROOT / "assets" / "contributor-evidence.svg").exists())
 
 

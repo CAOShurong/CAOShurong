@@ -1,5 +1,15 @@
 # Profile presentation decisions
 
+## Second revision, 16 September 2026
+
+- Owner feedback: the first revision was too ordinary and did not make the strengths visible enough.
+- Replace the orbital cover with an original engineering diagram and larger typography; supply coordinated light and dark SVGs.
+- Lead with accepted upstream work. Explain the problem and resulting behavior in short case studies, with direct PR links.
+- Present selected projects as four paired cards, retaining a small research section below them.
+- Show merged external PR and repository totals in a single restrained line. The daily GitHub workflow updates only the marked totals when they change; exclude personal repositories and validate archived receipts before writing.
+- Keep **ShurongCAO**, a linked homepage cover, and the separation between GitHub engineering work and the personal academic website.
+- This revision supersedes the table layout and no-count choice below. Preserve archived assets and contribution records.
+
 ## Current direction, 16 September 2026
 
 - GitHub foregrounds what the owner builds and the technical problems they solve. The academic website covers EE research and the broader personal background.

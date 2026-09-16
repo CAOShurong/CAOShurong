@@ -49,7 +49,7 @@ def summarize(data: dict[str, Any]) -> tuple[int, int, int]:
     return len(contributions), len(repositories), len(organizations)
 
 
-def verify_live(data: dict[str, Any]) -> None:
+def fetch_merged_external() -> set[tuple[str, int]]:
     query = """
     query($cursor: String) {
       user(login: "CAOShurong") {
@@ -87,6 +87,12 @@ def verify_live(data: dict[str, Any]) -> None:
         if not page_info["hasNextPage"]:
             break
         cursor = page_info["endCursor"]
+
+    return live
+
+
+def verify_live(data: dict[str, Any]) -> None:
+    live = fetch_merged_external()
 
     manifest = {(item[0], int(item[1])) for item in data["contributions"]}
     # A dated archive must remain verifiable as new contributions are merged.

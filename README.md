@@ -54,7 +54,7 @@ I continue to investigate issues and submit new pull requests. These live views 
 
 At CUHK, I am exploring semiconductor devices and integration, including BEOL-compatible processing, p-type oxides, and monolithic 3D integration. My earlier research includes wafer defect detection and industrial anomaly detection:
 
-- **[FALCO-WAFER](https://doi.org/10.1109/ITC-Asia67627.2025.00016)** — lightweight wafer defect detection · IEEE ITC-Asia, 2025 · **Co-first author**.
+- **[FALCO-WAFER](https://caoshurong.github.io/publications/#falco-wafer)** — lightweight wafer defect detection · IEEE ITC-Asia, 2025 · **Co-first author**.
 - **[Texture-AD](https://arxiv.org/abs/2409.06367)** — an industrial anomaly-detection dataset and benchmark · arXiv, 2024 · **Co-author**.
 
 My [academic homepage](https://caoshurong.github.io/) covers research directions, publications, and experience in more detail.

@@ -13,8 +13,8 @@ I am **ShurongCAO**, a PhD student in Electronic Engineering at **The Chinese Un
 
 <!-- upstream-stats:start -->
 
-**137 merged pull requests · 73 upstream repositories**<br>
-<sub>External repositories only · Updated 25 November 2026</sub>
+**139 merged pull requests · 74 upstream repositories**<br>
+<sub>External repositories only · Updated 26 November 2026</sub>
 
 <!-- upstream-stats:end -->
 
